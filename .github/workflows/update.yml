@@ -53,3 +53,5 @@ jobs:
     steps:
       - id: dep
         uses: actions/deploy-pages@v4
+
+# (déclenche l'enregistrement du workflow)
