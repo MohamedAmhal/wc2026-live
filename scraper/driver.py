@@ -6,8 +6,6 @@ case Turnstile. Il gère aussi tout seul la version du chromedriver (fini le
 mismatch 149/150)."""
 import logging
 
-from seleniumbase import Driver
-
 import config
 
 log = logging.getLogger(__name__)
@@ -39,6 +37,7 @@ def build_driver():
     Le profil persistant conserve le cookie cf_clearance posé après le défi
     Cloudflare : les runs suivants passent alors sans interaction.
     """
+    from seleniumbase import Driver  # import paresseux : inutile en mode --live (cloud)
     driver = Driver(
         uc=True,
         headless=config.HEADLESS,          # Cloudflare + clic GUI exigent une fenêtre visible
