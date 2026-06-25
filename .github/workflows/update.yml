@@ -1,0 +1,55 @@
+name: Mise à jour live + déploiement
+
+# Rafraîchit les données (native-stats, sans Cloudflare) et publie la PWA.
+on:
+  schedule:
+    - cron: "0 */3 * * *"     # toutes les 3 heures
+  workflow_dispatch: {}        # bouton « Run workflow » manuel
+
+permissions:
+  contents: write              # pour committer data.json + la base
+  pages: write                 # pour publier sur GitHub Pages
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Dépendances minimales pour le mode --live (pas de SeleniumBase/Cloudflare).
+      - run: pip install selenium beautifulsoup4 lxml
+
+      - name: Scrape live (native-stats) + export JSON
+        run: python run.py --live --headless
+
+      - name: Commit des données mises à jour
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/worldcup2026.db webapp/data.json
+          git commit -m "Live update $(date -u +%FT%TZ)" || echo "Aucun changement"
+          git push
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: webapp
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.dep.outputs.page_url }}
+    steps:
+      - id: dep
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,10 @@
+.venv/
+.chrome-profile/
+__pycache__/
+*.pyc
+data/*.db
+!data/worldcup2026.db
+data/_*.db
+logs/*.log
+.DS_Store
+downloaded_files/

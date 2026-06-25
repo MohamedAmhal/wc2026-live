@@ -1,0 +1,14 @@
+{
+  "name": "Mondial 26 · Live",
+  "short_name": "Mondial 26",
+  "description": "Suivi live de la Coupe du Monde 2026 : groupes, matchs, buteurs, stats.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0A0E1C",
+  "theme_color": "#0A0E1C",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

@@ -1,0 +1,451 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mondial 26 · Live</title>
+<meta name="theme-color" content="#0A0E1C">
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+  :root{
+    --ground:#0A0E1C; --panel:#141B30; --panel-2:#1B2540;
+    --line:#26304E; --text:#EAF0FF; --muted:#8493B8;
+    --accent:#2BE08B;      /* qualifié / pelouse */
+    --accent-2:#FF2E6D;    /* énergie / buteurs  */
+    --amber:#F5A623;       /* repêchable (3e)    */
+    --out:#6A4256;         /* éliminé            */
+    --font-display:"Arial Narrow","Helvetica Neue",system-ui,sans-serif;
+    --font-body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --font-num:ui-monospace,"SF Mono","Roboto Mono",monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--ground);color:var(--text);font-family:var(--font-body);
+    -webkit-font-smoothing:antialiased;line-height:1.45;
+    padding-bottom:env(safe-area-inset-bottom);
+  }
+  .num{font-family:var(--font-num);font-variant-numeric:tabular-nums}
+
+  /* ---- top bar ---- */
+  header{
+    position:sticky;top:0;z-index:20;background:rgba(10,14,28,.92);
+    backdrop-filter:blur(12px);border-bottom:1px solid var(--line);
+  }
+  .bar{display:flex;align-items:center;gap:12px;padding:14px 16px 10px}
+  .wordmark{
+    font-family:var(--font-display);font-weight:800;font-stretch:condensed;
+    text-transform:uppercase;letter-spacing:.04em;font-size:22px;line-height:.9;
+  }
+  .wordmark b{color:var(--accent-2)}
+  .live{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);
+    text-transform:uppercase;letter-spacing:.12em;margin-left:auto}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);
+    box-shadow:0 0 0 0 rgba(43,224,139,.7);animation:pulse 2.4s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(43,224,139,.55)}70%{box-shadow:0 0 0 9px rgba(43,224,139,0)}100%{box-shadow:0 0 0 0 rgba(43,224,139,0)}}
+
+  /* ---- tournament ticker ---- */
+  .ticker{display:flex;gap:0;padding:0 16px 12px;overflow-x:auto}
+  .stat{flex:1;min-width:78px;padding:8px 12px;border-left:2px solid var(--line)}
+  .stat:first-child{border-left:0;padding-left:0}
+  .stat .v{font-family:var(--font-display);font-weight:800;font-stretch:condensed;
+    font-size:26px;line-height:1;letter-spacing:.01em}
+  .stat .l{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:3px}
+
+  /* ---- tabs ---- */
+  nav{display:flex;gap:4px;padding:0 10px;overflow-x:auto;border-bottom:1px solid var(--line)}
+  nav button{
+    background:none;border:0;color:var(--muted);font-family:var(--font-display);
+    font-weight:700;font-stretch:condensed;text-transform:uppercase;letter-spacing:.06em;
+    font-size:15px;padding:12px 12px 10px;border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap;
+  }
+  nav button[aria-selected=true]{color:var(--text);border-bottom-color:var(--accent-2)}
+  nav button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+
+  main{padding:16px 14px 40px;max-width:760px;margin:0 auto}
+  .tab{display:none;animation:fade .25s ease}
+  .tab.on{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+  h2.sec{font-family:var(--font-display);font-weight:800;font-stretch:condensed;
+    text-transform:uppercase;letter-spacing:.05em;font-size:16px;color:var(--muted);margin:22px 2px 10px}
+  h2.sec:first-child{margin-top:0}
+
+  /* ---- groups ---- */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .card>.gh{display:flex;justify-content:space-between;align-items:center;padding:11px 14px;
+    background:var(--panel-2);font-family:var(--font-display);font-weight:800;font-stretch:condensed;
+    text-transform:uppercase;letter-spacing:.05em;font-size:15px}
+  .card>.gh .j{color:var(--muted);font-size:11px;letter-spacing:.1em}
+  table{width:100%;border-collapse:collapse}
+  td,th{padding:8px 10px;font-size:13px;text-align:center}
+  th{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+  .tm{text-align:left;display:flex;align-items:center;gap:9px;font-weight:600}
+  .pos{width:20px;height:20px;border-radius:6px;display:inline-grid;place-items:center;
+    font-family:var(--font-num);font-size:11px;font-weight:700;color:#06121f;flex:none}
+  .z1 .pos{background:var(--accent)} .z2 .pos{background:var(--amber);color:#1c1300}
+  .z3 .pos{background:var(--out);color:#f4d9e6}
+  tr.z1{box-shadow:inset 3px 0 0 var(--accent)} tr.z2{box-shadow:inset 3px 0 0 var(--amber)}
+  .pts{font-family:var(--font-num);font-weight:700;font-size:15px}
+  .gd{font-family:var(--font-num);color:var(--muted)}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;margin:14px 2px 2px;font-size:12px;color:var(--muted)}
+  .legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:middle}
+
+  /* ---- matches ---- */
+  .day{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin:16px 2px 7px}
+  .match{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;
+    background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:11px 12px;margin-bottom:7px}
+  .match .h{text-align:right;font-weight:600;font-size:14px}
+  .match .a{text-align:left;font-weight:600;font-size:14px}
+  .score{font-family:var(--font-num);font-weight:700;font-size:16px;background:var(--panel-2);
+    border-radius:8px;padding:4px 10px;min-width:54px;text-align:center;letter-spacing:.02em}
+  .score.soon{color:var(--muted);font-size:11px;font-family:var(--font-display);
+    font-stretch:condensed;letter-spacing:.08em;padding:6px 10px}
+
+  /* ---- bar charts ---- */
+  .seg{display:inline-flex;background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:3px;margin-bottom:14px;gap:2px}
+  .seg button{background:none;border:0;color:var(--muted);font-weight:700;font-size:13px;
+    padding:6px 14px;border-radius:6px;cursor:pointer;font-family:var(--font-display);font-stretch:condensed;
+    text-transform:uppercase;letter-spacing:.05em}
+  .seg button[aria-selected=true]{background:var(--accent-2);color:#fff}
+  .bars{display:flex;flex-direction:column;gap:7px}
+  .row{display:grid;grid-template-columns:140px 1fr 34px;align-items:center;gap:10px}
+  .row .who{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row .who small{color:var(--muted);font-size:11px}
+  .track{background:var(--panel);border-radius:6px;height:22px;overflow:hidden}
+  .fill{height:100%;width:0;border-radius:6px;background:linear-gradient(90deg,var(--accent-2),#ff7aa6);
+    transition:width .7s cubic-bezier(.2,.8,.2,1)}
+  .fill.green{background:linear-gradient(90deg,var(--accent),#9af5cf)}
+  .fill.blue{background:linear-gradient(90deg,#3b82f6,#7dd3fc)}
+  .row .val{font-family:var(--font-num);font-weight:700;text-align:right}
+
+  /* ---- scatter ---- */
+  .scatter{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:8px}
+  .scatter text{fill:var(--muted);font-size:9px;font-family:var(--font-num)}
+  .scatter .ax{stroke:var(--line)}
+  .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:6px}
+  .tile{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px}
+  .tile .v{font-family:var(--font-display);font-weight:800;font-stretch:condensed;font-size:30px;line-height:1}
+  .tile .l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:4px}
+
+  .fill.amber{background:linear-gradient(90deg,var(--amber),#ffd98a)}
+  /* feature cards */
+  .feats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:6px}
+  .feat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px}
+  .feat .fl{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+  .feat .fs{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-top:8px;font-size:12px;font-weight:600}
+  .feat .fs b{font-family:var(--font-num);font-size:17px;color:var(--accent);padding:0 4px}
+  /* column chart (séries temporelles) */
+  .cols{display:flex;gap:5px;align-items:flex-end;height:170px;overflow-x:auto;padding-top:4px}
+  .col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;min-width:24px;height:100%;gap:3px}
+  .col .colval{font-size:10px;color:var(--muted);font-family:var(--font-num)}
+  .colbar{flex:1;width:15px;display:flex;align-items:flex-end}
+  .colbar span{width:100%;background:linear-gradient(180deg,var(--accent-2),#7a1638);border-radius:4px 4px 0 0;transition:height .7s cubic-bezier(.2,.8,.2,1)}
+  .col .collbl{font-size:9px;color:var(--muted);font-family:var(--font-num)}
+  /* scatter */
+  .scatter .ax{stroke:var(--line)} .scatter .med{stroke:var(--line);stroke-dasharray:3 4;opacity:.7}
+  .scatter text{fill:var(--muted);font-size:10px;font-family:var(--font-num)}
+  .scatter .pt{cursor:pointer}
+  .scatter .pt:focus{outline:none;stroke:#fff;stroke-width:2}
+  .readout{margin-top:8px;font-size:12.5px;color:var(--muted);text-align:center;min-height:18px}
+  .readout b{color:var(--text)}
+  .hint{font-size:11px;color:var(--muted);margin:-4px 2px 8px}
+  /* data tables */
+  .dtable{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:14px}
+  table.dt{width:100%;min-width:360px;border-collapse:collapse}
+  table.dt th{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;
+    text-align:center;padding:10px 9px;background:var(--panel-2);position:sticky;top:0}
+  table.dt td{padding:9px 9px;font-size:13px;text-align:center;white-space:nowrap}
+  table.dt .l{text-align:left}
+  table.dt tbody tr+tr td{border-top:1px solid var(--line)}
+  table.dt .rk{font-family:var(--font-num);color:var(--muted);width:26px}
+  table.dt .nm{font-weight:600}
+  table.dt .n{font-family:var(--font-num)}
+  table.dt .idx{font-family:var(--font-num);font-weight:800;color:var(--accent);font-size:15px}
+  tr.q-yes td.rk{color:var(--accent);font-weight:700}
+  tr.q-yes{box-shadow:inset 3px 0 0 var(--accent)}
+  tr.q-no{opacity:.48}
+  tr.podium td.idx{color:var(--amber)}
+  .err{color:var(--muted);text-align:center;padding:40px 20px}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.fill{transition:none}}
+</style>
+
+<header>
+  <div class="bar">
+    <div class="wordmark">World&nbsp;Cup&nbsp;<b>26</b></div>
+    <div class="live"><span class="dot"></span><span id="updated">live</span></div>
+  </div>
+  <div class="ticker" id="ticker"></div>
+  <nav id="tabs">
+    <button data-tab="groups" aria-selected="true">Groupes</button>
+    <button data-tab="matches" aria-selected="false">Matchs</button>
+    <button data-tab="scorers" aria-selected="false">Buteurs</button>
+    <button data-tab="stats" aria-selected="false">Analyse</button>
+  </nav>
+</header>
+
+<main>
+  <section class="tab on" id="tab-groups">
+    <div class="grid" id="groups"></div>
+    <div class="legend">
+      <span><i style="background:var(--accent)"></i>Qualifié (1-2)</span>
+      <span><i style="background:var(--amber)"></i>Repêchable (3<sup>e</sup>)</span>
+      <span><i style="background:var(--out)"></i>Éliminé (4<sup>e</sup>)</span>
+    </div>
+  </section>
+
+  <section class="tab" id="tab-matches">
+    <h2 class="sec">À venir</h2><div id="upcoming"></div>
+    <h2 class="sec">Résultats</h2><div id="recent"></div>
+  </section>
+
+  <section class="tab" id="tab-scorers">
+    <div class="seg" id="scorer-toggle">
+      <button data-k="goals" aria-selected="true">Buts</button>
+      <button data-k="assists" aria-selected="false">Passes déc.</button>
+    </div>
+    <div class="bars" id="scorers"></div>
+  </section>
+
+  <section class="tab" id="tab-stats">
+    <div class="tiles" id="tiles"></div>
+    <div class="feats" id="feats"></div>
+    <h2 class="sec">Classement général</h2>
+    <p class="hint">Classé par points → diff → buts. Note /20 = performance par match (résultats, attaque, défense, discipline).</p>
+    <div class="dtable" id="power"></div>
+    <h2 class="sec">Meilleurs 3<sup>es</sup> · 8 qualifiés</h2>
+    <p class="hint">Départage : points, puis différence de buts, puis buts marqués.</p>
+    <div class="dtable" id="thirds"></div>
+    <h2 class="sec">Buts par jour</h2><div id="goalsday"></div>
+    <h2 class="sec">Marges de victoire</h2><div class="bars" id="margins"></div>
+    <h2 class="sec">Scores les plus fréquents</h2><div class="bars" id="scorelines"></div>
+    <h2 class="sec">Points par match</h2><div class="bars" id="ppg"></div>
+    <h2 class="sec">Meilleures attaques · buts marqués</h2><div class="bars" id="attack"></div>
+    <h2 class="sec">Meilleures défenses · buts encaissés</h2><div class="bars" id="defense"></div>
+    <h2 class="sec">Clean sheets</h2><div class="bars" id="cleansheets"></div>
+    <h2 class="sec">Implication offensive · buts + passes</h2><div class="bars" id="involve"></div>
+    <h2 class="sec">Efficacité · buts par tir</h2><div class="bars" id="conv"></div>
+    <h2 class="sec">Discipline · cartons</h2><div class="bars" id="discipline"></div>
+    <h2 class="sec">Attaque vs défense</h2>
+    <p class="hint">Chaque point = une équipe. Bas-droite = forte attaque + défense solide. Touchez un point.</p>
+    <div id="scatter"></div>
+    <div class="readout" id="scatter-readout">Touchez un point pour voir l'équipe.</div>
+  </section>
+</main>
+
+<script>
+const DATA_URL = "data.json";
+let DATA = null;
+
+async function loadData(){
+  if (window.WC_DATA) return window.WC_DATA;
+  const r = await fetch(DATA_URL, {cache:"no-store"});
+  if(!r.ok) throw new Error("data");
+  return r.json();
+}
+const el = (h)=>{const t=document.createElement("template");t.innerHTML=h.trim();return t.content.firstChild;};
+const esc = (s)=>String(s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+
+function relTime(iso){
+  const then=new Date(iso), now=new Date(), m=Math.round((now-then)/60000);
+  if(isNaN(m)) return "live";
+  if(m<2) return "à l'instant";
+  if(m<60) return "il y a "+m+" min";
+  const h=Math.round(m/60); if(h<24) return "il y a "+h+" h";
+  return "il y a "+Math.round(h/24)+" j";
+}
+
+function renderTicker(s){
+  const it=[["Matchs",s.matches_played+"/"+s.matches_total],["Buts",s.total_goals],
+            ["Buts/match",s.avg_goals],["Équipes",s.teams],["Groupes",s.groups]];
+  ticker.innerHTML="";
+  it.forEach(([l,v])=>ticker.append(el(
+    `<div class="stat"><div class="v num">${v}</div><div class="l">${l}</div></div>`)));
+}
+
+function renderGroups(groups){
+  const g=document.getElementById("groups"); g.innerHTML="";
+  groups.forEach(grp=>{
+    const maxMp=Math.max(0,...grp.teams.map(t=>t.mp||0));
+    const rows=grp.teams.map(t=>{
+      const z=t.rank<=2?"z1":(t.rank===3?"z2":"z3");
+      const gd=(t.gd>0?"+":"")+t.gd;
+      return `<tr class="${z}">
+        <td><span class="pos">${t.rank}</span></td>
+        <td class="tm">${esc(t.name)}</td>
+        <td class="num">${t.mp}</td>
+        <td class="gd">${gd}</td>
+        <td class="pts">${t.pts}</td></tr>`;
+    }).join("");
+    g.append(el(`<div class="card">
+      <div class="gh"><span>${esc(grp.group)}</span><span class="j">J${maxMp}</span></div>
+      <table><thead><tr><th></th><th style="text-align:left">Équipe</th><th>MJ</th><th>Diff</th><th>Pts</th></tr></thead>
+      <tbody>${rows}</tbody></table></div>`));
+  });
+}
+
+function matchRow(m, soon){
+  const score = soon
+    ? `<span class="score soon">${m.time||"–"}</span>`
+    : `<span class="score">${m.hs}<span style="color:var(--muted)">–</span>${m.as}</span>`;
+  return el(`<div class="match"><div class="h">${esc(m.home)}</div>${score}<div class="a">${esc(m.away)}</div></div>`);
+}
+function groupByDate(list){const o={};list.forEach(m=>{(o[m.date]=o[m.date]||[]).push(m)});return o;}
+function frDate(d){const dt=new Date(d+"T12:00");return isNaN(dt)?d:dt.toLocaleDateString("fr-FR",{weekday:"short",day:"numeric",month:"short"});}
+
+function renderMatches(data){
+  const up=document.getElementById("upcoming"); up.innerHTML="";
+  const byU=groupByDate(data.matches_upcoming);
+  Object.keys(byU).sort().forEach(d=>{up.append(el(`<div class="day">${frDate(d)}</div>`));byU[d].forEach(m=>up.append(matchRow(m,true)));});
+  if(!data.matches_upcoming.length) up.append(el(`<div class="err">Aucun match à venir.</div>`));
+  const re=document.getElementById("recent"); re.innerHTML="";
+  const byR=groupByDate(data.matches_recent);
+  Object.keys(byR).sort().reverse().forEach(d=>{re.append(el(`<div class="day">${frDate(d)}</div>`));byR[d].forEach(m=>re.append(matchRow(m,false)));});
+}
+
+function barRow(who, sub, val, max, cls, disp){
+  const pct=max?Math.round(val/max*100):0;
+  const shown=(disp!=null?disp:val);
+  const r=el(`<div class="row"><div class="who">${esc(who)} ${sub?`<small>${esc(sub)}</small>`:""}</div>
+    <div class="track"><div class="fill ${cls||""}"></div></div><div class="val num">${esc(shown)}</div></div>`);
+  requestAnimationFrame(()=>r.querySelector(".fill").style.width=pct+"%");
+  return r;
+}
+function fillBars(id, items, cls){
+  const c=document.getElementById(id); c.innerHTML="";
+  const max=Math.max(1,...items.map(i=>i.val||0));
+  items.forEach(i=>c.append(barRow(i.who, i.sub, i.val||0, max, i.cls||cls, i.disp)));
+  if(!items.length) c.append(el(`<div class="err">Pas encore de données.</div>`));
+}
+function renderColumns(id, items){
+  const c=document.getElementById(id); c.innerHTML="";
+  const max=Math.max(1,...items.map(i=>i.goals));
+  const wrap=el(`<div class="cols"></div>`);
+  items.forEach(i=>{
+    const h=Math.round(i.goals/max*100);
+    const col=el(`<div class="col" title="${i.date} : ${i.goals} buts">
+      <div class="colval">${i.goals}</div>
+      <div class="colbar"><span style="height:0"></span></div>
+      <div class="collbl">${i.date.slice(8)}</div></div>`);
+    wrap.append(col);
+    requestAnimationFrame(()=>col.querySelector("span").style.height=h+"%");
+  });
+  c.append(wrap);
+}
+function renderTable(id, cols, rows, rowClass){
+  const head=cols.map(c=>`<th class="${c.cls||""}">${c.h}</th>`).join("");
+  const body=rows.map(r=>{
+    const tds=cols.map(c=>`<td class="${c.cls||""}">${c.render?c.render(r):esc(r[c.k])}</td>`).join("");
+    return `<tr class="${rowClass?rowClass(r):""}">${tds}</tr>`;
+  }).join("");
+  const c=document.getElementById(id);
+  if(!rows.length){c.innerHTML='<div class="err">Pas encore de données.</div>';return;}
+  c.innerHTML=`<table class="dt"><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table>`;
+}
+const grp=(g)=>g?g.replace("Group ","Gr. "):"";
+const tile=(v,l)=>`<div class="tile"><div class="v num">${v}</div><div class="l">${l}</div></div>`;
+const feat=(label,m)=>m?`<div class="feat"><div class="fl">${label}</div>
+  <div class="fs"><span>${esc(m.home)}</span><b>${m.hs}–${m.as}</b><span>${esc(m.away)}</span></div></div>`:"";
+function renderScorers(k){
+  const list = k==="assists" ? DATA.assisters : DATA.scorers;
+  const c=document.getElementById("scorers"); c.innerHTML="";
+  const max=Math.max(1,...list.map(p=>p[k]||0));
+  list.forEach(p=>c.append(barRow(p.name,p.team,p[k]||0,max, k==="assists"?"blue":"")));
+  if(!list.length) c.append(el(`<div class="err">Pas encore de données.</div>`));
+}
+function renderStats(data){
+  const A=data.analytics||{}, ov=A.overview||{}, s=data.summary;
+  document.getElementById("tiles").innerHTML=
+    tile(s.total_goals,"Buts")+tile(s.avg_goals,"Buts/match")+
+    tile(ov.clean_sheets??"–","Clean sheets")+tile((ov.btts_pct??0)+"%","Les 2 marquent")+
+    tile(ov.draws??"–","Nuls")+tile((ov.cards_red??0)+" / "+(ov.cards_yellow??0),"Rouges / Jaunes");
+  document.getElementById("feats").innerHTML=
+    feat("Plus large victoire",ov.biggest_win)+feat("Match le plus prolifique",ov.top_match);
+
+  renderTable("power", [
+    {h:"#", k:"pos", cls:"rk"},
+    {h:"Équipe", cls:"l nm", render:r=>esc(r.team)},
+    {h:"Pts", k:"pts", cls:"n"},
+    {h:"BM", k:"gf", cls:"n"},
+    {h:"Diff", cls:"n", render:r=>(r.gd>0?"+":"")+r.gd},
+    {h:"CS", k:"cs", cls:"n"},
+    {h:"🟨", k:"yellow", cls:"n"},
+    {h:"Note", cls:"idx", render:r=>r.note+"<small style='color:var(--muted);font-weight:400'>/20</small>"},
+  ], A.power||[], r=>r.pos<=3?"podium":"");
+
+  renderTable("thirds", [
+    {h:"#", k:"pos", cls:"rk"},
+    {h:"Groupe", cls:"l", render:r=>grp(r.grp)},
+    {h:"Équipe", cls:"l nm", render:r=>esc(r.team)},
+    {h:"MJ", k:"mp", cls:"n"},
+    {h:"Diff", cls:"n", render:r=>(r.gd>0?"+":"")+r.gd},
+    {h:"Pts", k:"pts", cls:"n"},
+  ], A.thirds||[], r=>r.qualified?"q-yes":"q-no");
+
+  renderColumns("goalsday", A.goals_by_day||[]);
+  fillBars("margins",(A.margins||[]).map(m=>({who:m.label,val:m.n})));
+  fillBars("scorelines",(A.scorelines||[]).map(s=>({who:s.score,val:s.n})));
+  fillBars("ppg",(A.team_ppg||[]).map(t=>({who:t.team,sub:grp(t.grp)+" · "+t.pts+"pts",val:t.ppg})));
+  fillBars("attack",(data.team_attack||[]).map(t=>({who:t.team,sub:grp(t.grp),val:t.gf})));
+  fillBars("defense",(data.team_defense||[]).map(t=>({who:t.team,sub:grp(t.grp),val:t.ga})),"green");
+  fillBars("cleansheets",(A.team_clean_sheets||[]).map(t=>({who:t.team,val:t.cs})),"green");
+  fillBars("involve",(A.involvements||[]).map(p=>({who:p.name,sub:p.team+" · "+p.g+"b "+p.a+"pd",val:p.ga})));
+  fillBars("conv",(A.conversion||[]).map(p=>({who:p.name,sub:p.team+" · "+p.goals+"b/"+p.shots+"t",val:p.conv,disp:p.conv+"%"})));
+  fillBars("discipline",(A.discipline||[]).map(p=>({who:p.name,sub:p.team,val:(p.y||0)+(p.r||0)*2,disp:(p.y||0)+"🟨"+(p.r?" "+p.r+"🟥":"")})),"amber");
+  renderScatter(data.team_scatter||[]);
+}
+function renderScatter(teams){
+  const W=360,H=300,P=40;
+  const gf=teams.map(t=>t.gf||0), ga=teams.map(t=>t.ga||0);
+  const mx=Math.max(4,...gf), my=Math.max(4,...ga);
+  const med=a=>{const s=[...a].sort((x,y)=>x-y);return s.length?s[Math.floor(s.length/2)]:0;};
+  const x=v=>P+v/mx*(W-2*P), y=v=>H-P-v/my*(H-2*P);
+  const dots=teams.map((t,i)=>{
+    const jx=((i*53)%7-3)*0.7, jy=((i*31)%7-3)*0.7;  // léger jitter anti-superposition
+    const cx=(x(t.gf||0)+jx).toFixed(1), cy=(y(t.ga||0)+jy).toFixed(1);
+    const col=(t.gf||0)>=(t.ga||0)?'var(--accent)':'var(--accent-2)';
+    return `<circle class="pt" cx="${cx}" cy="${cy}" r="5" fill="${col}" opacity=".85"
+      tabindex="0" data-t="${esc(t.team)}" data-g="${t.gf||0}" data-a="${t.ga||0}"/>`;
+  }).join("");
+  document.getElementById("scatter").innerHTML=
+   `<svg class="scatter" viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Attaque vs défense">
+     <line class="med" x1="${x(med(gf)).toFixed(1)}" y1="${P}" x2="${x(med(gf)).toFixed(1)}" y2="${H-P}"/>
+     <line class="med" x1="${P}" y1="${y(med(ga)).toFixed(1)}" x2="${W-P}" y2="${y(med(ga)).toFixed(1)}"/>
+     <line class="ax" x1="${P}" y1="${H-P}" x2="${W-P}" y2="${H-P}"/>
+     <line class="ax" x1="${P}" y1="${P}" x2="${P}" y2="${H-P}"/>
+     <text x="${W-P}" y="${H-P+18}" text-anchor="end">buts marqués →</text>
+     <text x="6" y="${P-14}">↑ buts encaissés</text>
+     ${dots}</svg>`;
+  const ro=document.getElementById("scatter-readout");
+  document.querySelectorAll("#scatter .pt").forEach(p=>{
+    const show=()=>{ro.innerHTML=`<b>${p.dataset.t}</b> · ${p.dataset.g} marqués · ${p.dataset.a} encaissés`;};
+    p.addEventListener("click",show); p.addEventListener("focus",show);
+  });
+}
+
+function selectTab(name){
+  document.querySelectorAll("#tabs button").forEach(b=>b.setAttribute("aria-selected", b.dataset.tab===name));
+  document.querySelectorAll(".tab").forEach(s=>s.classList.toggle("on", s.id==="tab-"+name));
+  if(name==="scorers") renderScorers(document.querySelector("#scorer-toggle [aria-selected=true]").dataset.k);
+}
+
+function wire(){
+  document.querySelectorAll("#tabs button").forEach(b=>b.onclick=()=>selectTab(b.dataset.tab));
+  document.querySelectorAll("#scorer-toggle button").forEach(b=>b.onclick=()=>{
+    document.querySelectorAll("#scorer-toggle button").forEach(x=>x.setAttribute("aria-selected",x===b));
+    renderScorers(b.dataset.k);
+  });
+}
+
+(async function(){
+  try{
+    DATA = await loadData();
+    document.getElementById("updated").textContent = relTime(DATA.generated_at);
+    renderTicker(DATA.summary);
+    renderGroups(DATA.groups);
+    renderMatches(DATA);
+    renderStats(DATA);
+    wire();
+  }catch(e){
+    document.querySelector("main").innerHTML='<div class="err">Données indisponibles.<br>Lance <code>python run.py --live</code>.</div>';
+  }
+})();
+
+if("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(()=>{});
+</script>
