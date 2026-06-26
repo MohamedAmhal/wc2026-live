@@ -27,7 +27,7 @@ jobs:
           python-version: "3.12"
 
       # Dépendances minimales pour le mode --live (pas de SeleniumBase/Cloudflare).
-      - run: pip install selenium beautifulsoup4 lxml
+      - run: pip install selenium beautifulsoup4 lxml tzdata
 
       # Met à jour scores + classement depuis native-stats et régénère data.json.
       # (la base committée fournit groupes/équipes/stats joueurs ; non re-committée)

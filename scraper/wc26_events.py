@@ -7,11 +7,49 @@ import json
 import logging
 import re
 import urllib.request
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 log = logging.getLogger(__name__)
 
 API_URL = "https://worldcup26.ir/get/games"
 RETRIES = 3
+
+PARIS = ZoneInfo("Europe/Paris")
+
+# stadium_id (worldcup26.ir) -> fuseau horaire IANA du stade.
+STADIUM_TZ = {
+    "1": "America/Mexico_City",   # Estadio Azteca (Mexico City)
+    "2": "America/Mexico_City",   # Estadio Akron (Guadalajara)
+    "3": "America/Monterrey",     # Estadio BBVA (Monterrey)
+    "4": "America/Chicago",       # AT&T Stadium (Dallas)
+    "5": "America/Chicago",       # NRG Stadium (Houston)
+    "6": "America/Chicago",       # Arrowhead (Kansas City)
+    "7": "America/New_York",      # Mercedes-Benz (Atlanta)
+    "8": "America/New_York",      # Hard Rock (Miami)
+    "9": "America/New_York",      # Gillette (Boston)
+    "10": "America/New_York",     # Lincoln Financial (Philadelphia)
+    "11": "America/New_York",     # MetLife (New York/NJ)
+    "12": "America/Toronto",      # BMO Field (Toronto)
+    "13": "America/Vancouver",    # BC Place (Vancouver)
+    "14": "America/Los_Angeles",  # Lumen Field (Seattle)
+    "15": "America/Los_Angeles",  # Levi's (San Francisco Bay Area)
+    "16": "America/Los_Angeles",  # SoFi (Los Angeles)
+}
+
+
+def _paris_time(iso, hhmm, stadium_id):
+    """Heure de Paris correspondant à l'heure locale du match. '' si inconnu.
+    Suffixe ' +1' si Paris est le jour suivant (décalage horaire)."""
+    tz = STADIUM_TZ.get(str(stadium_id))
+    if not (iso and hhmm and tz):
+        return ""
+    try:
+        dt = datetime.strptime(f"{iso} {hhmm}", "%Y-%m-%d %H:%M").replace(tzinfo=ZoneInfo(tz))
+        p = dt.astimezone(PARIS)
+        return p.strftime("%H:%M") + ("" if p.date() == dt.date() else " +1")
+    except Exception:
+        return ""
 
 
 def fetch_games():
@@ -92,6 +130,7 @@ def build():
             "hs": _to_int(g.get("home_score")), "as": _to_int(g.get("away_score")),
             "group": g.get("group"), "matchday": g.get("matchday"),
             "date": iso, "time": hhmm,
+            "time_paris": _paris_time(iso, hhmm, g.get("stadium_id")),
         }
         if st == "live":
             m["minute"] = g.get("time_elapsed")
