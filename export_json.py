@@ -251,6 +251,14 @@ def build(db_path=config.DB_PATH, generated_at=None):
 
     analytics = _analytics(cur)
 
+    # Événements live (buteurs + minutes + matchs en direct) via API externe.
+    try:
+        from scraper import wc26_events
+        events = wc26_events.build()
+    except Exception:
+        log.exception("Événements live indisponibles ce run.")
+        events = {"live": [], "results": []}
+
     data = {
         "generated_at": (generated_at or dt.datetime.now()).isoformat(timespec="seconds"),
         "summary": summary,
@@ -264,6 +272,7 @@ def build(db_path=config.DB_PATH, generated_at=None):
         "team_defense": defense,
         "team_scatter": team_rows,
         "analytics": analytics,
+        "events": events,
     }
     conn.close()
 

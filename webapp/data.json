@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T15:53:36",
+  "generated_at": "2026-06-26T15:15:56",
   "summary": {
     "teams": 48,
     "groups": 12,
@@ -3420,6 +3420,762 @@
         "red": 0,
         "note": 4.0,
         "pos": 48
+      }
+    ]
+  },
+  "events": {
+    "live": [],
+    "results": [
+      {
+        "home": "Turkey",
+        "away": "United States",
+        "hs": 3,
+        "as": 2,
+        "group": "D",
+        "matchday": "3",
+        "date": "06/25/2026 19:00",
+        "goals": [
+          {
+            "player": "Auston Trusty",
+            "minute": "3",
+            "team": "away"
+          },
+          {
+            "player": "Arda Güler",
+            "minute": "10",
+            "team": "home"
+          },
+          {
+            "player": "Baris Alpr Ailmaz",
+            "minute": "31",
+            "team": "home"
+          },
+          {
+            "player": "Sebastian Berhalter",
+            "minute": "49",
+            "team": "away"
+          },
+          {
+            "player": "Kan Aihan",
+            "minute": "90+8",
+            "team": "home"
+          }
+        ]
+      },
+      {
+        "home": "Paraguay",
+        "away": "Australia",
+        "hs": 0,
+        "as": 0,
+        "group": "D",
+        "matchday": "3",
+        "date": "06/25/2026 19:00",
+        "goals": []
+      },
+      {
+        "home": "Japan",
+        "away": "Sweden",
+        "hs": 1,
+        "as": 1,
+        "group": "F",
+        "matchday": "3",
+        "date": "06/25/2026 18:00",
+        "goals": [
+          {
+            "player": "Daizen Maeda",
+            "minute": "56",
+            "team": "home"
+          },
+          {
+            "player": "Anthony Elanga",
+            "minute": "62",
+            "team": "away"
+          }
+        ]
+      },
+      {
+        "home": "Tunisia",
+        "away": "Netherlands",
+        "hs": 1,
+        "as": 3,
+        "group": "F",
+        "matchday": "3",
+        "date": "06/25/2026 18:00",
+        "goals": [
+          {
+            "player": "Alis Skhiri",
+            "minute": "3",
+            "team": "away"
+          },
+          {
+            "player": "Brian Brobbey",
+            "minute": "7",
+            "team": "away"
+          },
+          {
+            "player": "Hazm Mstvri",
+            "minute": "54",
+            "team": "home"
+          },
+          {
+            "player": "Ian Fn Hkh",
+            "minute": "62",
+            "team": "away"
+          }
+        ]
+      },
+      {
+        "home": "Curaçao",
+        "away": "Ivory Coast",
+        "hs": 0,
+        "as": 2,
+        "group": "E",
+        "matchday": "3",
+        "date": "06/25/2026 16:00",
+        "goals": [
+          {
+            "player": "Nikvlas Ph Ph",
+            "minute": "7",
+            "team": "away"
+          },
+          {
+            "player": "Nikvlas Ph Ph",
+            "minute": "64",
+            "team": "away"
+          }
+        ]
+      },
+      {
+        "home": "Ecuador",
+        "away": "Germany",
+        "hs": 2,
+        "as": 1,
+        "group": "E",
+        "matchday": "3",
+        "date": "06/25/2026 16:00",
+        "goals": [
+          {
+            "player": "Leroy Sané",
+            "minute": "2",
+            "team": "away"
+          },
+          {
+            "player": "Nilsvn Angvlv",
+            "minute": "9",
+            "team": "home"
+          },
+          {
+            "player": "Gvnzalv Plata",
+            "minute": "77",
+            "team": "home"
+          }
+        ]
+      },
+      {
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "hs": 0,
+        "as": 3,
+        "group": "A",
+        "matchday": "3",
+        "date": "06/24/2026 19:00",
+        "goals": [
+          {
+            "player": "Mateo Chávez",
+            "minute": "55",
+            "team": "away"
+          },
+          {
+            "player": "Jvlian Kviinvnz",
+            "minute": "61",
+            "team": "away"
+          },
+          {
+            "player": "Álvaro Fidalgo",
+            "minute": "90+4",
+            "team": "away"
+          }
+        ]
+      },
+      {
+        "home": "South Africa",
+        "away": "South Korea",
+        "hs": 1,
+        "as": 0,
+        "group": "A",
+        "matchday": "3",
+        "date": "06/24/2026 19:00",
+        "goals": [
+          {
+            "player": "Taplv Maskv",
+            "minute": "63",
+            "team": "home"
+          }
+        ]
+      },
+      {
+        "home": "Morocco",
+        "away": "Haiti",
+        "hs": 4,
+        "as": 2,
+        "group": "C",
+        "matchday": "3",
+        "date": "06/24/2026 18:00",
+        "goals": [
+          {
+            "player": "Yassine Bounou",
+            "minute": "10",
+            "team": "away"
+          },
+          {
+            "player": "Achraf Hakimi",
+            "minute": "39",
+            "team": "home"
+          },
+          {
+            "player": "Wilson Isidor",
+            "minute": "43",
+            "team": "away"
+          },
+          {
+            "player": "Asmaail Saibari",
+            "minute": "45+1",
+            "team": "home"
+          },
+          {
+            "player": "Svfian Rhimi",
+            "minute": "78",
+            "team": "home"
+          },
+          {
+            "player": "Gessime Yassine",
+            "minute": "89",
+            "team": "home"
+          }
+        ]
+      },
+      {
+        "home": "Scotland",
+        "away": "Brazil",
+        "hs": 0,
+        "as": 3,
+        "group": "C",
+        "matchday": "3",
+        "date": "06/24/2026 18:00",
+        "goals": [
+          {
+            "player": "Vinícius Júnior",
+            "minute": "7",
+            "team": "away"
+          },
+          {
+            "player": "Vinícius Júnior",
+            "minute": "45+3",
+            "team": "away"
+          },
+          {
+            "player": "Matheus Cunha",
+            "minute": "60",
+            "team": "away"
+          }
+        ]
+      },
+      {
+        "home": "Bosnia and Herzegovina",
+        "away": "Qatar",
+        "hs": 3,
+        "as": 1,
+        "group": "B",
+        "matchday": "3",
+        "date": "06/24/2026 12:00",
+        "goals": [
+          {
+            "player": "Karim Alaibgvvich",
+            "minute": "29",
+            "team": "home"
+          },
+          {
+            "player": "Abvnad",
+            "minute": "34",
+            "team": "home"
+          },
+          {
+            "player": "Hassan Al-Haydos",
+            "minute": "42",
+            "team": "away"
+          },
+          {
+            "player": "Armin Mhmich",
+            "minute": "80",
+            "team": "home"
+          }
+        ]
+      },
+      {
+        "home": "Switzerland",
+        "away": "Canada",
+        "hs": 2,
+        "as": 1,
+        "group": "B",
+        "matchday": "3",
+        "date": "06/24/2026 12:00",
+        "goals": [
+          {
+            "player": "Rubén Vargas",
+            "minute": "46",
+            "team": "home"
+          },
+          {
+            "player": "Jvhan Mnzambi",
+            "minute": "57",
+            "team": "home"
+          },
+          {
+            "player": "Prvmis Divid",
+            "minute": "76",
+            "team": "away"
+          }
+        ]
+      },
+      {
+        "home": "Colombia",
+        "away": "Democratic Republic of the Congo",
+        "hs": 1,
+        "as": 0,
+        "group": "K",
+        "matchday": "2",
+        "date": "06/23/2026 20:00",
+        "goals": [
+          {
+            "player": "Dnil Mvnvz",
+            "minute": "76",
+            "team": "home"
+          }
+        ]
+      },
+      {
+        "home": "Panama",
+        "away": "Croatia",
+        "hs": 0,
+        "as": 1,
+        "group": "L",
+        "matchday": "2",
+        "date": "06/23/2026 19:00",
+        "goals": [
+          {
+            "player": "Ante Budimir",
+            "minute": "54",
+            "team": "away"
+          }
+        ]
+      },
+      {
+        "home": "England",
+        "away": "Ghana",
+        "hs": 0,
+        "as": 0,
+        "group": "L",
+        "matchday": "2",
+        "date": "06/23/2026 16:00",
+        "goals": []
+      },
+      {
+        "home": "Portugal",
+        "away": "Uzbekistan",
+        "hs": 5,
+        "as": 0,
+        "group": "K",
+        "matchday": "2",
+        "date": "06/23/2026 12:00",
+        "goals": [
+          {
+            "player": "Cristiano Ronaldo",
+            "minute": "6",
+            "team": "home"
+          },
+          {
+            "player": "Nvnv Mndz",
+            "minute": "17",
+            "team": "home"
+          },
+          {
+            "player": "Cristiano Ronaldo",
+            "minute": "39",
+            "team": "home"
+          },
+          {
+            "player": "Abdalvhid Namtvf",
+            "minute": "60",
+            "team": "home"
+          },
+          {
+            "player": "Rafael Leão",
+            "minute": "87",
+            "team": "home"
+          }
+        ]
+      },
+      {
+        "home": "Norway",
+        "away": "Senegal",
+        "hs": 3,
+        "as": 2,
+        "group": "I",
+        "matchday": "2",
+        "date": "06/22/2026 20:00",
+        "goals": [
+          {
+            "player": "Markvs Hlmgrn Pdrsn",
+            "minute": "43",
+            "team": "home"
+          },
+          {
+            "player": "Erling Haaland",
+            "minute": "48",
+            "team": "home"
+          },
+          {
+            "player": "Ismaïla Sarr",
+            "minute": "53",
+            "team": "away"
+          },
+          {
+            "player": "Erling Haaland",
+            "minute": "58",
+            "team": "home"
+          },
+          {
+            "player": "Ismaïla Sarr",
+            "minute": "90+3",
+            "team": "away"
+          }
+        ]
+      },
+      {
+        "home": "Jordan",
+        "away": "Algeria",
+        "hs": 1,
+        "as": 2,
+        "group": "J",
+        "matchday": "2",
+        "date": "06/22/2026 20:00",
+        "goals": [
+          {
+            "player": "Al Rashdan",
+            "minute": "36",
+            "team": "home"
+          },
+          {
+            "player": "Nzir Bnbvali",
+            "minute": "69",
+            "team": "away"
+          },
+          {
+            "player": "Amine Gouiri",
+            "minute": "82",
+            "team": "away"
+          }
+        ]
+      },
+      {
+        "home": "France",
+        "away": "Iraq",
+        "hs": 3,
+        "as": 0,
+        "group": "I",
+        "matchday": "2",
+        "date": "06/22/2026 17:00",
+        "goals": [
+          {
+            "player": "Kylian Mbappé",
+            "minute": "14",
+            "team": "home"
+          },
+          {
+            "player": "Kylian Mbappé",
+            "minute": "54",
+            "team": "home"
+          },
+          {
+            "player": "Ousmane Dembélé",
+            "minute": "66",
+            "team": "home"
+          }
+        ]
+      },
+      {
+        "home": "Argentina",
+        "away": "Austria",
+        "hs": 2,
+        "as": 0,
+        "group": "J",
+        "matchday": "2",
+        "date": "06/22/2026 12:00",
+        "goals": [
+          {
+            "player": "Lionel Messi",
+            "minute": "38",
+            "team": "home"
+          },
+          {
+            "player": "Lionel Messi",
+            "minute": "90+5",
+            "team": "home"
+          }
+        ]
+      },
+      {
+        "home": "New Zealand",
+        "away": "Egypt",
+        "hs": 1,
+        "as": 3,
+        "group": "G",
+        "matchday": "2",
+        "date": "06/21/2026 18:00",
+        "goals": [
+          {
+            "player": "Fin Svrman",
+            "minute": "15",
+            "team": "home"
+          },
+          {
+            "player": "Mostafa Ziko",
+            "minute": "58",
+            "team": "away"
+          },
+          {
+            "player": "Mohamed Salah",
+            "minute": "67",
+            "team": "away"
+          },
+          {
+            "player": "Mahmoud Hassan Trezeguet",
+            "minute": "82",
+            "team": "away"
+          }
+        ]
+      },
+      {
+        "home": "Uruguay",
+        "away": "Cape Verde",
+        "hs": 2,
+        "as": 2,
+        "group": "H",
+        "matchday": "2",
+        "date": "06/21/2026 18:00",
+        "goals": [
+          {
+            "player": "Kevin Pina",
+            "minute": "21",
+            "team": "away"
+          },
+          {
+            "player": "Maximiliano Araújo",
+            "minute": "44",
+            "team": "home"
+          },
+          {
+            "player": "Agustín Canobbio",
+            "minute": "45+6",
+            "team": "home"
+          },
+          {
+            "player": "Hliv Varla",
+            "minute": "61",
+            "team": "away"
+          }
+        ]
+      },
+      {
+        "home": "Spain",
+        "away": "Saudi Arabia",
+        "hs": 4,
+        "as": 0,
+        "group": "H",
+        "matchday": "2",
+        "date": "06/21/2026 12:00",
+        "goals": [
+          {
+            "player": "Lamine Yamal",
+            "minute": "10",
+            "team": "home"
+          },
+          {
+            "player": "Mikel Oyarzabal",
+            "minute": "21",
+            "team": "home"
+          },
+          {
+            "player": "Mikel Oyarzabal",
+            "minute": "24",
+            "team": "home"
+          },
+          {
+            "player": "Hassan Mohamed Altmbkti",
+            "minute": "49",
+            "team": "home"
+          }
+        ]
+      },
+      {
+        "home": "Belgium",
+        "away": "Iran",
+        "hs": 0,
+        "as": 0,
+        "group": "G",
+        "matchday": "2",
+        "date": "06/21/2026 12:00",
+        "goals": []
+      },
+      {
+        "home": "Tunisia",
+        "away": "Japan",
+        "hs": 0,
+        "as": 4,
+        "group": "F",
+        "matchday": "2",
+        "date": "06/20/2026 22:00",
+        "goals": [
+          {
+            "player": "Daichi Kamada",
+            "minute": "4",
+            "team": "away"
+          },
+          {
+            "player": "Aiash Ivida",
+            "minute": "31",
+            "team": "away"
+          },
+          {
+            "player": "Junya Itō",
+            "minute": "69",
+            "team": "away"
+          },
+          {
+            "player": "Aiash Ivida",
+            "minute": "83",
+            "team": "away"
+          }
+        ]
+      },
+      {
+        "home": "Ecuador",
+        "away": "Curaçao",
+        "hs": 0,
+        "as": 0,
+        "group": "E",
+        "matchday": "2",
+        "date": "06/20/2026 19:00",
+        "goals": []
+      },
+      {
+        "home": "Germany",
+        "away": "Ivory Coast",
+        "hs": 2,
+        "as": 1,
+        "group": "E",
+        "matchday": "2",
+        "date": "06/20/2026 16:00",
+        "goals": [
+          {
+            "player": "Franck Kessié",
+            "minute": "30",
+            "team": "away"
+          },
+          {
+            "player": "Dniz Avndav",
+            "minute": "68",
+            "team": "home"
+          },
+          {
+            "player": "Dniz Avndav",
+            "minute": "90+4",
+            "team": "home"
+          }
+        ]
+      },
+      {
+        "home": "Netherlands",
+        "away": "Sweden",
+        "hs": 5,
+        "as": 1,
+        "group": "F",
+        "matchday": "2",
+        "date": "06/20/2026 12:00",
+        "goals": [
+          {
+            "player": "Brian Brobbey",
+            "minute": "5",
+            "team": "home"
+          },
+          {
+            "player": "Brian Brobbey",
+            "minute": "17",
+            "team": "home"
+          },
+          {
+            "player": "Kvdi Khakpv",
+            "minute": "47",
+            "team": "home"
+          },
+          {
+            "player": "Kvdi Khakpv",
+            "minute": "54",
+            "team": "home"
+          },
+          {
+            "player": "Anthony Elanga",
+            "minute": "59",
+            "team": "away"
+          },
+          {
+            "player": "Crysencio Summerville",
+            "minute": "89",
+            "team": "home"
+          }
+        ]
+      },
+      {
+        "home": "Brazil",
+        "away": "Haiti",
+        "hs": 3,
+        "as": 0,
+        "group": "C",
+        "matchday": "2",
+        "date": "06/19/2026 21:00",
+        "goals": [
+          {
+            "player": "Matheus Cunha",
+            "minute": "23",
+            "team": "home"
+          },
+          {
+            "player": "Matheus Cunha",
+            "minute": "36",
+            "team": "home"
+          },
+          {
+            "player": "Vinícius Júnior",
+            "minute": "45+3",
+            "team": "home"
+          }
+        ]
+      },
+      {
+        "home": "Turkey",
+        "away": "Paraguay",
+        "hs": 0,
+        "as": 1,
+        "group": "D",
+        "matchday": "2",
+        "date": "06/19/2026 20:00",
+        "goals": [
+          {
+            "player": "Matías Galarza",
+            "minute": "2",
+            "team": "away"
+          }
+        ]
       }
     ]
   }

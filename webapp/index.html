@@ -162,6 +162,23 @@
   tr.q-yes{box-shadow:inset 3px 0 0 var(--accent)}
   tr.q-no{opacity:.48}
   tr.podium td.idx{color:var(--amber)}
+  /* live / events */
+  .evcard{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 13px;margin-bottom:9px}
+  .evcard.islive{border-color:var(--accent-2);box-shadow:0 0 0 1px var(--accent-2) inset}
+  .ev-top{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:var(--muted);margin-bottom:8px}
+  .livebadge{color:var(--accent-2);font-weight:700;display:flex;align-items:center;gap:5px}
+  .livebadge .rd{width:8px;height:8px;border-radius:50%;background:var(--accent-2);animation:pulse 1.6s infinite}
+  .ev-head{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px}
+  .ev-team{font-weight:700;font-size:14px}
+  .ev-team.h{text-align:right}.ev-team.a{text-align:left}
+  .ev-score{font-family:var(--font-num);font-weight:800;font-size:19px;background:var(--panel-2);border-radius:8px;padding:3px 11px}
+  .ev-score span{color:var(--muted);margin:0 2px}
+  .goals{margin-top:9px;border-top:1px solid var(--line);padding-top:8px;display:flex;flex-direction:column;gap:5px}
+  .goal{font-size:13px}
+  .goal.a{text-align:right;color:#ff9ebd}
+  .goal .min{font-family:var(--font-num);color:var(--muted)}
+  .goal-empty{font-size:12px;color:var(--muted)}
+  nav button .livedot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent-2);margin-left:5px;vertical-align:middle;animation:pulse 1.6s infinite}
   .err{color:var(--muted);text-align:center;padding:40px 20px}
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.fill{transition:none}}
 </style>
@@ -174,6 +191,7 @@
   <div class="ticker" id="ticker"></div>
   <nav id="tabs">
     <button data-tab="groups" aria-selected="true">Groupes</button>
+    <button data-tab="live" aria-selected="false">En direct</button>
     <button data-tab="matches" aria-selected="false">Matchs</button>
     <button data-tab="scorers" aria-selected="false">Buteurs</button>
     <button data-tab="stats" aria-selected="false">Analyse</button>
@@ -188,6 +206,13 @@
       <span><i style="background:var(--amber)"></i>Repêchable (3<sup>e</sup>)</span>
       <span><i style="background:var(--out)"></i>Éliminé (4<sup>e</sup>)</span>
     </div>
+  </section>
+
+  <section class="tab" id="tab-live">
+    <h2 class="sec">⚽ En direct</h2>
+    <div id="live-now"></div>
+    <h2 class="sec">Résultats &amp; buteurs</h2>
+    <div id="live-results"></div>
   </section>
 
   <section class="tab" id="tab-matches">
@@ -419,6 +444,38 @@ function renderScatter(teams){
   });
 }
 
+function goalCard(m, live){
+  const meta = (m.group?"Gr. "+esc(m.group):"") + (m.matchday?" · J"+esc(m.matchday):"");
+  const min = m.minute!=null ? esc(m.minute)+(/^\d+$/.test(String(m.minute))?"'":"") : "live";
+  const top = live
+    ? `<div class="ev-top"><span class="livebadge"><span class="rd"></span>EN DIRECT ${min}</span><span>${meta}</span></div>`
+    : `<div class="ev-top"><span>${meta}</span><span>${esc((m.date||"").slice(0,10))}</span></div>`;
+  const goals = (m.goals||[]).map(g=>
+    `<div class="goal ${g.team==='home'?'h':'a'}"><span class="min">${g.minute?esc(g.minute)+"'":""}</span> ⚽ ${esc(g.player)}</div>`
+  ).join("") || `<div class="goal-empty">Aucun buteur renseigné.</div>`;
+  return el(`<div class="evcard ${live?'islive':''}">${top}
+    <div class="ev-head">
+      <div class="ev-team h">${esc(m.home)}</div>
+      <div class="ev-score">${m.hs??"–"}<span>–</span>${m.as??"–"}</div>
+      <div class="ev-team a">${esc(m.away)}</div></div>
+    <div class="goals">${goals}</div></div>`);
+}
+function renderEvents(data){
+  const ev = data.events || {live:[],results:[]};
+  const now = document.getElementById("live-now"); now.innerHTML="";
+  if(ev.live && ev.live.length){
+    ev.live.forEach(m=>now.append(goalCard(m,true)));
+  }else{
+    now.append(el(`<div class="err">Aucun match en direct pour le moment.<br>Reviens pendant un match ⚽</div>`));
+  }
+  const res = document.getElementById("live-results"); res.innerHTML="";
+  (ev.results||[]).forEach(m=>res.append(goalCard(m,false)));
+  if(!(ev.results||[]).length) res.append(el(`<div class="err">Pas encore de résultats.</div>`));
+  // pastille rouge sur l'onglet si des matchs sont en direct
+  const tabBtn=document.querySelector('#tabs button[data-tab="live"]');
+  if(tabBtn && ev.live && ev.live.length && !tabBtn.querySelector(".livedot"))
+    tabBtn.insertAdjacentHTML("beforeend",'<span class="livedot"></span>');
+}
 function selectTab(name){
   document.querySelectorAll("#tabs button").forEach(b=>b.setAttribute("aria-selected", b.dataset.tab===name));
   document.querySelectorAll(".tab").forEach(s=>s.classList.toggle("on", s.id==="tab-"+name));
@@ -439,6 +496,7 @@ function wire(){
     document.getElementById("updated").textContent = relTime(DATA.generated_at);
     renderTicker(DATA.summary);
     renderGroups(DATA.groups);
+    renderEvents(DATA);
     renderMatches(DATA);
     renderStats(DATA);
     wire();
