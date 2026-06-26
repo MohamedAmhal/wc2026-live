@@ -217,7 +217,6 @@
 
   <section class="tab" id="tab-matches">
     <h2 class="sec">À venir</h2><div id="upcoming"></div>
-    <h2 class="sec">Résultats</h2><div id="recent"></div>
   </section>
 
   <section class="tab" id="tab-scorers">
@@ -319,9 +318,6 @@ function renderMatches(data){
   const byU=groupByDate(data.matches_upcoming);
   Object.keys(byU).sort().forEach(d=>{up.append(el(`<div class="day">${frDate(d)}</div>`));byU[d].forEach(m=>up.append(matchRow(m,true)));});
   if(!data.matches_upcoming.length) up.append(el(`<div class="err">Aucun match à venir.</div>`));
-  const re=document.getElementById("recent"); re.innerHTML="";
-  const byR=groupByDate(data.matches_recent);
-  Object.keys(byR).sort().reverse().forEach(d=>{re.append(el(`<div class="day">${frDate(d)}</div>`));byR[d].forEach(m=>re.append(matchRow(m,false)));});
 }
 
 function barRow(who, sub, val, max, cls, disp){
