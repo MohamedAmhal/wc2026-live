@@ -139,18 +139,18 @@ def _analytics(cur):
     } for i, r in enumerate(thirds)]
 
     # --- Classement général : toutes les équipes, tri Pts > Diff > BM -----
-    # Note /20 = performance PAR MATCH (juste entre équipes à 2 ou 3 matchs),
-    # combinée (résultats + attaque + défense − cartons) puis mise à l'échelle.
+    # Note /20 = performance GLOBALE (résultats + attaque + défense − cartons),
+    # mise à l'échelle 4→20. Sur les totaux (pas par match) pour rester cohérent
+    # avec le classement : le leader a la meilleure note.
     power = []
     for r in st:
         y, rc = team_cards.get(r["t"], (0, 0))
         cs = clean.get(r["t"], 0)
-        mp = r["mp"] or 1
-        raw_pm = (4*r["pts"] + 3*r["gd"] + 2*r["gf"] + 3*cs - 2*rc - 0.5*y) / mp
+        raw = 4*r["pts"] + 3*r["gd"] + 2*r["gf"] + 3*cs - 2*rc - 0.5*y
         power.append({
             "team": r["t"], "grp": r["g"], "mp": r["mp"], "pts": r["pts"],
             "gf": r["gf"], "gd": r["gd"], "cs": cs, "yellow": y, "red": rc,
-            "_raw": raw_pm,
+            "_raw": raw,
         })
     raws = [p["_raw"] for p in power] or [0]
     lo, hi = min(raws), max(raws)
