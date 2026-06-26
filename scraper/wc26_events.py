@@ -147,4 +147,6 @@ def build():
 
     log.info("Événements : %d en direct, %d résultats, %d à venir",
              len(live), len(results), len(upcoming))
-    return {"live": live, "results": results[:30], "upcoming": upcoming[:24]}
+    # results non tronqué (timing des buts par équipe en a besoin) ; la PWA
+    # n'affiche que les premiers.
+    return {"live": live, "results": results, "upcoming": upcoming[:24]}

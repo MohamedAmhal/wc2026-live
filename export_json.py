@@ -6,6 +6,7 @@ pré-agrégé pour que la PWA n'ait qu'à afficher (zéro calcul côté client).
 import datetime as dt
 import json
 import logging
+import re
 import sqlite3
 from pathlib import Path
 
@@ -184,6 +185,163 @@ def _analytics(cur):
     }
 
 
+def _int0(v):
+    try:
+        return int(float(v))
+    except (TypeError, ValueError):
+        return 0
+
+
+def _teams_detail(cur, events, note_map):
+    """Compose un dashboard par équipe : indicateurs, forme, forces/faiblesses
+    (percentile vs les 48), timing des buts, effectif, journal."""
+    from scraper import native_stats as ns  # réutilise normalisation + alias
+
+    teams = _rows(cur, """SELECT team_name t, group_name g, rank, mp, w, d, l,
+                                 gf, ga, gd, pts FROM standings""")
+    if not teams:
+        return {}
+
+    # Stats d'équipe fbref (possession, tirs...) préchargées.
+    tstats = {}
+    for r in cur.execute("SELECT team_name, category, stats_json FROM team_stats"):
+        tstats.setdefault(r[0], {})[r[1]] = json.loads(r[2])
+
+    def tget(team, cat, key):
+        v = tstats.get(team, {}).get(cat, {}).get(key)
+        try:
+            return float(v)
+        except (TypeError, ValueError):
+            return None
+
+    matches = _rows(cur, """SELECT match_date d, home_team h, away_team a,
+                                   home_score hs, away_score as_ FROM matches
+                            WHERE home_score IS NOT NULL ORDER BY match_date""")
+
+    # Effectifs (standard + tirs).
+    squad = {}
+    for r in cur.execute("""SELECT players.team_name, players.name, players.position,
+              json_extract(stats_json,'$.goals'), json_extract(stats_json,'$.assists'),
+              json_extract(stats_json,'$.minutes') FROM players JOIN player_stats
+              USING(player_id) WHERE category='standard'"""):
+        squad.setdefault(r[0], []).append({
+            "name": r[1], "pos": r[2], "goals": _int0(r[3]),
+            "assists": _int0(r[4]), "minutes": _int0(r[5])})
+    shots_by_player = {}
+    for r in cur.execute("""SELECT name, json_extract(stats_json,'$.shots') s
+              FROM players JOIN player_stats USING(player_id) WHERE category='shooting'"""):
+        shots_by_player[r[0]] = _int0(r[1])
+
+    # Résolution nom anglais (events) -> nom fbref.
+    lookup = {ns._norm(t["t"]): t["t"] for t in teams}
+    lookup.update(ns._ALIASES)
+    resolve = lambda n: lookup.get(ns._norm(n))
+
+    # Timing des buts (6 tranches) depuis les événements.
+    BK = [(1, 15), (16, 30), (31, 45), (46, 60), (61, 75), (76, 200)]
+    timing = {t["t"]: {"scored": [0]*6, "conceded": [0]*6} for t in teams}
+    for m in (events.get("results") or []):
+        H, A = resolve(m.get("home")), resolve(m.get("away"))
+        for gl in m.get("goals") or []:
+            scorer = H if gl["team"] == "home" else A
+            concede = A if gl["team"] == "home" else H
+            if not gl.get("minute"):
+                continue
+            try:
+                mi = int(re.split(r"\+", str(gl["minute"]))[0])
+            except ValueError:
+                continue
+            bi = next((i for i, (lo, hi) in enumerate(BK) if lo <= mi <= hi), 5)
+            if scorer in timing:
+                timing[scorer]["scored"][bi] += 1
+            if concede in timing:
+                timing[concede]["conceded"][bi] += 1
+
+    # Clean sheets par équipe (depuis les matchs).
+    cs = {t["t"]: 0 for t in teams}
+    for m in matches:
+        if m["as_"] == 0 and m["h"] in cs:
+            cs[m["h"]] += 1
+        if m["hs"] == 0 and m["a"] in cs:
+            cs[m["a"]] += 1
+
+    # Base de métriques pour le percentile.
+    pm = lambda v, n: round(v/n, 2) if n else 0
+    base = {}
+    for t in teams:
+        nm, n = t["t"], t["mp"] or 0
+        shots, sot = tget(nm, "shooting", "shots"), tget(nm, "shooting", "shots_on_target")
+        base[nm] = {
+            "gf_pm": pm(t["gf"], n), "ga_pm": pm(t["ga"], n),
+            "poss": tget(nm, "standard", "possession"),
+            "conv": round(t["gf"]/shots*100, 1) if shots else None,
+            "acc": round(sot/shots*100, 1) if shots else None,
+            "cs": cs.get(nm, 0), "shots": shots, "sot": sot,
+            "cards": (tget(nm, "standard", "cards_yellow") or 0)
+                     + (tget(nm, "standard", "cards_red") or 0)*2,
+        }
+
+    def pct(metric, invert=False):
+        vals = [base[x][metric] for x in base if base[x][metric] is not None]
+        out = {}
+        for nm in base:
+            v = base[nm][metric]
+            if v is None:
+                out[nm] = None
+                continue
+            p = round(sum(1 for o in vals if o < v)/len(vals)*100) if vals else 0
+            out[nm] = (100 - p) if invert else p
+        return out
+
+    P = {"Attaque": pct("gf_pm"), "Défense": pct("ga_pm", invert=True),
+         "Possession": pct("poss"), "Finition": pct("conv"),
+         "Solidité": pct("cs"), "Discipline": pct("cards", invert=True)}
+
+    detail = {}
+    for t in teams:
+        nm, n = t["t"], t["mp"] or 0
+        mine = [m for m in matches if nm in (m["h"], m["a"])]
+        form, log = [], []
+        for m in mine:
+            home = m["h"] == nm
+            gf_, ga_ = (m["hs"], m["as_"]) if home else (m["as_"], m["hs"])
+            res = "V" if gf_ > ga_ else ("N" if gf_ == ga_ else "D")
+            form.append(res)
+            log.append({"date": m["d"], "opp": m["a"] if home else m["h"],
+                        "gf": gf_, "ga": ga_, "res": res})
+        sc = [(k, P[k].get(nm)) for k in P if P[k].get(nm) is not None]
+        strengths = [k for k, v in sorted(sc, key=lambda x: -x[1]) if v >= 70][:3]
+        weak = [k for k, v in sorted(sc, key=lambda x: x[1]) if v <= 30][:3]
+        b = base[nm]
+        style = []
+        if b["poss"] is not None:
+            style.append("Possession" if b["poss"] >= 52
+                         else ("Bloc bas" if b["poss"] <= 46 else "Équilibré"))
+        if b["gf_pm"] >= 2:
+            style.append("Offensif")
+        if b["ga_pm"] <= 0.7:
+            style.append("Défense solide")
+        if b["conv"] and b["conv"] >= 20:
+            style.append("Finition clinique")
+        sq = sorted(squad.get(nm, []), key=lambda p: (-p["goals"], -p["assists"], -p["minutes"]))
+        for p in sq:
+            p["shots"] = shots_by_player.get(p["name"])
+        detail[nm] = {
+            "name": nm, "group": t["g"], "rank": t["rank"], "pts": t["pts"],
+            "mp": n, "w": t["w"], "d": t["d"], "l": t["l"],
+            "gf": t["gf"], "ga": t["ga"], "gd": t["gd"], "note": note_map.get(nm),
+            "ppg": round(t["pts"]/n, 2) if n else 0,
+            "gf_pm": b["gf_pm"], "ga_pm": b["ga_pm"], "possession": b["poss"],
+            "shots": b["shots"], "sot": b["sot"], "accuracy": b["acc"],
+            "conversion": b["conv"], "clean_sheets": b["cs"],
+            "cards_y": _int0(tget(nm, "standard", "cards_yellow")),
+            "cards_r": _int0(tget(nm, "standard", "cards_red")),
+            "form": form[-5:], "strengths": strengths, "weaknesses": weak,
+            "style": style, "timing": timing[nm], "squad": sq[:26], "log": log,
+        }
+    return detail
+
+
 def build(db_path=config.DB_PATH, generated_at=None):
     conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
@@ -264,6 +422,13 @@ def build(db_path=config.DB_PATH, generated_at=None):
     if events.get("upcoming"):
         upcoming = events["upcoming"]
 
+    try:
+        note_map = {p["team"]: p.get("note") for p in analytics.get("power", [])}
+        teams_detail = _teams_detail(cur, events, note_map)
+    except Exception:
+        log.exception("Dashboard équipes indisponible ce run.")
+        teams_detail = {}
+
     data = {
         "generated_at": (generated_at or dt.datetime.now()).isoformat(timespec="seconds"),
         "summary": summary,
@@ -278,6 +443,7 @@ def build(db_path=config.DB_PATH, generated_at=None):
         "team_scatter": team_rows,
         "analytics": analytics,
         "events": events,
+        "teams": teams_detail,
     }
     conn.close()
 

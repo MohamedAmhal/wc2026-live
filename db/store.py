@@ -83,6 +83,13 @@ class Store:
                )""")
         self.conn.commit()
 
+    def upsert_team_stats(self, team_name, category, team_id, stats: dict):
+        row = {
+            "team_name": team_name, "category": category, "team_id": team_id,
+            "stats_json": json.dumps(stats, ensure_ascii=False),
+        }
+        return self._upsert("team_stats", [row], ["team_name", "category"])
+
     def rebuild_venues_and_referees(self):
         """Recalcule les agrégats stades/arbitres depuis la table matches."""
         cur = self.conn.cursor()

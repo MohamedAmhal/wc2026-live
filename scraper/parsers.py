@@ -271,3 +271,38 @@ def parse_player_stats(soup, category):
 
     log.info("Stats '%s' : %d joueurs", category, len(players))
     return players, stats
+
+
+def parse_team_stats(soup, category):
+    """Stats AU NIVEAU ÉQUIPE depuis la table `stats_squads_<cat>_for`.
+
+    C'est là que vit la possession % et les totaux d'équipe (tirs, buts...).
+    Renvoie [{team_name, team_id, category, stats:{data-stat: valeur}}]."""
+    out = []
+    table = None
+    for t in soup.find_all("table"):
+        tid = t.get("id", "") or ""
+        if tid.startswith("stats_squads_") and tid.endswith("_for"):
+            table = t
+            break
+    if table is None:
+        return out
+    for row in _data_rows(table):
+        name = _name_text(row, "team")
+        if not name:
+            continue
+        s = {}
+        for cell in row.find_all(attrs={"data-stat": True}):
+            stat = cell["data-stat"]
+            if stat == "team":
+                continue
+            v = cell.get_text(strip=True)
+            s[stat] = v if v != "" else None
+        out.append({
+            "team_name": name,
+            "team_id": _id_from(row, "team", "squad"),
+            "category": category,
+            "stats": s,
+        })
+    log.info("Stats équipe '%s' : %d équipes", category, len(out))
+    return out

@@ -79,6 +79,9 @@ class Pipeline:
             self.store.upsert_players(list(players.values()))
             for player_id, team_name, s in stats:
                 self.store.upsert_player_stats(player_id, cat, team_name, s)
+            # Stats au niveau équipe (possession, tirs, totaux...).
+            for ts in parsers.parse_team_stats(soup, cat):
+                self.store.upsert_team_stats(ts["team_name"], cat, ts["team_id"], ts["stats"])
 
     def scrape_live_native(self):
         """Source live : corrige le retard de fbref (scores + classement)."""

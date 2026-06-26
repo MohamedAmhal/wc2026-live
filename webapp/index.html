@@ -180,6 +180,47 @@
   .goal .min{font-family:var(--font-num);color:var(--muted)}
   .goal-empty{font-size:12px;color:var(--muted)}
   nav button .livedot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent-2);margin-left:5px;vertical-align:middle;animation:pulse 1.6s infinite}
+  /* team screen */
+  [data-team]{cursor:pointer}
+  .tm[data-team]{text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+  .screen{position:fixed;inset:0;z-index:50;background:var(--ground);overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .screen-bar{position:sticky;top:0;background:rgba(10,14,28,.95);backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;padding:14px 16px}
+  .screen-bar button{background:none;border:0;color:var(--accent);font-size:15px;font-weight:700;cursor:pointer}
+  #ts-title{font-family:var(--font-display);font-weight:800;font-stretch:condensed;text-transform:uppercase;letter-spacing:.04em;font-size:20px}
+  .screen-body{padding:16px 14px 60px;max-width:760px;margin:0 auto}
+  .th-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;
+    display:flex;flex-direction:column;gap:10px;align-items:flex-start;position:relative}
+  .th-sub{color:var(--muted);font-size:13px}
+  .th-form{display:flex;gap:5px}
+  .fc{width:22px;height:22px;border-radius:6px;display:grid;place-items:center;font-family:var(--font-num);font-size:12px;font-weight:700;color:#06121f}
+  .fc.V{background:var(--accent)}.fc.N{background:var(--muted)}.fc.D{background:var(--accent-2);color:#fff}
+  .th-note{position:absolute;top:14px;right:16px;font-family:var(--font-display);font-weight:800;font-size:30px;color:var(--accent);line-height:1}
+  .th-note small{font-size:13px;color:var(--muted)}
+  .th3{font-family:var(--font-display);font-weight:800;font-stretch:condensed;text-transform:uppercase;letter-spacing:.05em;font-size:15px;color:var(--muted);margin:20px 2px 9px}
+  .chips{display:flex;flex-wrap:wrap;gap:7px}
+  .chip{background:var(--panel-2);border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:13px;font-weight:600}
+  .chip.good{color:var(--accent);border-color:rgba(43,224,139,.4)}
+  .chip.bad{color:#ff9ebd;border-color:rgba(255,46,109,.4)}
+  .ttiles{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+  .ttile{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px}
+  .ttile .tv{font-family:var(--font-display);font-weight:800;font-size:23px;line-height:1}
+  .ttile .tl{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-top:4px}
+  .timing{display:flex;gap:6px;align-items:flex-end;height:120px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 10px 6px}
+  .tcol{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:4px}
+  .tbars{flex:1;display:flex;align-items:flex-end;gap:3px}
+  .tbars span{width:9px;border-radius:3px 3px 0 0;transition:height .6s cubic-bezier(.2,.8,.2,1)}
+  .tbars .sb{background:var(--accent)}.tbars .cb{background:var(--accent-2)}
+  .tcol .tlbl{font-size:9px;color:var(--muted);font-family:var(--font-num)}
+  .tlegend{display:flex;gap:16px;justify-content:center;font-size:11px;color:var(--muted);margin-top:8px}
+  .tlegend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:middle}
+  .tlegend .sg{background:var(--accent)}.tlegend .cg{background:var(--accent-2)}
+  .log{display:flex;flex-direction:column;gap:6px}
+  .logrow{display:grid;grid-template-columns:auto auto 1fr auto;gap:10px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:9px 12px}
+  .lr-res{width:20px;height:20px;border-radius:6px;display:grid;place-items:center;font-size:11px;font-weight:700;color:#06121f;font-family:var(--font-num)}
+  .lr-res.V{background:var(--accent)}.lr-res.N{background:var(--muted)}.lr-res.D{background:var(--accent-2);color:#fff}
+  .lr-date{color:var(--muted);font-size:11px;font-family:var(--font-num)}
+  .lr-opp{font-weight:600;font-size:13px}.lr-sc{font-weight:700;font-family:var(--font-num)}
   .err{color:var(--muted);text-align:center;padding:40px 20px}
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.fill{transition:none}}
 </style>
@@ -256,6 +297,11 @@
   </section>
 </main>
 
+<div id="team-screen" class="screen" hidden>
+  <div class="screen-bar"><button id="ts-back">← Retour</button><span id="ts-title"></span></div>
+  <div class="screen-body"></div>
+</div>
+
 <script>
 const DATA_URL = "data.json";
 let DATA = null;
@@ -295,7 +341,7 @@ function renderGroups(groups){
       const gd=(t.gd>0?"+":"")+t.gd;
       return `<tr class="${z}">
         <td><span class="pos">${t.rank}</span></td>
-        <td class="tm">${esc(t.name)}</td>
+        <td class="tm" data-team="${esc(t.name)}">${esc(t.name)}</td>
         <td class="num">${t.mp}</td>
         <td class="gd">${gd}</td>
         <td class="pts">${t.pts}</td></tr>`;
@@ -385,7 +431,7 @@ function renderStats(data){
 
   renderTable("power", [
     {h:"#", k:"pos", cls:"rk"},
-    {h:"Équipe", cls:"l nm", render:r=>esc(r.team)},
+    {h:"Équipe", cls:"l nm", render:r=>`<span data-team="${esc(r.team)}">${esc(r.team)}</span>`},
     {h:"Pts", k:"pts", cls:"n"},
     {h:"BM", k:"gf", cls:"n"},
     {h:"Diff", cls:"n", render:r=>(r.gd>0?"+":"")+r.gd},
@@ -469,13 +515,70 @@ function renderEvents(data){
     now.append(el(`<div class="err">Aucun match en direct pour le moment.<br>Reviens pendant un match ⚽</div>`));
   }
   const res = document.getElementById("live-results"); res.innerHTML="";
-  (ev.results||[]).forEach(m=>res.append(goalCard(m,false)));
+  (ev.results||[]).slice(0,30).forEach(m=>res.append(goalCard(m,false)));
   if(!(ev.results||[]).length) res.append(el(`<div class="err">Pas encore de résultats.</div>`));
   // pastille rouge sur l'onglet si des matchs sont en direct
   const tabBtn=document.querySelector('#tabs button[data-tab="live"]');
   if(tabBtn && ev.live && ev.live.length && !tabBtn.querySelector(".livedot"))
     tabBtn.insertAdjacentHTML("beforeend",'<span class="livedot"></span>');
 }
+// ---- écran d'équipe ----
+const _chip=(t,c)=>`<span class="chip ${c||''}">${esc(t)}</span>`;
+const _formChips=(f)=>(f&&f.length)?f.map(r=>`<span class="fc ${r}">${r}</span>`).join(""):'<span class="th-sub">—</span>';
+const _tile=(v,l,s)=>`<div class="ttile"><div class="tv num">${v==null?'–':esc(v)}${(v==null?'':(s||''))}</div><div class="tl">${l}</div></div>`;
+function _timingChart(tm){
+  const lab=["0-15","16-30","31-45","46-60","61-75","76+"];
+  const max=Math.max(1,...(tm.scored||[]),...(tm.conceded||[]));
+  let c="";
+  for(let i=0;i<6;i++){
+    const s=tm.scored[i]||0, cc=tm.conceded[i]||0;
+    c+=`<div class="tcol"><div class="tbars">
+      <span class="sb" style="height:${Math.round(s/max*100)}%" title="${s} marqués"></span>
+      <span class="cb" style="height:${Math.round(cc/max*100)}%" title="${cc} encaissés"></span></div>
+      <div class="tlbl">${lab[i]}</div></div>`;
+  }
+  return `<div class="timing">${c}</div><div class="tlegend"><span><i class="sg"></i>marqués</span><span><i class="cg"></i>encaissés</span></div>`;
+}
+function renderTeam(name){
+  const t=(DATA.teams||{})[name];
+  const body=document.querySelector("#team-screen .screen-body");
+  document.getElementById("ts-title").textContent=name;
+  if(!t){body.innerHTML='<div class="err">Données indisponibles pour cette équipe.</div>';return;}
+  const tiles=[_tile(t.possession,"Possession","%"),_tile(t.shots,"Tirs"),_tile(t.accuracy,"Précision","%"),
+    _tile(t.conversion,"Conversion","%"),_tile(t.clean_sheets,"Clean sheets"),_tile(t.ppg,"Pts/match"),
+    _tile(t.gf_pm,"Buts/match"),_tile(t.ga_pm,"Encaissés/m"),_tile(t.cards_y+"/"+t.cards_r,"🟨/🟥")].join("");
+  const sq=(t.squad||[]).map(p=>`<tr><td class="l nm">${esc(p.name)}</td><td>${esc(p.pos||'')}</td>
+    <td class="n">${p.goals}</td><td class="n">${p.assists}</td><td class="n">${p.shots==null?'–':p.shots}</td><td class="n">${p.minutes}</td></tr>`).join("");
+  const log=(t.log||[]).slice().reverse().map(m=>`<div class="logrow"><span class="lr-res ${m.res}">${m.res}</span>
+    <span class="lr-date">${esc(m.date)}</span><span class="lr-opp">${esc(m.opp)}</span><span class="lr-sc">${m.gf}-${m.ga}</span></div>`).join("");
+  body.innerHTML=`
+    <div class="th-card">
+      <div class="th-sub">Gr. ${esc((t.group||'').replace('Group ',''))} · ${t.rank}<sup>e</sup> · ${t.pts} pts · ${t.w}-${t.d}-${t.l}</div>
+      <div class="th-form">${_formChips(t.form)}</div>
+      ${t.note!=null?`<div class="th-note num">${t.note}<small>/20</small></div>`:""}
+    </div>
+    ${t.strengths&&t.strengths.length?`<h3 class="th3">Points forts</h3><div class="chips">${t.strengths.map(s=>_chip("▲ "+s,"good")).join("")}</div>`:""}
+    ${t.weaknesses&&t.weaknesses.length?`<h3 class="th3">Points faibles</h3><div class="chips">${t.weaknesses.map(s=>_chip("▼ "+s,"bad")).join("")}</div>`:""}
+    ${t.style&&t.style.length?`<h3 class="th3">Profil de jeu</h3><div class="chips">${t.style.map(s=>_chip(s)).join("")}</div>`:""}
+    <h3 class="th3">Indicateurs</h3><div class="ttiles">${tiles}</div>
+    <h3 class="th3">Quand l'équipe marque / encaisse</h3>${_timingChart(t.timing||{scored:[],conceded:[]})}
+    <h3 class="th3">Effectif</h3>
+    <div class="dtable"><table class="dt"><thead><tr><th class="l">Joueur</th><th>Poste</th><th>B</th><th>PD</th><th>Tirs</th><th>Min</th></tr></thead><tbody>${sq||''}</tbody></table></div>
+    <h3 class="th3">Journal des matchs</h3><div class="log">${log||'<div class="err">Aucun match joué.</div>'}</div>`;
+}
+function openTeam(name){
+  if(!(DATA.teams||{})[name]) return;
+  renderTeam(name);
+  document.getElementById("team-screen").hidden=false;
+  document.body.style.overflow="hidden";
+  try{ history.pushState({team:name},""); }catch(e){}
+  window.scrollTo(0,0);
+}
+function closeTeam(){
+  document.getElementById("team-screen").hidden=true;
+  document.body.style.overflow="";
+}
+
 function selectTab(name){
   document.querySelectorAll("#tabs button").forEach(b=>b.setAttribute("aria-selected", b.dataset.tab===name));
   document.querySelectorAll(".tab").forEach(s=>s.classList.toggle("on", s.id==="tab-"+name));
@@ -487,6 +590,17 @@ function wire(){
   document.querySelectorAll("#scorer-toggle button").forEach(b=>b.onclick=()=>{
     document.querySelectorAll("#scorer-toggle button").forEach(x=>x.setAttribute("aria-selected",x===b));
     renderScorers(b.dataset.k);
+  });
+  // écran d'équipe : ouverture au clic, fermeture, bouton retour matériel
+  document.getElementById("ts-back").onclick=()=>{
+    if(history.state&&history.state.team) history.back(); else closeTeam();
+  };
+  window.addEventListener("popstate",()=>{
+    if(!document.getElementById("team-screen").hidden) closeTeam();
+  });
+  document.addEventListener("click",e=>{
+    const b=e.target.closest("[data-team]");
+    if(b){ e.preventDefault(); openTeam(b.getAttribute("data-team")); }
   });
 }
 

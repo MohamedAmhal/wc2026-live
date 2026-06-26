@@ -80,6 +80,15 @@ CREATE TABLE IF NOT EXISTS player_stats (
     FOREIGN KEY (player_id) REFERENCES players(player_id)
 );
 
+-- Stats au niveau équipe (depuis fbref : possession, tirs, totaux...)
+CREATE TABLE IF NOT EXISTS team_stats (
+    team_name   TEXT,
+    category    TEXT,
+    team_id     TEXT,
+    stats_json  TEXT,
+    PRIMARY KEY (team_name, category)
+);
+
 -- Stades / lieux (dérivés des matchs)
 CREATE TABLE IF NOT EXISTS venues (
     venue_name      TEXT PRIMARY KEY,
