@@ -145,8 +145,29 @@ def build():
     results.sort(key=lambda x: (x["date"], x["time"]), reverse=True)
     upcoming.sort(key=lambda x: (x["date"], x["time"]))
 
-    log.info("Événements : %d en direct, %d résultats, %d à venir",
-             len(live), len(results), len(upcoming))
-    # results non tronqué (timing des buts par équipe en a besoin) ; la PWA
-    # n'affiche que les premiers.
-    return {"live": live, "results": results, "upcoming": upcoming[:24]}
+    # --- Tableau à élimination directe (se remplit au fil du tournoi) ----
+    ROUND_ORDER = ["r32", "r16", "qf", "sf", "final"]
+    LABELS = {"r32": "16es de finale", "r16": "8es de finale",
+              "qf": "Quarts de finale", "sf": "Demi-finales", "final": "Finale"}
+    by_round = {k: [] for k in ROUND_ORDER}
+    for g in games:
+        ty = g.get("type")
+        if ty not in by_round:
+            continue
+        iso, hh = _parse_date(g.get("local_date"))
+        st = _status(g)
+        by_round[ty].append({
+            "home": g.get("home_team_name_en"), "away": g.get("away_team_name_en"),
+            "hs": _to_int(g.get("home_score")), "as": _to_int(g.get("away_score")),
+            "date": iso, "time": hh, "status": st,
+            "minute": g.get("time_elapsed") if st == "live" else None,
+            "id": str(g.get("id") or ""),
+        })
+    for k in by_round:
+        by_round[k].sort(key=lambda m: (m["date"], m["time"], m["id"]))
+    bracket = [{"key": k, "label": LABELS[k], "matches": by_round[k]} for k in ROUND_ORDER]
+
+    log.info("Événements : %d en direct, %d résultats, %d à venir, bracket=%s",
+             len(live), len(results), len(upcoming),
+             {b["key"]: len(b["matches"]) for b in bracket})
+    return {"live": live, "results": results, "upcoming": upcoming[:24], "bracket": bracket}

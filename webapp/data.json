@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T16:32:38",
+  "generated_at": "2026-06-26T18:07:45",
   "summary": {
     "teams": 48,
     "groups": 12,
@@ -1012,8 +1012,8 @@
     {
       "home": "Senegal",
       "away": "Iraq",
-      "hs": 0,
-      "as": 0,
+      "hs": null,
+      "as": null,
       "group": "I",
       "matchday": "3",
       "date": "2026-06-26",
@@ -1023,8 +1023,8 @@
     {
       "home": "Norway",
       "away": "France",
-      "hs": 0,
-      "as": 0,
+      "hs": null,
+      "as": null,
       "group": "I",
       "matchday": "3",
       "date": "2026-06-26",
@@ -1154,7 +1154,7 @@
     },
     {
       "home": "Brazil",
-      "away": null,
+      "away": "Japan",
       "hs": 0,
       "as": 0,
       "group": "R32",
@@ -1175,7 +1175,7 @@
       "time_paris": "22:30"
     },
     {
-      "home": null,
+      "home": "Netherlands",
       "away": "Morocco",
       "hs": 0,
       "as": 0,
@@ -1186,7 +1186,7 @@
       "time_paris": "03:00 +1"
     },
     {
-      "home": null,
+      "home": "Ivory Coast",
       "away": null,
       "hs": 0,
       "as": 0,
@@ -1242,7 +1242,7 @@
     },
     {
       "home": "United States",
-      "away": null,
+      "away": "Bosnia and Herzegovina",
       "hs": 0,
       "as": 0,
       "group": "R32",
@@ -5206,8 +5206,8 @@
       {
         "home": "Senegal",
         "away": "Iraq",
-        "hs": 0,
-        "as": 0,
+        "hs": null,
+        "as": null,
         "group": "I",
         "matchday": "3",
         "date": "2026-06-26",
@@ -5217,8 +5217,8 @@
       {
         "home": "Norway",
         "away": "France",
-        "hs": 0,
-        "as": 0,
+        "hs": null,
+        "as": null,
         "group": "I",
         "matchday": "3",
         "date": "2026-06-26",
@@ -5348,7 +5348,7 @@
       },
       {
         "home": "Brazil",
-        "away": null,
+        "away": "Japan",
         "hs": 0,
         "as": 0,
         "group": "R32",
@@ -5369,7 +5369,7 @@
         "time_paris": "22:30"
       },
       {
-        "home": null,
+        "home": "Netherlands",
         "away": "Morocco",
         "hs": 0,
         "as": 0,
@@ -5380,7 +5380,7 @@
         "time_paris": "03:00 +1"
       },
       {
-        "home": null,
+        "home": "Ivory Coast",
         "away": null,
         "hs": 0,
         "as": 0,
@@ -5436,7 +5436,7 @@
       },
       {
         "home": "United States",
-        "away": null,
+        "away": "Bosnia and Herzegovina",
         "hs": 0,
         "as": 0,
         "group": "R32",
@@ -5466,6 +5466,379 @@
         "date": "2026-07-02",
         "time": "19:00",
         "time_paris": "01:00 +1"
+      }
+    ],
+    "bracket": [
+      {
+        "key": "r32",
+        "label": "16es de finale",
+        "matches": [
+          {
+            "home": "South Africa",
+            "away": "Canada",
+            "hs": 0,
+            "as": 0,
+            "date": "2026-06-28",
+            "time": "12:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "73"
+          },
+          {
+            "home": "Brazil",
+            "away": "Japan",
+            "hs": 0,
+            "as": 0,
+            "date": "2026-06-29",
+            "time": "12:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "76"
+          },
+          {
+            "home": "Germany",
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-06-29",
+            "time": "16:30",
+            "status": "upcoming",
+            "minute": null,
+            "id": "74"
+          },
+          {
+            "home": "Netherlands",
+            "away": "Morocco",
+            "hs": 0,
+            "as": 0,
+            "date": "2026-06-29",
+            "time": "19:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "75"
+          },
+          {
+            "home": "Ivory Coast",
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-06-30",
+            "time": "12:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "78"
+          },
+          {
+            "home": null,
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-06-30",
+            "time": "17:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "77"
+          },
+          {
+            "home": "Mexico",
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-06-30",
+            "time": "19:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "79"
+          },
+          {
+            "home": null,
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-07-01",
+            "time": "12:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "80"
+          },
+          {
+            "home": null,
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-07-01",
+            "time": "13:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "82"
+          },
+          {
+            "home": "United States",
+            "away": "Bosnia and Herzegovina",
+            "hs": 0,
+            "as": 0,
+            "date": "2026-07-01",
+            "time": "17:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "81"
+          },
+          {
+            "home": null,
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-07-02",
+            "time": "12:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "84"
+          },
+          {
+            "home": null,
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-07-02",
+            "time": "19:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "83"
+          },
+          {
+            "home": "Switzerland",
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-07-02",
+            "time": "20:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "85"
+          },
+          {
+            "home": "Australia",
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-07-03",
+            "time": "13:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "88"
+          },
+          {
+            "home": "Argentina",
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-07-03",
+            "time": "18:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "86"
+          },
+          {
+            "home": null,
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-07-03",
+            "time": "20:30",
+            "status": "upcoming",
+            "minute": null,
+            "id": "87"
+          }
+        ]
+      },
+      {
+        "key": "r16",
+        "label": "8es de finale",
+        "matches": [
+          {
+            "home": null,
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-07-04",
+            "time": "12:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "90"
+          },
+          {
+            "home": null,
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-07-04",
+            "time": "17:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "89"
+          },
+          {
+            "home": null,
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-07-05",
+            "time": "16:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "91"
+          },
+          {
+            "home": null,
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-07-05",
+            "time": "18:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "92"
+          },
+          {
+            "home": null,
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-07-06",
+            "time": "14:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "93"
+          },
+          {
+            "home": null,
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-07-06",
+            "time": "17:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "94"
+          },
+          {
+            "home": null,
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-07-07",
+            "time": "12:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "95"
+          },
+          {
+            "home": null,
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-07-07",
+            "time": "13:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "96"
+          }
+        ]
+      },
+      {
+        "key": "qf",
+        "label": "Quarts de finale",
+        "matches": [
+          {
+            "home": null,
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-07-09",
+            "time": "16:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "97"
+          },
+          {
+            "home": null,
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-07-10",
+            "time": "12:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "98"
+          },
+          {
+            "home": null,
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-07-11",
+            "time": "17:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "99"
+          },
+          {
+            "home": null,
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-07-11",
+            "time": "20:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "100"
+          }
+        ]
+      },
+      {
+        "key": "sf",
+        "label": "Demi-finales",
+        "matches": [
+          {
+            "home": null,
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-07-14",
+            "time": "14:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "101"
+          },
+          {
+            "home": null,
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-07-15",
+            "time": "15:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "102"
+          }
+        ]
+      },
+      {
+        "key": "final",
+        "label": "Finale",
+        "matches": [
+          {
+            "home": null,
+            "away": null,
+            "hs": 0,
+            "as": 0,
+            "date": "2026-07-19",
+            "time": "15:00",
+            "status": "upcoming",
+            "minute": null,
+            "id": "104"
+          }
+        ]
       }
     ]
   },

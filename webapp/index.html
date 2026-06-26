@@ -180,6 +180,20 @@
   .goal .min{font-family:var(--font-num);color:var(--muted)}
   .goal-empty{font-size:12px;color:var(--muted)}
   nav button .livedot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent-2);margin-left:5px;vertical-align:middle;animation:pulse 1.6s infinite}
+  /* bracket */
+  .bracket{display:flex;gap:14px;overflow-x:auto;padding:4px 2px 14px;-webkit-overflow-scrolling:touch}
+  .brcol{min-width:210px;flex:none;display:flex;flex-direction:column;gap:9px}
+  .brhead{font-family:var(--font-display);font-weight:800;font-stretch:condensed;text-transform:uppercase;
+    letter-spacing:.05em;font-size:14px;color:var(--muted);padding:2px}
+  .brcard{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:10px 11px}
+  .brcard.islive{border-color:var(--accent-2);box-shadow:0 0 0 1px var(--accent-2) inset}
+  .brteam{font-size:13px;font-weight:600;padding:3px 0}
+  .brteam .tbd{color:var(--muted);font-weight:400;font-style:italic}
+  .brmid{display:flex;align-items:center;justify-content:center;margin:3px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:4px 0}
+  .brmid b{font-family:var(--font-num);font-weight:800;font-size:16px}
+  .brmid .vs{font-family:var(--font-num);color:var(--muted);font-size:12px}
+  .brmid .lv{color:var(--accent-2);font-weight:700;font-size:12px}
+  .brdate{font-size:10px;color:var(--muted);font-family:var(--font-num);margin-top:6px;text-align:center}
   /* team screen */
   [data-team]{cursor:pointer}
   .tm[data-team]{text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
@@ -235,6 +249,7 @@
     <button data-tab="groups" aria-selected="true">Groupes</button>
     <button data-tab="live" aria-selected="false">En direct</button>
     <button data-tab="matches" aria-selected="false">Matchs</button>
+    <button data-tab="bracket" aria-selected="false">Tableau</button>
     <button data-tab="scorers" aria-selected="false">Buteurs</button>
     <button data-tab="stats" aria-selected="false">Analyse</button>
   </nav>
@@ -261,6 +276,12 @@
     <h2 class="sec">À venir</h2>
     <p class="hint">🏟 heure sur place · 🇫🇷 heure de Paris</p>
     <div id="upcoming"></div>
+  </section>
+
+  <section class="tab" id="tab-bracket">
+    <h2 class="sec">Tableau final · 16es → finale</h2>
+    <p class="hint">Se remplit au fil du tournoi. Touchez une équipe pour sa fiche. ← faites défiler →</p>
+    <div id="bracket"></div>
   </section>
 
   <section class="tab" id="tab-scorers">
@@ -522,6 +543,27 @@ function renderEvents(data){
   if(tabBtn && ev.live && ev.live.length && !tabBtn.querySelector(".livedot"))
     tabBtn.insertAdjacentHTML("beforeend",'<span class="livedot"></span>');
 }
+// ---- tableau (bracket) ----
+function _brTeam(n){ return n?`<span data-team="${esc(n)}">${esc(n)}</span>`:'<span class="tbd">À déterminer</span>'; }
+function bracketCard(m){
+  const fin=m.status==="finished", live=m.status==="live";
+  const mid=fin?`<b>${m.hs}-${m.as}</b>`
+    :(live?`<span class="lv">⚽ ${esc(m.minute||"live")}</span>`:`<span class="vs">${esc(m.time||"vs")}</span>`);
+  return `<div class="brcard ${live?'islive':''}">
+    <div class="brteam">${_brTeam(m.home)}</div>
+    <div class="brmid">${mid}</div>
+    <div class="brteam">${_brTeam(m.away)}</div>
+    ${m.date?`<div class="brdate">${esc(m.date)}</div>`:""}</div>`;
+}
+function renderBracket(data){
+  const b=(data.events&&data.events.bracket)||[];
+  const wrap=document.getElementById("bracket");
+  if(!b.length){wrap.innerHTML='<div class="err">Tableau pas encore disponible.</div>';return;}
+  wrap.innerHTML=`<div class="bracket">${b.map(r=>
+    `<div class="brcol"><div class="brhead">${esc(r.label)}</div>${
+      r.matches.map(bracketCard).join("")||'<div class="err">—</div>'}</div>`).join("")}</div>`;
+}
+
 // ---- écran d'équipe ----
 const _chip=(t,c)=>`<span class="chip ${c||''}">${esc(t)}</span>`;
 const _formChips=(f)=>(f&&f.length)?f.map(r=>`<span class="fc ${r}">${r}</span>`).join(""):'<span class="th-sub">—</span>';
@@ -611,6 +653,7 @@ function wire(){
     renderTicker(DATA.summary);
     renderGroups(DATA.groups);
     renderEvents(DATA);
+    renderBracket(DATA);
     renderMatches(DATA);
     renderStats(DATA);
     wire();

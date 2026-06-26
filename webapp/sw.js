@@ -1,5 +1,5 @@
 // Service worker : app installable + hors-ligne, données toujours fraîches.
-const CACHE = "mondial26-v3";
+const CACHE = "mondial26-v4";
 const SHELL = ["./", "./index.html", "./manifest.webmanifest", "./icon.svg"];
 
 self.addEventListener("install", (e) => {
