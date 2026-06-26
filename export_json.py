@@ -257,7 +257,12 @@ def build(db_path=config.DB_PATH, generated_at=None):
         events = wc26_events.build()
     except Exception:
         log.exception("Événements live indisponibles ce run.")
-        events = {"live": [], "results": []}
+        events = {"live": [], "results": [], "upcoming": []}
+
+    # « À venir » vient de l'API (statut notstarted) : un match commencé en sort
+    # automatiquement (il passe en direct). Repli sur la base si l'API est down.
+    if events.get("upcoming"):
+        upcoming = events["upcoming"]
 
     data = {
         "generated_at": (generated_at or dt.datetime.now()).isoformat(timespec="seconds"),

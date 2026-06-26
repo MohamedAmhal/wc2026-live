@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T15:15:56",
+  "generated_at": "2026-06-26T15:24:33",
   "summary": {
     "teams": 48,
     "groups": 12,
@@ -1010,137 +1010,244 @@
   ],
   "matches_upcoming": [
     {
-      "date": "2026-06-25",
-      "time": "16:00(22:00)",
-      "home": "Curaçao",
-      "away": "Côte d'Ivoire",
-      "venue": "Lincoln Financial Field (Neutral Site)"
-    },
-    {
-      "date": "2026-06-25",
-      "time": "16:00(22:00)",
-      "home": "Ecuador",
-      "away": "Germany",
-      "venue": "MetLife Stadium (Neutral Site)"
-    },
-    {
-      "date": "2026-06-25",
-      "time": "18:00(01:00)",
-      "home": "Japan",
-      "away": "Sweden",
-      "venue": "AT&T Stadium (Neutral Site)"
-    },
-    {
-      "date": "2026-06-25",
-      "time": "18:00(01:00)",
-      "home": "Tunisia",
-      "away": "Netherlands",
-      "venue": "GEHA Field at Arrowhead Stadium (Neutral Site)"
-    },
-    {
-      "date": "2026-06-25",
-      "time": "19:00(04:00)",
-      "home": "Paraguay",
-      "away": "Australia",
-      "venue": "Levi's Stadium (Neutral Site)"
-    },
-    {
-      "date": "2026-06-25",
-      "time": "19:00(04:00)",
-      "home": "Türkiye",
-      "away": "United States",
-      "venue": "SoFi Stadium (Neutral Site)"
-    },
-    {
-      "date": "2026-06-26",
-      "time": "15:00(21:00)",
-      "home": "Norway",
-      "away": "France",
-      "venue": "Gillette Stadium (Neutral Site)"
-    },
-    {
-      "date": "2026-06-26",
-      "time": "15:00(21:00)",
       "home": "Senegal",
       "away": "Iraq",
-      "venue": "BMO Field (Neutral Site)"
+      "hs": 0,
+      "as": 0,
+      "group": "I",
+      "matchday": "3",
+      "date": "2026-06-26",
+      "time": "15:00"
     },
     {
+      "home": "Norway",
+      "away": "France",
+      "hs": 0,
+      "as": 0,
+      "group": "I",
+      "matchday": "3",
       "date": "2026-06-26",
-      "time": "18:00(02:00)",
+      "time": "15:00"
+    },
+    {
       "home": "Uruguay",
       "away": "Spain",
-      "venue": "Estadio Akron (Neutral Site)"
+      "hs": 0,
+      "as": 0,
+      "group": "H",
+      "matchday": "3",
+      "date": "2026-06-26",
+      "time": "18:00"
     },
     {
-      "date": "2026-06-26",
-      "time": "19:00(02:00)",
-      "home": "Cabo Verde",
+      "home": "Cape Verde",
       "away": "Saudi Arabia",
-      "venue": "Reliant Stadium (Neutral Site)"
+      "hs": 0,
+      "as": 0,
+      "group": "H",
+      "matchday": "3",
+      "date": "2026-06-26",
+      "time": "19:00"
     },
     {
-      "date": "2026-06-26",
-      "time": "20:00(05:00)",
       "home": "Egypt",
-      "away": "IR Iran",
-      "venue": "Lumen Field (Neutral Site)"
+      "away": "Iran",
+      "hs": 0,
+      "as": 0,
+      "group": "G",
+      "matchday": "3",
+      "date": "2026-06-26",
+      "time": "20:00"
     },
     {
-      "date": "2026-06-26",
-      "time": "20:00(05:00)",
       "home": "New Zealand",
       "away": "Belgium",
-      "venue": "BC Place Stadium (Neutral Site)"
+      "hs": 0,
+      "as": 0,
+      "group": "G",
+      "matchday": "3",
+      "date": "2026-06-26",
+      "time": "20:00"
     },
     {
-      "date": "2026-06-27",
-      "time": "17:00(23:00)",
       "home": "Panama",
       "away": "England",
-      "venue": "MetLife Stadium (Neutral Site)"
+      "hs": 0,
+      "as": 0,
+      "group": "L",
+      "matchday": "3",
+      "date": "2026-06-27",
+      "time": "17:00"
     },
     {
-      "date": "2026-06-27",
-      "time": "17:00(23:00)",
       "home": "Croatia",
       "away": "Ghana",
-      "venue": "Lincoln Financial Field (Neutral Site)"
+      "hs": 0,
+      "as": 0,
+      "group": "L",
+      "matchday": "3",
+      "date": "2026-06-27",
+      "time": "17:00"
     },
     {
+      "home": "Democratic Republic of the Congo",
+      "away": "Uzbekistan",
+      "hs": 0,
+      "as": 0,
+      "group": "K",
+      "matchday": "3",
       "date": "2026-06-27",
-      "time": "19:30(01:30)",
+      "time": "19:30"
+    },
+    {
       "home": "Colombia",
       "away": "Portugal",
-      "venue": "Hard Rock Stadium (Neutral Site)"
+      "hs": 0,
+      "as": 0,
+      "group": "K",
+      "matchday": "3",
+      "date": "2026-06-27",
+      "time": "19:30"
     },
     {
-      "date": "2026-06-27",
-      "time": "19:30(01:30)",
-      "home": "Congo DR",
-      "away": "Uzbekistan",
-      "venue": "Mercedes-Benz Stadium (Neutral Site)"
-    },
-    {
-      "date": "2026-06-27",
-      "time": "21:00(04:00)",
       "home": "Jordan",
       "away": "Argentina",
-      "venue": "AT&T Stadium (Neutral Site)"
+      "hs": 0,
+      "as": 0,
+      "group": "J",
+      "matchday": "3",
+      "date": "2026-06-27",
+      "time": "21:00"
     },
     {
-      "date": "2026-06-27",
-      "time": "21:00(04:00)",
       "home": "Algeria",
       "away": "Austria",
-      "venue": "GEHA Field at Arrowhead Stadium (Neutral Site)"
+      "hs": 0,
+      "as": 0,
+      "group": "J",
+      "matchday": "3",
+      "date": "2026-06-27",
+      "time": "21:00"
     },
     {
-      "date": "2026-06-28",
-      "time": "12:00(21:00)",
       "home": "South Africa",
       "away": "Canada",
-      "venue": "SoFi Stadium (Neutral Site)"
+      "hs": 0,
+      "as": 0,
+      "group": "R32",
+      "matchday": "4",
+      "date": "2026-06-28",
+      "time": "12:00"
+    },
+    {
+      "home": "Brazil",
+      "away": null,
+      "hs": 0,
+      "as": 0,
+      "group": "R32",
+      "matchday": "4",
+      "date": "2026-06-29",
+      "time": "12:00"
+    },
+    {
+      "home": "Germany",
+      "away": null,
+      "hs": 0,
+      "as": 0,
+      "group": "R32",
+      "matchday": "4",
+      "date": "2026-06-29",
+      "time": "16:30"
+    },
+    {
+      "home": null,
+      "away": "Morocco",
+      "hs": 0,
+      "as": 0,
+      "group": "R32",
+      "matchday": "4",
+      "date": "2026-06-29",
+      "time": "19:00"
+    },
+    {
+      "home": null,
+      "away": null,
+      "hs": 0,
+      "as": 0,
+      "group": "R32",
+      "matchday": "4",
+      "date": "2026-06-30",
+      "time": "12:00"
+    },
+    {
+      "home": null,
+      "away": null,
+      "hs": 0,
+      "as": 0,
+      "group": "R32",
+      "matchday": "4",
+      "date": "2026-06-30",
+      "time": "17:00"
+    },
+    {
+      "home": "Mexico",
+      "away": null,
+      "hs": 0,
+      "as": 0,
+      "group": "R32",
+      "matchday": "4",
+      "date": "2026-06-30",
+      "time": "19:00"
+    },
+    {
+      "home": null,
+      "away": null,
+      "hs": 0,
+      "as": 0,
+      "group": "R32",
+      "matchday": "4",
+      "date": "2026-07-01",
+      "time": "12:00"
+    },
+    {
+      "home": null,
+      "away": null,
+      "hs": 0,
+      "as": 0,
+      "group": "R32",
+      "matchday": "4",
+      "date": "2026-07-01",
+      "time": "13:00"
+    },
+    {
+      "home": "United States",
+      "away": null,
+      "hs": 0,
+      "as": 0,
+      "group": "R32",
+      "matchday": "4",
+      "date": "2026-07-01",
+      "time": "17:00"
+    },
+    {
+      "home": null,
+      "away": null,
+      "hs": 0,
+      "as": 0,
+      "group": "R32",
+      "matchday": "4",
+      "date": "2026-07-02",
+      "time": "12:00"
+    },
+    {
+      "home": null,
+      "away": null,
+      "hs": 0,
+      "as": 0,
+      "group": "R32",
+      "matchday": "4",
+      "date": "2026-07-02",
+      "time": "19:00"
     }
   ],
   "scorers": [
@@ -3433,7 +3540,8 @@
         "as": 2,
         "group": "D",
         "matchday": "3",
-        "date": "06/25/2026 19:00",
+        "date": "2026-06-25",
+        "time": "19:00",
         "goals": [
           {
             "player": "Auston Trusty",
@@ -3469,7 +3577,8 @@
         "as": 0,
         "group": "D",
         "matchday": "3",
-        "date": "06/25/2026 19:00",
+        "date": "2026-06-25",
+        "time": "19:00",
         "goals": []
       },
       {
@@ -3479,7 +3588,8 @@
         "as": 1,
         "group": "F",
         "matchday": "3",
-        "date": "06/25/2026 18:00",
+        "date": "2026-06-25",
+        "time": "18:00",
         "goals": [
           {
             "player": "Daizen Maeda",
@@ -3500,7 +3610,8 @@
         "as": 3,
         "group": "F",
         "matchday": "3",
-        "date": "06/25/2026 18:00",
+        "date": "2026-06-25",
+        "time": "18:00",
         "goals": [
           {
             "player": "Alis Skhiri",
@@ -3531,7 +3642,8 @@
         "as": 2,
         "group": "E",
         "matchday": "3",
-        "date": "06/25/2026 16:00",
+        "date": "2026-06-25",
+        "time": "16:00",
         "goals": [
           {
             "player": "Nikvlas Ph Ph",
@@ -3552,7 +3664,8 @@
         "as": 1,
         "group": "E",
         "matchday": "3",
-        "date": "06/25/2026 16:00",
+        "date": "2026-06-25",
+        "time": "16:00",
         "goals": [
           {
             "player": "Leroy Sané",
@@ -3578,7 +3691,8 @@
         "as": 3,
         "group": "A",
         "matchday": "3",
-        "date": "06/24/2026 19:00",
+        "date": "2026-06-24",
+        "time": "19:00",
         "goals": [
           {
             "player": "Mateo Chávez",
@@ -3604,7 +3718,8 @@
         "as": 0,
         "group": "A",
         "matchday": "3",
-        "date": "06/24/2026 19:00",
+        "date": "2026-06-24",
+        "time": "19:00",
         "goals": [
           {
             "player": "Taplv Maskv",
@@ -3620,7 +3735,8 @@
         "as": 2,
         "group": "C",
         "matchday": "3",
-        "date": "06/24/2026 18:00",
+        "date": "2026-06-24",
+        "time": "18:00",
         "goals": [
           {
             "player": "Yassine Bounou",
@@ -3661,7 +3777,8 @@
         "as": 3,
         "group": "C",
         "matchday": "3",
-        "date": "06/24/2026 18:00",
+        "date": "2026-06-24",
+        "time": "18:00",
         "goals": [
           {
             "player": "Vinícius Júnior",
@@ -3687,7 +3804,8 @@
         "as": 1,
         "group": "B",
         "matchday": "3",
-        "date": "06/24/2026 12:00",
+        "date": "2026-06-24",
+        "time": "12:00",
         "goals": [
           {
             "player": "Karim Alaibgvvich",
@@ -3718,7 +3836,8 @@
         "as": 1,
         "group": "B",
         "matchday": "3",
-        "date": "06/24/2026 12:00",
+        "date": "2026-06-24",
+        "time": "12:00",
         "goals": [
           {
             "player": "Rubén Vargas",
@@ -3744,7 +3863,8 @@
         "as": 0,
         "group": "K",
         "matchday": "2",
-        "date": "06/23/2026 20:00",
+        "date": "2026-06-23",
+        "time": "20:00",
         "goals": [
           {
             "player": "Dnil Mvnvz",
@@ -3760,7 +3880,8 @@
         "as": 1,
         "group": "L",
         "matchday": "2",
-        "date": "06/23/2026 19:00",
+        "date": "2026-06-23",
+        "time": "19:00",
         "goals": [
           {
             "player": "Ante Budimir",
@@ -3776,7 +3897,8 @@
         "as": 0,
         "group": "L",
         "matchday": "2",
-        "date": "06/23/2026 16:00",
+        "date": "2026-06-23",
+        "time": "16:00",
         "goals": []
       },
       {
@@ -3786,7 +3908,8 @@
         "as": 0,
         "group": "K",
         "matchday": "2",
-        "date": "06/23/2026 12:00",
+        "date": "2026-06-23",
+        "time": "12:00",
         "goals": [
           {
             "player": "Cristiano Ronaldo",
@@ -3822,7 +3945,8 @@
         "as": 2,
         "group": "I",
         "matchday": "2",
-        "date": "06/22/2026 20:00",
+        "date": "2026-06-22",
+        "time": "20:00",
         "goals": [
           {
             "player": "Markvs Hlmgrn Pdrsn",
@@ -3858,7 +3982,8 @@
         "as": 2,
         "group": "J",
         "matchday": "2",
-        "date": "06/22/2026 20:00",
+        "date": "2026-06-22",
+        "time": "20:00",
         "goals": [
           {
             "player": "Al Rashdan",
@@ -3884,7 +4009,8 @@
         "as": 0,
         "group": "I",
         "matchday": "2",
-        "date": "06/22/2026 17:00",
+        "date": "2026-06-22",
+        "time": "17:00",
         "goals": [
           {
             "player": "Kylian Mbappé",
@@ -3910,7 +4036,8 @@
         "as": 0,
         "group": "J",
         "matchday": "2",
-        "date": "06/22/2026 12:00",
+        "date": "2026-06-22",
+        "time": "12:00",
         "goals": [
           {
             "player": "Lionel Messi",
@@ -3931,7 +4058,8 @@
         "as": 3,
         "group": "G",
         "matchday": "2",
-        "date": "06/21/2026 18:00",
+        "date": "2026-06-21",
+        "time": "18:00",
         "goals": [
           {
             "player": "Fin Svrman",
@@ -3962,7 +4090,8 @@
         "as": 2,
         "group": "H",
         "matchday": "2",
-        "date": "06/21/2026 18:00",
+        "date": "2026-06-21",
+        "time": "18:00",
         "goals": [
           {
             "player": "Kevin Pina",
@@ -3993,7 +4122,8 @@
         "as": 0,
         "group": "H",
         "matchday": "2",
-        "date": "06/21/2026 12:00",
+        "date": "2026-06-21",
+        "time": "12:00",
         "goals": [
           {
             "player": "Lamine Yamal",
@@ -4024,7 +4154,8 @@
         "as": 0,
         "group": "G",
         "matchday": "2",
-        "date": "06/21/2026 12:00",
+        "date": "2026-06-21",
+        "time": "12:00",
         "goals": []
       },
       {
@@ -4034,7 +4165,8 @@
         "as": 4,
         "group": "F",
         "matchday": "2",
-        "date": "06/20/2026 22:00",
+        "date": "2026-06-20",
+        "time": "22:00",
         "goals": [
           {
             "player": "Daichi Kamada",
@@ -4065,7 +4197,8 @@
         "as": 0,
         "group": "E",
         "matchday": "2",
-        "date": "06/20/2026 19:00",
+        "date": "2026-06-20",
+        "time": "19:00",
         "goals": []
       },
       {
@@ -4075,7 +4208,8 @@
         "as": 1,
         "group": "E",
         "matchday": "2",
-        "date": "06/20/2026 16:00",
+        "date": "2026-06-20",
+        "time": "16:00",
         "goals": [
           {
             "player": "Franck Kessié",
@@ -4101,7 +4235,8 @@
         "as": 1,
         "group": "F",
         "matchday": "2",
-        "date": "06/20/2026 12:00",
+        "date": "2026-06-20",
+        "time": "12:00",
         "goals": [
           {
             "player": "Brian Brobbey",
@@ -4142,7 +4277,8 @@
         "as": 0,
         "group": "C",
         "matchday": "2",
-        "date": "06/19/2026 21:00",
+        "date": "2026-06-19",
+        "time": "21:00",
         "goals": [
           {
             "player": "Matheus Cunha",
@@ -4168,7 +4304,8 @@
         "as": 1,
         "group": "D",
         "matchday": "2",
-        "date": "06/19/2026 20:00",
+        "date": "2026-06-19",
+        "time": "20:00",
         "goals": [
           {
             "player": "Matías Galarza",
@@ -4176,6 +4313,248 @@
             "team": "away"
           }
         ]
+      }
+    ],
+    "upcoming": [
+      {
+        "home": "Senegal",
+        "away": "Iraq",
+        "hs": 0,
+        "as": 0,
+        "group": "I",
+        "matchday": "3",
+        "date": "2026-06-26",
+        "time": "15:00"
+      },
+      {
+        "home": "Norway",
+        "away": "France",
+        "hs": 0,
+        "as": 0,
+        "group": "I",
+        "matchday": "3",
+        "date": "2026-06-26",
+        "time": "15:00"
+      },
+      {
+        "home": "Uruguay",
+        "away": "Spain",
+        "hs": 0,
+        "as": 0,
+        "group": "H",
+        "matchday": "3",
+        "date": "2026-06-26",
+        "time": "18:00"
+      },
+      {
+        "home": "Cape Verde",
+        "away": "Saudi Arabia",
+        "hs": 0,
+        "as": 0,
+        "group": "H",
+        "matchday": "3",
+        "date": "2026-06-26",
+        "time": "19:00"
+      },
+      {
+        "home": "Egypt",
+        "away": "Iran",
+        "hs": 0,
+        "as": 0,
+        "group": "G",
+        "matchday": "3",
+        "date": "2026-06-26",
+        "time": "20:00"
+      },
+      {
+        "home": "New Zealand",
+        "away": "Belgium",
+        "hs": 0,
+        "as": 0,
+        "group": "G",
+        "matchday": "3",
+        "date": "2026-06-26",
+        "time": "20:00"
+      },
+      {
+        "home": "Panama",
+        "away": "England",
+        "hs": 0,
+        "as": 0,
+        "group": "L",
+        "matchday": "3",
+        "date": "2026-06-27",
+        "time": "17:00"
+      },
+      {
+        "home": "Croatia",
+        "away": "Ghana",
+        "hs": 0,
+        "as": 0,
+        "group": "L",
+        "matchday": "3",
+        "date": "2026-06-27",
+        "time": "17:00"
+      },
+      {
+        "home": "Democratic Republic of the Congo",
+        "away": "Uzbekistan",
+        "hs": 0,
+        "as": 0,
+        "group": "K",
+        "matchday": "3",
+        "date": "2026-06-27",
+        "time": "19:30"
+      },
+      {
+        "home": "Colombia",
+        "away": "Portugal",
+        "hs": 0,
+        "as": 0,
+        "group": "K",
+        "matchday": "3",
+        "date": "2026-06-27",
+        "time": "19:30"
+      },
+      {
+        "home": "Jordan",
+        "away": "Argentina",
+        "hs": 0,
+        "as": 0,
+        "group": "J",
+        "matchday": "3",
+        "date": "2026-06-27",
+        "time": "21:00"
+      },
+      {
+        "home": "Algeria",
+        "away": "Austria",
+        "hs": 0,
+        "as": 0,
+        "group": "J",
+        "matchday": "3",
+        "date": "2026-06-27",
+        "time": "21:00"
+      },
+      {
+        "home": "South Africa",
+        "away": "Canada",
+        "hs": 0,
+        "as": 0,
+        "group": "R32",
+        "matchday": "4",
+        "date": "2026-06-28",
+        "time": "12:00"
+      },
+      {
+        "home": "Brazil",
+        "away": null,
+        "hs": 0,
+        "as": 0,
+        "group": "R32",
+        "matchday": "4",
+        "date": "2026-06-29",
+        "time": "12:00"
+      },
+      {
+        "home": "Germany",
+        "away": null,
+        "hs": 0,
+        "as": 0,
+        "group": "R32",
+        "matchday": "4",
+        "date": "2026-06-29",
+        "time": "16:30"
+      },
+      {
+        "home": null,
+        "away": "Morocco",
+        "hs": 0,
+        "as": 0,
+        "group": "R32",
+        "matchday": "4",
+        "date": "2026-06-29",
+        "time": "19:00"
+      },
+      {
+        "home": null,
+        "away": null,
+        "hs": 0,
+        "as": 0,
+        "group": "R32",
+        "matchday": "4",
+        "date": "2026-06-30",
+        "time": "12:00"
+      },
+      {
+        "home": null,
+        "away": null,
+        "hs": 0,
+        "as": 0,
+        "group": "R32",
+        "matchday": "4",
+        "date": "2026-06-30",
+        "time": "17:00"
+      },
+      {
+        "home": "Mexico",
+        "away": null,
+        "hs": 0,
+        "as": 0,
+        "group": "R32",
+        "matchday": "4",
+        "date": "2026-06-30",
+        "time": "19:00"
+      },
+      {
+        "home": null,
+        "away": null,
+        "hs": 0,
+        "as": 0,
+        "group": "R32",
+        "matchday": "4",
+        "date": "2026-07-01",
+        "time": "12:00"
+      },
+      {
+        "home": null,
+        "away": null,
+        "hs": 0,
+        "as": 0,
+        "group": "R32",
+        "matchday": "4",
+        "date": "2026-07-01",
+        "time": "13:00"
+      },
+      {
+        "home": "United States",
+        "away": null,
+        "hs": 0,
+        "as": 0,
+        "group": "R32",
+        "matchday": "4",
+        "date": "2026-07-01",
+        "time": "17:00"
+      },
+      {
+        "home": null,
+        "away": null,
+        "hs": 0,
+        "as": 0,
+        "group": "R32",
+        "matchday": "4",
+        "date": "2026-07-02",
+        "time": "12:00"
+      },
+      {
+        "home": null,
+        "away": null,
+        "hs": 0,
+        "as": 0,
+        "group": "R32",
+        "matchday": "4",
+        "date": "2026-07-02",
+        "time": "19:00"
       }
     ]
   }

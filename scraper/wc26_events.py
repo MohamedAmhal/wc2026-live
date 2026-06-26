@@ -65,15 +65,24 @@ def _to_int(v):
         return None
 
 
+def _parse_date(local_date):
+    """'06/13/2026 21:00' -> ('2026-06-13', '21:00'). Tolérant."""
+    m = re.match(r"(\d{2})/(\d{2})/(\d{4})(?:\s+(\d{2}:\d{2}))?", str(local_date or ""))
+    if not m:
+        return "", ""
+    return f"{m.group(3)}-{m.group(1)}-{m.group(2)}", (m.group(4) or "")
+
+
 def build():
     """Renvoie {'live': [...], 'results': [...]} prêts pour la PWA.
 
     Chaque match : home/away, score, group, matchday, minute (si live),
     et `goals` trié par minute (joueur + minute + côté)."""
     games = fetch_games()
-    live, results = [], []
+    live, results, upcoming = [], [], []
     for g in games:
         st = _status(g)
+        iso, hhmm = _parse_date(g.get("local_date"))
         goals = (_parse_scorers(g.get("home_scorers"), "home")
                  + _parse_scorers(g.get("away_scorers"), "away"))
         goals.sort(key=lambda x: (int(re.split(r"\+", x["minute"])[0])
@@ -82,19 +91,21 @@ def build():
             "home": g.get("home_team_name_en"), "away": g.get("away_team_name_en"),
             "hs": _to_int(g.get("home_score")), "as": _to_int(g.get("away_score")),
             "group": g.get("group"), "matchday": g.get("matchday"),
-            "date": g.get("local_date", ""), "goals": goals,
+            "date": iso, "time": hhmm,
         }
         if st == "live":
             m["minute"] = g.get("time_elapsed")
+            m["goals"] = goals
             live.append(m)
         elif st == "finished":
+            m["goals"] = goals
             results.append(m)
+        else:  # upcoming (notstarted) : un match commencé n'arrive jamais ici
+            upcoming.append(m)
 
-    def _key(x):  # tri par date décroissante (MM/DD/YYYY HH:MM)
-        d = x.get("date", "")
-        mm = re.match(r"(\d{2})/(\d{2})/(\d{4})\s+(\d{2}):(\d{2})", d)
-        return (mm.group(3), mm.group(1), mm.group(2), mm.group(4), mm.group(5)) if mm else ("",)
-    results.sort(key=_key, reverse=True)
+    results.sort(key=lambda x: (x["date"], x["time"]), reverse=True)
+    upcoming.sort(key=lambda x: (x["date"], x["time"]))
 
-    log.info("Événements : %d en direct, %d résultats (avec buteurs)", len(live), len(results))
-    return {"live": live, "results": results[:30]}
+    log.info("Événements : %d en direct, %d résultats, %d à venir",
+             len(live), len(results), len(upcoming))
+    return {"live": live, "results": results[:30], "upcoming": upcoming[:24]}
