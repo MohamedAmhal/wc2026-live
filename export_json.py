@@ -139,14 +139,14 @@ def _analytics(cur):
     } for i, r in enumerate(thirds)]
 
     # --- Classement général : toutes les équipes, tri Pts > Diff > BM -----
-    # Note /20 = performance GLOBALE (résultats + attaque + défense − cartons),
-    # mise à l'échelle 4→20. Sur les totaux (pas par match) pour rester cohérent
-    # avec le classement : le leader a la meilleure note.
+    # Note /20 = niveau selon le classement officiel (points → diff → buts),
+    # mise à l'échelle 4→20. Les points DOMINENT (×1000) pour que la note suive
+    # exactement l'ordre du tableau : une équipe plus bas n'a jamais une meilleure note.
     power = []
     for r in st:
         y, rc = team_cards.get(r["t"], (0, 0))
         cs = clean.get(r["t"], 0)
-        raw = 4*r["pts"] + 3*r["gd"] + 2*r["gf"] + 3*cs - 2*rc - 0.5*y
+        raw = r["pts"]*100 + r["gd"]*3 + r["gf"]*0.5
         power.append({
             "team": r["t"], "grp": r["g"], "mp": r["mp"], "pts": r["pts"],
             "gf": r["gf"], "gd": r["gd"], "cs": cs, "yellow": y, "red": rc,
