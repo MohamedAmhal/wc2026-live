@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T18:07:45",
+  "generated_at": "2026-06-27T14:40:30",
   "summary": {
     "teams": 48,
     "groups": 12,
@@ -1010,72 +1010,6 @@
   ],
   "matches_upcoming": [
     {
-      "home": "Senegal",
-      "away": "Iraq",
-      "hs": null,
-      "as": null,
-      "group": "I",
-      "matchday": "3",
-      "date": "2026-06-26",
-      "time": "15:00",
-      "time_paris": "21:00"
-    },
-    {
-      "home": "Norway",
-      "away": "France",
-      "hs": null,
-      "as": null,
-      "group": "I",
-      "matchday": "3",
-      "date": "2026-06-26",
-      "time": "15:00",
-      "time_paris": "21:00"
-    },
-    {
-      "home": "Uruguay",
-      "away": "Spain",
-      "hs": 0,
-      "as": 0,
-      "group": "H",
-      "matchday": "3",
-      "date": "2026-06-26",
-      "time": "18:00",
-      "time_paris": "02:00 +1"
-    },
-    {
-      "home": "Cape Verde",
-      "away": "Saudi Arabia",
-      "hs": 0,
-      "as": 0,
-      "group": "H",
-      "matchday": "3",
-      "date": "2026-06-26",
-      "time": "19:00",
-      "time_paris": "02:00 +1"
-    },
-    {
-      "home": "Egypt",
-      "away": "Iran",
-      "hs": 0,
-      "as": 0,
-      "group": "G",
-      "matchday": "3",
-      "date": "2026-06-26",
-      "time": "20:00",
-      "time_paris": "05:00 +1"
-    },
-    {
-      "home": "New Zealand",
-      "away": "Belgium",
-      "hs": 0,
-      "as": 0,
-      "group": "G",
-      "matchday": "3",
-      "date": "2026-06-26",
-      "time": "20:00",
-      "time_paris": "05:00 +1"
-    },
-    {
       "home": "Panama",
       "away": "England",
       "hs": 0,
@@ -1165,7 +1099,7 @@
     },
     {
       "home": "Germany",
-      "away": null,
+      "away": "Paraguay",
       "hs": 0,
       "as": 0,
       "group": "R32",
@@ -1187,7 +1121,7 @@
     },
     {
       "home": "Ivory Coast",
-      "away": null,
+      "away": "Norway",
       "hs": 0,
       "as": 0,
       "group": "R32",
@@ -1197,7 +1131,7 @@
       "time_paris": "19:00"
     },
     {
-      "home": null,
+      "home": "France",
       "away": null,
       "hs": 0,
       "as": 0,
@@ -1219,7 +1153,7 @@
       "time_paris": "03:00 +1"
     },
     {
-      "home": null,
+      "home": "Belgium",
       "away": null,
       "hs": 0,
       "as": 0,
@@ -1272,6 +1206,72 @@
       "date": "2026-07-02",
       "time": "19:00",
       "time_paris": "01:00 +1"
+    },
+    {
+      "home": "Switzerland",
+      "away": null,
+      "hs": 0,
+      "as": 0,
+      "group": "R32",
+      "matchday": "4",
+      "date": "2026-07-02",
+      "time": "20:00",
+      "time_paris": "05:00 +1"
+    },
+    {
+      "home": "Australia",
+      "away": "Egypt",
+      "hs": 0,
+      "as": 0,
+      "group": "R32",
+      "matchday": "4",
+      "date": "2026-07-03",
+      "time": "13:00",
+      "time_paris": "20:00"
+    },
+    {
+      "home": "Argentina",
+      "away": "Cape Verde",
+      "hs": 0,
+      "as": 0,
+      "group": "R32",
+      "matchday": "4",
+      "date": "2026-07-03",
+      "time": "18:00",
+      "time_paris": "00:00 +1"
+    },
+    {
+      "home": null,
+      "away": null,
+      "hs": 0,
+      "as": 0,
+      "group": "R32",
+      "matchday": "4",
+      "date": "2026-07-03",
+      "time": "20:30",
+      "time_paris": "03:30 +1"
+    },
+    {
+      "home": null,
+      "away": null,
+      "hs": 0,
+      "as": 0,
+      "group": "R16",
+      "matchday": "5",
+      "date": "2026-07-04",
+      "time": "12:00",
+      "time_paris": "19:00"
+    },
+    {
+      "home": null,
+      "away": null,
+      "hs": 0,
+      "as": 0,
+      "group": "R16",
+      "matchday": "5",
+      "date": "2026-07-04",
+      "time": "17:00",
+      "time_paris": "23:00"
     }
   ],
   "scorers": [
@@ -3562,6 +3562,178 @@
     "live": [],
     "results": [
       {
+        "home": "Egypt",
+        "away": "Iran",
+        "hs": 1,
+        "as": 1,
+        "group": "G",
+        "matchday": "3",
+        "date": "2026-06-26",
+        "time": "20:00",
+        "time_paris": "05:00 +1",
+        "goals": [
+          {
+            "player": "Mahmoud Saber",
+            "minute": "5",
+            "team": "home"
+          },
+          {
+            "player": "Ramin Rezaeian",
+            "minute": "14",
+            "team": "away"
+          }
+        ]
+      },
+      {
+        "home": "New Zealand",
+        "away": "Belgium",
+        "hs": 1,
+        "as": 5,
+        "group": "G",
+        "matchday": "3",
+        "date": "2026-06-26",
+        "time": "20:00",
+        "time_paris": "05:00 +1",
+        "goals": [
+          {
+            "player": "Leandro Trossard",
+            "minute": "28",
+            "team": "away"
+          },
+          {
+            "player": "Leandro Trossard",
+            "minute": "50",
+            "team": "away"
+          },
+          {
+            "player": "Kevin De Bruyne",
+            "minute": "66",
+            "team": "away"
+          },
+          {
+            "player": "Ali Jast",
+            "minute": "84",
+            "team": "home"
+          },
+          {
+            "player": "Romelu Lukaku",
+            "minute": "86",
+            "team": "away"
+          },
+          {
+            "player": "Alexis Saelemaekers",
+            "minute": "90+4",
+            "team": "away"
+          }
+        ]
+      },
+      {
+        "home": "Cape Verde",
+        "away": "Saudi Arabia",
+        "hs": 0,
+        "as": 0,
+        "group": "H",
+        "matchday": "3",
+        "date": "2026-06-26",
+        "time": "19:00",
+        "time_paris": "02:00 +1",
+        "goals": []
+      },
+      {
+        "home": "Uruguay",
+        "away": "Spain",
+        "hs": 0,
+        "as": 1,
+        "group": "H",
+        "matchday": "3",
+        "date": "2026-06-26",
+        "time": "18:00",
+        "time_paris": "02:00 +1",
+        "goals": [
+          {
+            "player": "Álex Baena",
+            "minute": "42",
+            "team": "away"
+          }
+        ]
+      },
+      {
+        "home": "Senegal",
+        "away": "Iraq",
+        "hs": 5,
+        "as": 0,
+        "group": "I",
+        "matchday": "3",
+        "date": "2026-06-26",
+        "time": "15:00",
+        "time_paris": "21:00",
+        "goals": [
+          {
+            "player": "Habib Diarra",
+            "minute": "4",
+            "team": "home"
+          },
+          {
+            "player": "Ismaïla Sarr",
+            "minute": "56",
+            "team": "home"
+          },
+          {
+            "player": "Paph Gviih",
+            "minute": "59",
+            "team": "home"
+          },
+          {
+            "player": "Paph Gviih",
+            "minute": "71",
+            "team": "home"
+          },
+          {
+            "player": "Ailman Andiaih",
+            "minute": "82",
+            "team": "home"
+          }
+        ]
+      },
+      {
+        "home": "Norway",
+        "away": "France",
+        "hs": 1,
+        "as": 4,
+        "group": "I",
+        "matchday": "3",
+        "date": "2026-06-26",
+        "time": "15:00",
+        "time_paris": "21:00",
+        "goals": [
+          {
+            "player": "Ousmane Dembélé",
+            "minute": "7",
+            "team": "away"
+          },
+          {
+            "player": "Ousmane Dembélé",
+            "minute": "20",
+            "team": "away"
+          },
+          {
+            "player": "Thelo Aasgaard",
+            "minute": "21",
+            "team": "home"
+          },
+          {
+            "player": "Ousmane Dembélé",
+            "minute": "32",
+            "team": "away"
+          },
+          {
+            "player": "Désiré Doué",
+            "minute": "90+4",
+            "team": "away"
+          }
+        ]
+      },
+      {
         "home": "Turkey",
         "away": "United States",
         "hs": 3,
@@ -5204,72 +5376,6 @@
     ],
     "upcoming": [
       {
-        "home": "Senegal",
-        "away": "Iraq",
-        "hs": null,
-        "as": null,
-        "group": "I",
-        "matchday": "3",
-        "date": "2026-06-26",
-        "time": "15:00",
-        "time_paris": "21:00"
-      },
-      {
-        "home": "Norway",
-        "away": "France",
-        "hs": null,
-        "as": null,
-        "group": "I",
-        "matchday": "3",
-        "date": "2026-06-26",
-        "time": "15:00",
-        "time_paris": "21:00"
-      },
-      {
-        "home": "Uruguay",
-        "away": "Spain",
-        "hs": 0,
-        "as": 0,
-        "group": "H",
-        "matchday": "3",
-        "date": "2026-06-26",
-        "time": "18:00",
-        "time_paris": "02:00 +1"
-      },
-      {
-        "home": "Cape Verde",
-        "away": "Saudi Arabia",
-        "hs": 0,
-        "as": 0,
-        "group": "H",
-        "matchday": "3",
-        "date": "2026-06-26",
-        "time": "19:00",
-        "time_paris": "02:00 +1"
-      },
-      {
-        "home": "Egypt",
-        "away": "Iran",
-        "hs": 0,
-        "as": 0,
-        "group": "G",
-        "matchday": "3",
-        "date": "2026-06-26",
-        "time": "20:00",
-        "time_paris": "05:00 +1"
-      },
-      {
-        "home": "New Zealand",
-        "away": "Belgium",
-        "hs": 0,
-        "as": 0,
-        "group": "G",
-        "matchday": "3",
-        "date": "2026-06-26",
-        "time": "20:00",
-        "time_paris": "05:00 +1"
-      },
-      {
         "home": "Panama",
         "away": "England",
         "hs": 0,
@@ -5359,7 +5465,7 @@
       },
       {
         "home": "Germany",
-        "away": null,
+        "away": "Paraguay",
         "hs": 0,
         "as": 0,
         "group": "R32",
@@ -5381,7 +5487,7 @@
       },
       {
         "home": "Ivory Coast",
-        "away": null,
+        "away": "Norway",
         "hs": 0,
         "as": 0,
         "group": "R32",
@@ -5391,7 +5497,7 @@
         "time_paris": "19:00"
       },
       {
-        "home": null,
+        "home": "France",
         "away": null,
         "hs": 0,
         "as": 0,
@@ -5413,7 +5519,7 @@
         "time_paris": "03:00 +1"
       },
       {
-        "home": null,
+        "home": "Belgium",
         "away": null,
         "hs": 0,
         "as": 0,
@@ -5466,6 +5572,72 @@
         "date": "2026-07-02",
         "time": "19:00",
         "time_paris": "01:00 +1"
+      },
+      {
+        "home": "Switzerland",
+        "away": null,
+        "hs": 0,
+        "as": 0,
+        "group": "R32",
+        "matchday": "4",
+        "date": "2026-07-02",
+        "time": "20:00",
+        "time_paris": "05:00 +1"
+      },
+      {
+        "home": "Australia",
+        "away": "Egypt",
+        "hs": 0,
+        "as": 0,
+        "group": "R32",
+        "matchday": "4",
+        "date": "2026-07-03",
+        "time": "13:00",
+        "time_paris": "20:00"
+      },
+      {
+        "home": "Argentina",
+        "away": "Cape Verde",
+        "hs": 0,
+        "as": 0,
+        "group": "R32",
+        "matchday": "4",
+        "date": "2026-07-03",
+        "time": "18:00",
+        "time_paris": "00:00 +1"
+      },
+      {
+        "home": null,
+        "away": null,
+        "hs": 0,
+        "as": 0,
+        "group": "R32",
+        "matchday": "4",
+        "date": "2026-07-03",
+        "time": "20:30",
+        "time_paris": "03:30 +1"
+      },
+      {
+        "home": null,
+        "away": null,
+        "hs": 0,
+        "as": 0,
+        "group": "R16",
+        "matchday": "5",
+        "date": "2026-07-04",
+        "time": "12:00",
+        "time_paris": "19:00"
+      },
+      {
+        "home": null,
+        "away": null,
+        "hs": 0,
+        "as": 0,
+        "group": "R16",
+        "matchday": "5",
+        "date": "2026-07-04",
+        "time": "17:00",
+        "time_paris": "23:00"
       }
     ],
     "bracket": [
@@ -5497,7 +5669,7 @@
           },
           {
             "home": "Germany",
-            "away": null,
+            "away": "Paraguay",
             "hs": 0,
             "as": 0,
             "date": "2026-06-29",
@@ -5519,7 +5691,7 @@
           },
           {
             "home": "Ivory Coast",
-            "away": null,
+            "away": "Norway",
             "hs": 0,
             "as": 0,
             "date": "2026-06-30",
@@ -5529,7 +5701,7 @@
             "id": "78"
           },
           {
-            "home": null,
+            "home": "France",
             "away": null,
             "hs": 0,
             "as": 0,
@@ -5551,7 +5723,7 @@
             "id": "79"
           },
           {
-            "home": null,
+            "home": "Belgium",
             "away": null,
             "hs": 0,
             "as": 0,
@@ -5618,7 +5790,7 @@
           },
           {
             "home": "Australia",
-            "away": null,
+            "away": "Egypt",
             "hs": 0,
             "as": 0,
             "date": "2026-07-03",
@@ -5629,7 +5801,7 @@
           },
           {
             "home": "Argentina",
-            "away": null,
+            "away": "Cape Verde",
             "hs": 0,
             "as": 0,
             "date": "2026-07-03",
@@ -6125,6 +6297,62 @@
           "ga": 0,
           "res": "V"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-24",
+          "opp": "Czechia",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Raúl Rangel",
+            "Jorge Sánchez",
+            "César Montes",
+            "Edson Álvarez",
+            "Luis Romo",
+            "Israel Reyes",
+            "Julián Quiñones",
+            "Gilberto Mora",
+            "Mateo Chávez",
+            "Guillermo Martínez Ayala",
+            "Roberto Alvarado"
+          ]
+        },
+        {
+          "date": "2026-06-18",
+          "opp": "Korea Republic",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Raúl Rangel",
+            "Jorge Sánchez",
+            "Edson Álvarez",
+            "Johan Vásquez",
+            "Erik Lira",
+            "Luis Romo",
+            "Raúl Jiménez",
+            "Julián Quiñones",
+            "Jesús Gallardo",
+            "Roberto Alvarado",
+            "Brian Gutiérrez"
+          ]
+        },
+        {
+          "date": "2026-06-11",
+          "opp": "South Africa",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Raúl Rangel",
+            "César Montes",
+            "Johan Vásquez",
+            "Erik Lira",
+            "Álvaro Fidalgo",
+            "Raúl Jiménez",
+            "Israel Reyes",
+            "Julián Quiñones",
+            "Jesús Gallardo",
+            "Roberto Alvarado",
+            "Brian Gutiérrez"
+          ]
+        }
       ]
     },
     "Korea Republic": {
@@ -6369,6 +6597,62 @@
           "gf": 0,
           "ga": 1,
           "res": "D"
+        }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-24",
+          "opp": "South Africa",
+          "formation": "3-4-3",
+          "xi": [
+            "Kim Seung-gyu",
+            "Lee Han-beom",
+            "Lee Gi-hyuk",
+            "Kim Min-jae",
+            "Hwang In-beom",
+            "Paik Seung-ho",
+            "Hwang Hee-chan",
+            "Lee Tae-seok",
+            "Oh Hyeon-gyu",
+            "Lee Kang-in",
+            "Seol Young-woo"
+          ]
+        },
+        {
+          "date": "2026-06-18",
+          "opp": "Mexico",
+          "formation": "3-4-3",
+          "xi": [
+            "Kim Seung-gyu",
+            "Lee Han-beom",
+            "Lee Gi-hyuk",
+            "Kim Min-jae",
+            "Hwang In-beom",
+            "Son Heung-min",
+            "Paik Seung-ho",
+            "Lee Jae-sung",
+            "Kim Moon-hwan",
+            "Lee Kang-in",
+            "Seol Young-woo"
+          ]
+        },
+        {
+          "date": "2026-06-11",
+          "opp": "Czechia",
+          "formation": "3-4-3",
+          "xi": [
+            "Kim Seung-gyu",
+            "Lee Han-beom",
+            "Lee Gi-hyuk",
+            "Kim Min-jae",
+            "Hwang In-beom",
+            "Son Heung-min",
+            "Paik Seung-ho",
+            "Lee Jae-sung",
+            "Lee Tae-seok",
+            "Lee Kang-in",
+            "Seol Young-woo"
+          ]
         }
       ]
     },
@@ -6622,6 +6906,62 @@
           "ga": 3,
           "res": "D"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-24",
+          "opp": "Mexico",
+          "formation": "3-4-3",
+          "xi": [
+            "Matej Kovar",
+            "Tomáš Holeš",
+            "Robin Hranáč",
+            "Vladimír Coufal",
+            "Ladislav Krejčí",
+            "Adam Hložek",
+            "Lukáš Červ",
+            "Pavel Šulc",
+            "Michal Sadílek",
+            "David Douděra",
+            "Denis Višinský"
+          ]
+        },
+        {
+          "date": "2026-06-18",
+          "opp": "South Africa",
+          "formation": "5-3-2",
+          "xi": [
+            "Matej Kovar",
+            "Tomáš Holeš",
+            "Robin Hranáč",
+            "Vladimír Coufal",
+            "Ladislav Krejčí",
+            "Vladimír Darida",
+            "Adam Hložek",
+            "Patrik Schick",
+            "Lukáš Červ",
+            "Michal Sadílek",
+            "Alexandr Sojka"
+          ]
+        },
+        {
+          "date": "2026-06-11",
+          "opp": "Korea Republic",
+          "formation": "3-4-3",
+          "xi": [
+            "Matej Kovar",
+            "Robin Hranáč",
+            "Vladimír Coufal",
+            "Štěpán Chaloupek",
+            "Ladislav Krejčí",
+            "Patrik Schick",
+            "Pavel Šulc",
+            "Lukáš Provod",
+            "Jaroslav Zelený",
+            "Tomáš Souček",
+            "Alexandr Sojka"
+          ]
+        }
       ]
     },
     "South Africa": {
@@ -6857,6 +7197,62 @@
           "gf": 1,
           "ga": 0,
           "res": "V"
+        }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-24",
+          "opp": "Korea Republic",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Ronwen Williams",
+            "Thalente Mbatha",
+            "Aubrey Modiba",
+            "Oswin Appollis",
+            "Relebohile Mofokeng",
+            "Thapelo Maseko",
+            "Sphephelo Sithole",
+            "Mbekezeli Mbokazi",
+            "Evidence Makgopa",
+            "Khuliso Mudau",
+            "Ime Okon"
+          ]
+        },
+        {
+          "date": "2026-06-18",
+          "opp": "Czechia",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Ronwen Williams",
+            "Teboho Mokoena",
+            "Thalente Mbatha",
+            "Aubrey Modiba",
+            "Oswin Appollis",
+            "Thapelo Maseko",
+            "Mbekezeli Mbokazi",
+            "Iqraam Rayners",
+            "Khuliso Mudau",
+            "Ime Okon",
+            "Jayden Adams"
+          ]
+        },
+        {
+          "date": "2026-06-11",
+          "opp": "Mexico",
+          "formation": "5-3-2",
+          "xi": [
+            "Ronwen Williams",
+            "Teboho Mokoena",
+            "Aubrey Modiba",
+            "Lyle Foster",
+            "Sphephelo Sithole",
+            "Mbekezeli Mbokazi",
+            "Iqraam Rayners",
+            "Nkosinathi Sibisi",
+            "Khuliso Mudau",
+            "Ime Okon",
+            "Jayden Adams"
+          ]
         }
       ]
     },
@@ -7102,6 +7498,62 @@
           "gf": 1,
           "ga": 2,
           "res": "D"
+        }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-24",
+          "opp": "Switzerland",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Maxime Crépeau",
+            "Alistair Johnston",
+            "Luc De Fougerolles",
+            "Mathieu Choinière",
+            "Cyle Larin",
+            "Jonathan David",
+            "Derek Cornelius",
+            "Tajon Buchanan",
+            "Ali Ahmed",
+            "Richie Laryea",
+            "Nathan Saliba"
+          ]
+        },
+        {
+          "date": "2026-06-18",
+          "opp": "Qatar",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Maxime Crépeau",
+            "Alistair Johnston",
+            "Luc De Fougerolles",
+            "Stephen Eustáquio",
+            "Ismaël Koné",
+            "Cyle Larin",
+            "Jonathan David",
+            "Derek Cornelius",
+            "Tajon Buchanan",
+            "Ali Ahmed",
+            "Richie Laryea"
+          ]
+        },
+        {
+          "date": "2026-06-12",
+          "opp": "Bosnia & Herz.",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Maxime Crépeau",
+            "Alistair Johnston",
+            "Luc De Fougerolles",
+            "Stephen Eustáquio",
+            "Ismaël Koné",
+            "Jonathan David",
+            "Liam Millar",
+            "Tani Oluwaseyi",
+            "Derek Cornelius",
+            "Tajon Buchanan",
+            "Richie Laryea"
+          ]
         }
       ]
     },
@@ -7355,6 +7807,62 @@
           "gf": 2,
           "ga": 1,
           "res": "V"
+        }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-24",
+          "opp": "Canada",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Gregor Kobel",
+            "Nico Elvedi",
+            "Manuel Akanji",
+            "Breel Embolo",
+            "Remo Freuler",
+            "Johan Manzambi",
+            "Granit Xhaka",
+            "Ricardo Rodríguez",
+            "Djibril Sow",
+            "Ruben Vargas",
+            "Luca Jaquez"
+          ]
+        },
+        {
+          "date": "2026-06-18",
+          "opp": "Bosnia & Herz.",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Gregor Kobel",
+            "Silvan Widmer",
+            "Nico Elvedi",
+            "Manuel Akanji",
+            "Breel Embolo",
+            "Remo Freuler",
+            "Granit Xhaka",
+            "Dan Ndoye",
+            "Ricardo Rodríguez",
+            "Michel Aebischer",
+            "Fabian Rieder"
+          ]
+        },
+        {
+          "date": "2026-06-13",
+          "opp": "Qatar",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Gregor Kobel",
+            "Nico Elvedi",
+            "Manuel Akanji",
+            "Denis Zakaria",
+            "Breel Embolo",
+            "Remo Freuler",
+            "Granit Xhaka",
+            "Dan Ndoye",
+            "Ricardo Rodríguez",
+            "Ruben Vargas",
+            "Michel Aebischer"
+          ]
         }
       ]
     },
@@ -7615,6 +8123,62 @@
           "ga": 1,
           "res": "V"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-24",
+          "opp": "Qatar",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Nikola Vasilj",
+            "Sead Kolašinac",
+            "Ermedin Demirović",
+            "Edin Džeko",
+            "Ivan Bašić",
+            "Ivan Šunjić",
+            "Nikola Katić",
+            "Kerim Alajbegović",
+            "Esmir Bajraktarevic",
+            "Stjepan Radeljić",
+            "Arjan Malic"
+          ]
+        },
+        {
+          "date": "2026-06-18",
+          "opp": "Switzerland",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Nikola Vasilj",
+            "Tarik Muharemovic",
+            "Sead Kolašinac",
+            "Benjamin Tahirovic",
+            "Amar Dedić",
+            "Ermedin Demirović",
+            "Edin Džeko",
+            "Ivan Šunjić",
+            "Amar Memić",
+            "Nikola Katić",
+            "Kerim Alajbegović"
+          ]
+        },
+        {
+          "date": "2026-06-12",
+          "opp": "Canada",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Nikola Vasilj",
+            "Tarik Muharemovic",
+            "Sead Kolašinac",
+            "Benjamin Tahirovic",
+            "Amar Dedić",
+            "Ermedin Demirović",
+            "Ivan Bašić",
+            "Amar Memić",
+            "Nikola Katić",
+            "Esmir Bajraktarevic",
+            "Jovo Lukić"
+          ]
+        }
       ]
     },
     "Qatar": {
@@ -7872,6 +8436,62 @@
           "gf": 1,
           "ga": 3,
           "res": "D"
+        }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-24",
+          "opp": "Bosnia & Herz.",
+          "formation": "4-3-2-1",
+          "xi": [
+            "Mahmoud Abunada",
+            "Ró-Ró",
+            "Issa Laye",
+            "Jassem Gaber",
+            "Edmilson Junior",
+            "Hassan Al-Haydos",
+            "Akram Afif",
+            "Karim Boudiaf",
+            "Boualem Khoukhi",
+            "Sultan Al-Brake",
+            "Ahmed Fathy"
+          ]
+        },
+        {
+          "date": "2026-06-18",
+          "opp": "Canada",
+          "formation": "4-3-2-1",
+          "xi": [
+            "Mahmoud Abunada",
+            "Ró-Ró",
+            "Issa Laye",
+            "Jassem Gaber",
+            "Edmilson Junior",
+            "Akram Afif",
+            "Ayoub Al-Oui",
+            "Homam Ahmed",
+            "Yusuf Abdurisag",
+            "Boualem Khoukhi",
+            "Assim Madibo"
+          ]
+        },
+        {
+          "date": "2026-06-13",
+          "opp": "Switzerland",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Mahmoud Abunada",
+            "Ró-Ró",
+            "Issa Laye",
+            "Jassem Gaber",
+            "Edmilson Junior",
+            "Akram Afif",
+            "Ayoub Al-Oui",
+            "Homam Ahmed",
+            "Yusuf Abdurisag",
+            "Boualem Khoukhi",
+            "Assim Madibo"
+          ]
         }
       ]
     },
@@ -8135,6 +8755,62 @@
           "ga": 0,
           "res": "V"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-24",
+          "opp": "Scotland",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Alisson",
+            "Gabriel Magalhães",
+            "Marquinhos",
+            "Casemiro",
+            "Vinicius Júnior",
+            "Bruno Guimarães",
+            "Matheus Cunha",
+            "Danilo",
+            "Douglas Santos",
+            "Lucas Paquetá",
+            "Rayan"
+          ]
+        },
+        {
+          "date": "2026-06-19",
+          "opp": "Haiti",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Alisson",
+            "Gabriel Magalhães",
+            "Marquinhos",
+            "Casemiro",
+            "Vinicius Júnior",
+            "Bruno Guimarães",
+            "Matheus Cunha",
+            "Raphinha",
+            "Danilo",
+            "Douglas Santos",
+            "Lucas Paquetá"
+          ]
+        },
+        {
+          "date": "2026-06-13",
+          "opp": "Morocco",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Alisson",
+            "Gabriel Magalhães",
+            "Marquinhos",
+            "Casemiro",
+            "Vinicius Júnior",
+            "Bruno Guimarães",
+            "Raphinha",
+            "Douglas Santos",
+            "Lucas Paquetá",
+            "Roger Ibanez",
+            "Igor Thiago"
+          ]
+        }
       ]
     },
     "Morocco": {
@@ -8376,6 +9052,62 @@
           "gf": 4,
           "ga": 2,
           "res": "V"
+        }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-24",
+          "opp": "Haiti",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Yassine Bounou",
+            "Achraf Hakimi",
+            "Sofyan Amrabat",
+            "Brahim Díaz",
+            "Ismael Saibari",
+            "Chadi Riad",
+            "Ayoub El Kaabi",
+            "Bilal El Khannouss",
+            "Neil El Aynaoui",
+            "Redouane Halhal",
+            "Anass Salah-Eddine"
+          ]
+        },
+        {
+          "date": "2026-06-19",
+          "opp": "Scotland",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Yassine Bounou",
+            "Achraf Hakimi",
+            "Noussair Mazraoui",
+            "Ayyoub Bouaddi",
+            "Azzedine Ounahi",
+            "Brahim Díaz",
+            "Ismael Saibari",
+            "Issa Diop",
+            "Chadi Riad",
+            "Bilal El Khannouss",
+            "Neil El Aynaoui"
+          ]
+        },
+        {
+          "date": "2026-06-13",
+          "opp": "Brazil",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Yassine Bounou",
+            "Achraf Hakimi",
+            "Noussair Mazraoui",
+            "Ayyoub Bouaddi",
+            "Azzedine Ounahi",
+            "Brahim Díaz",
+            "Ismael Saibari",
+            "Issa Diop",
+            "Chadi Riad",
+            "Bilal El Khannouss",
+            "Neil El Aynaoui"
+          ]
         }
       ]
     },
@@ -8619,6 +9351,62 @@
           "ga": 3,
           "res": "D"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-24",
+          "opp": "Brazil",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Angus Gunn",
+            "Andy Robertson",
+            "Scott McTominay",
+            "John McGinn",
+            "Jack Hendry",
+            "Ben Gannon-Doak",
+            "Lewis Ferguson",
+            "Lawrence Shankland",
+            "Nathan Patterson",
+            "Kenny McLean",
+            "Scott McKenna"
+          ]
+        },
+        {
+          "date": "2026-06-19",
+          "opp": "Morocco",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Angus Gunn",
+            "Andy Robertson",
+            "Scott McTominay",
+            "Grant Hanley",
+            "Kieran Tierney",
+            "John McGinn",
+            "Ché Adams",
+            "Ryan Christie",
+            "Jack Hendry",
+            "Lewis Ferguson",
+            "Nathan Patterson"
+          ]
+        },
+        {
+          "date": "2026-06-13",
+          "opp": "Haiti",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Angus Gunn",
+            "Aaron Hickey",
+            "Andy Robertson",
+            "Scott McTominay",
+            "Grant Hanley",
+            "John McGinn",
+            "Ché Adams",
+            "Jack Hendry",
+            "Ben Gannon-Doak",
+            "Lewis Ferguson",
+            "Lawrence Shankland"
+          ]
+        }
       ]
     },
     "Haiti": {
@@ -8844,6 +9632,62 @@
           "gf": 2,
           "ga": 4,
           "res": "D"
+        }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-24",
+          "opp": "Morocco",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Johny Placide",
+            "Ricardo Adé",
+            "Hannes Delcroix",
+            "Martin Expérience",
+            "Jean-Ricner Bellegarde",
+            "Ruben Providence",
+            "Lenny Joseph",
+            "Danley Jean-Jacques",
+            "Wilson Isidor",
+            "Josué Casimir",
+            "Jean-Kevin Duverne"
+          ]
+        },
+        {
+          "date": "2026-06-19",
+          "opp": "Brazil",
+          "formation": "3-4-3",
+          "xi": [
+            "Johny Placide",
+            "Carlens Arcus",
+            "Ricardo Adé",
+            "Hannes Delcroix",
+            "Martin Expérience",
+            "Jean-Ricner Bellegarde",
+            "Ruben Providence",
+            "Danley Jean-Jacques",
+            "Frantzdy Pierrot",
+            "Josué Casimir",
+            "Jean-Kevin Duverne"
+          ]
+        },
+        {
+          "date": "2026-06-13",
+          "opp": "Scotland",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Johny Placide",
+            "Carlens Arcus",
+            "Ricardo Adé",
+            "Hannes Delcroix",
+            "Martin Expérience",
+            "Jean-Ricner Bellegarde",
+            "Louicius Deedson",
+            "Ruben Providence",
+            "Danley Jean-Jacques",
+            "Wilson Isidor",
+            "Frantzdy Pierrot"
+          ]
         }
       ]
     },
@@ -9114,6 +9958,62 @@
           "ga": 3,
           "res": "D"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-25",
+          "opp": "Türkiye",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Matt Turner",
+            "Auston Trusty",
+            "Gio Reyna",
+            "Weston McKennie",
+            "Ricardo Pepi",
+            "Brenden Aaronson",
+            "Miles Robinson",
+            "Sebastian Berhalter",
+            "Timothy Weah",
+            "Mark McKenzie",
+            "Joe Scally"
+          ]
+        },
+        {
+          "date": "2026-06-19",
+          "opp": "Australia",
+          "formation": "3-5-2",
+          "xi": [
+            "Matt Freese",
+            "Sergiño Dest",
+            "Chris Richards",
+            "Tyler Adams",
+            "Antonee Robinson",
+            "Weston McKennie",
+            "Ricardo Pepi",
+            "Tim Ream",
+            "Alex Freeman",
+            "Malik Tillman",
+            "Folarin Balogun"
+          ]
+        },
+        {
+          "date": "2026-06-12",
+          "opp": "Paraguay",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Matt Freese",
+            "Sergiño Dest",
+            "Chris Richards",
+            "Tyler Adams",
+            "Antonee Robinson",
+            "Weston McKennie",
+            "Christian Pulisic",
+            "Tim Ream",
+            "Alex Freeman",
+            "Malik Tillman",
+            "Folarin Balogun"
+          ]
+        }
       ]
     },
     "Australia": {
@@ -9359,6 +10259,62 @@
           "gf": 0,
           "ga": 0,
           "res": "N"
+        }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-25",
+          "opp": "Paraguay",
+          "formation": "3-4-3",
+          "xi": [
+            "Patrick Beach",
+            "Alessandro Circati",
+            "Jordy Bos",
+            "Connor Metcalfe",
+            "Aiden O'Neill",
+            "Aziz Behich",
+            "Nestory Irankunda",
+            "Harry Souttar",
+            "Cristian Volpato",
+            "Jackson Irvine",
+            "Lucas Herrington"
+          ]
+        },
+        {
+          "date": "2026-06-19",
+          "opp": "United States",
+          "formation": "5-4-1",
+          "xi": [
+            "Patrick Beach",
+            "Alessandro Circati",
+            "Jacob Italiano",
+            "Jordy Bos",
+            "Mathew Leckie",
+            "Mo Touré",
+            "Aiden O'Neill",
+            "Harry Souttar",
+            "Cameron Burgess",
+            "Nishan Velupillay",
+            "Paul Okon-Engstler"
+          ]
+        },
+        {
+          "date": "2026-06-13",
+          "opp": "Türkiye",
+          "formation": "5-4-1",
+          "xi": [
+            "Patrick Beach",
+            "Alessandro Circati",
+            "Jacob Italiano",
+            "Jordy Bos",
+            "Connor Metcalfe",
+            "Mo Touré",
+            "Aiden O'Neill",
+            "Nestory Irankunda",
+            "Harry Souttar",
+            "Cameron Burgess",
+            "Paul Okon-Engstler"
+          ]
         }
       ]
     },
@@ -9611,6 +10567,62 @@
           "gf": 0,
           "ga": 0,
           "res": "N"
+        }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-25",
+          "opp": "Australia",
+          "formation": "5-3-2",
+          "xi": [
+            "Orlando Gill",
+            "Gustavo Velásquez",
+            "Omar Alderete",
+            "Juan Cáceres",
+            "Diego Gómez",
+            "Andrés Cubas",
+            "Gustavo Gómez",
+            "Julio Enciso",
+            "Gabriel Ávalos",
+            "Matías Galarza",
+            "Alexandro Maidana"
+          ]
+        },
+        {
+          "date": "2026-06-19",
+          "opp": "Türkiye",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Orlando Gill",
+            "Omar Alderete",
+            "Juan Cáceres",
+            "Júnior Alonso",
+            "Diego Gómez",
+            "Miguel Almirón",
+            "Andrés Cubas",
+            "Gustavo Gómez",
+            "Julio Enciso",
+            "Matías Galarza",
+            "Isidro Pitta"
+          ]
+        },
+        {
+          "date": "2026-06-12",
+          "opp": "United States",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Orlando Gill",
+            "Omar Alderete",
+            "Juan Cáceres",
+            "Júnior Alonso",
+            "Diego Gómez",
+            "Antonio Sanabria",
+            "Miguel Almirón",
+            "Andrés Cubas",
+            "Gustavo Gómez",
+            "Damián Bobadilla",
+            "Julio Enciso"
+          ]
         }
       ]
     },
@@ -9880,6 +10892,62 @@
           "ga": 2,
           "res": "V"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-25",
+          "opp": "United States",
+          "formation": "5-4-1",
+          "xi": [
+            "Uğurcan Çakır",
+            "Zeki Çelik",
+            "Salih Özcan",
+            "Orkun Kökçü",
+            "Arda Güler",
+            "Kenan Yıldız",
+            "Eren Elmalı",
+            "Abdülkerim Bardakcı",
+            "Ozan Kabak",
+            "Barış Alper Yılmaz",
+            "Oğuz Aydın"
+          ]
+        },
+        {
+          "date": "2026-06-19",
+          "opp": "Paraguay",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Uğurcan Çakır",
+            "Merih Demiral",
+            "Kerem Aktürkoğlu",
+            "Arda Güler",
+            "Hakan Çalhanoğlu",
+            "Kenan Yıldız",
+            "Abdülkerim Bardakcı",
+            "İsmail Yüksek",
+            "Mert Müldür",
+            "Yunus Akgün",
+            "Ferdi Kadioglu"
+          ]
+        },
+        {
+          "date": "2026-06-13",
+          "opp": "Australia",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Uğurcan Çakır",
+            "Zeki Çelik",
+            "Merih Demiral",
+            "Orkun Kökçü",
+            "Kerem Aktürkoğlu",
+            "Arda Güler",
+            "Hakan Çalhanoğlu",
+            "Abdülkerim Bardakcı",
+            "İsmail Yüksek",
+            "Ferdi Kadioglu",
+            "Barış Alper Yılmaz"
+          ]
+        }
       ]
     },
     "Germany": {
@@ -10141,6 +11209,62 @@
           "ga": 2,
           "res": "D"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-25",
+          "opp": "Ecuador",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Manuel Neuer",
+            "Antonio Rüdiger",
+            "Jonathan Tah",
+            "Aleksandar Pavlovic",
+            "Joshua Kimmich",
+            "Kai Havertz",
+            "Jamal Musiala",
+            "Florian Wirtz",
+            "Leroy Sané",
+            "David Raum",
+            "Felix Nmecha"
+          ]
+        },
+        {
+          "date": "2026-06-20",
+          "opp": "Côte d'Ivoire",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Manuel Neuer",
+            "Jonathan Tah",
+            "Aleksandar Pavlovic",
+            "Joshua Kimmich",
+            "Kai Havertz",
+            "Jamal Musiala",
+            "Nico Schlotterbeck",
+            "Florian Wirtz",
+            "Nathaniel Brown",
+            "Leroy Sané",
+            "Felix Nmecha"
+          ]
+        },
+        {
+          "date": "2026-06-14",
+          "opp": "Curaçao",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Manuel Neuer",
+            "Jonathan Tah",
+            "Aleksandar Pavlovic",
+            "Joshua Kimmich",
+            "Kai Havertz",
+            "Jamal Musiala",
+            "Nico Schlotterbeck",
+            "Florian Wirtz",
+            "Nathaniel Brown",
+            "Leroy Sané",
+            "Felix Nmecha"
+          ]
+        }
       ]
     },
     "Côte d'Ivoire": {
@@ -10399,6 +11523,62 @@
           "ga": 0,
           "res": "V"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-25",
+          "opp": "Curaçao",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Yahia Fofana",
+            "Ousmane Diomande",
+            "Odilon Kossounou",
+            "Franck Kessié",
+            "Ange-Yoan Bonny",
+            "Yan Diomandé",
+            "Christopher Opéri",
+            "Amad Diallo",
+            "Guéla Doué",
+            "Ibrahim Sangaré",
+            "Nicolas Pépé"
+          ]
+        },
+        {
+          "date": "2026-06-20",
+          "opp": "Germany",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Yahia Fofana",
+            "Ghislain Konan",
+            "Wilfried Singo",
+            "Odilon Kossounou",
+            "Franck Kessié",
+            "Ange-Yoan Bonny",
+            "Yan Diomandé",
+            "Amad Diallo",
+            "Ibrahim Sangaré",
+            "Emmanuel Agbadou",
+            "Christ Inao Oulaï"
+          ]
+        },
+        {
+          "date": "2026-06-14",
+          "opp": "Ecuador",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Yahia Fofana",
+            "Ghislain Konan",
+            "Wilfried Singo",
+            "Seko Fofana",
+            "Franck Kessié",
+            "Yan Diomandé",
+            "Elye Wahi",
+            "Guéla Doué",
+            "Nicolas Pépé",
+            "Emmanuel Agbadou",
+            "Bazoumana Touré"
+          ]
+        }
       ]
     },
     "Ecuador": {
@@ -10635,6 +11815,62 @@
           "gf": 2,
           "ga": 1,
           "res": "V"
+        }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-25",
+          "opp": "Germany",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Hernán Galíndez",
+            "Piero Hincapié",
+            "Joel Ordóñez",
+            "Willian Pacho",
+            "John Yeboah",
+            "Enner Valencia",
+            "Pedro Vite",
+            "Gonzalo Plata",
+            "Nilson Angulo",
+            "Alan Franco",
+            "Moisés Caicedo"
+          ]
+        },
+        {
+          "date": "2026-06-20",
+          "opp": "Curaçao",
+          "formation": "3-1-4-2",
+          "xi": [
+            "Hernán Galíndez",
+            "Piero Hincapié",
+            "Jordy Alcivar",
+            "Willian Pacho",
+            "Pervis Estupiñán",
+            "John Yeboah",
+            "Enner Valencia",
+            "Pedro Vite",
+            "Gonzalo Plata",
+            "Alan Franco",
+            "Moisés Caicedo"
+          ]
+        },
+        {
+          "date": "2026-06-14",
+          "opp": "Côte d'Ivoire",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Hernán Galíndez",
+            "Piero Hincapié",
+            "Joel Ordóñez",
+            "Willian Pacho",
+            "John Yeboah",
+            "Enner Valencia",
+            "Alan Minda",
+            "Pedro Vite",
+            "Gonzalo Plata",
+            "Alan Franco",
+            "Moisés Caicedo"
+          ]
         }
       ]
     },
@@ -10894,6 +12130,62 @@
           "ga": 2,
           "res": "D"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-25",
+          "opp": "Côte d'Ivoire",
+          "formation": "5-4-1",
+          "xi": [
+            "Eloy Room",
+            "Juriën Gaari",
+            "Sherel Floranus",
+            "Juninho Bacuna",
+            "Livano Comenencia",
+            "Jürgen Locadia",
+            "Leandro Bacuna",
+            "Armando Obispo",
+            "Joshua Brenet",
+            "Tahith Chong",
+            "Deveron Fonville"
+          ]
+        },
+        {
+          "date": "2026-06-20",
+          "opp": "Ecuador",
+          "formation": "5-4-1",
+          "xi": [
+            "Eloy Room",
+            "Juriën Gaari",
+            "Sherel Floranus",
+            "Juninho Bacuna",
+            "Livano Comenencia",
+            "Jürgen Locadia",
+            "Leandro Bacuna",
+            "Armando Obispo",
+            "Joshua Brenet",
+            "Tahith Chong",
+            "Deveron Fonville"
+          ]
+        },
+        {
+          "date": "2026-06-14",
+          "opp": "Germany",
+          "formation": "4-3-1-2",
+          "xi": [
+            "Eloy Room",
+            "Sherel Floranus",
+            "Juninho Bacuna",
+            "Livano Comenencia",
+            "Jürgen Locadia",
+            "Leandro Bacuna",
+            "Sontje Hansen",
+            "Armando Obispo",
+            "Tahith Chong",
+            "Riechedly Bazoer",
+            "Deveron Fonville"
+          ]
+        }
       ]
     },
     "Netherlands": {
@@ -11131,6 +12423,62 @@
           "gf": 3,
           "ga": 1,
           "res": "V"
+        }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-25",
+          "opp": "Tunisia",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Bart Verbruggen",
+            "Virgil van Dijk",
+            "Nathan Aké",
+            "Jan Paul van Hecke",
+            "Ryan Gravenberch",
+            "Cody Gakpo",
+            "Tijjani Reijnders",
+            "Donyell Malen",
+            "Brian Brobbey",
+            "Frenkie de Jong",
+            "Denzel Dumfries"
+          ]
+        },
+        {
+          "date": "2026-06-20",
+          "opp": "Sweden",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Bart Verbruggen",
+            "Virgil van Dijk",
+            "Jan Paul van Hecke",
+            "Ryan Gravenberch",
+            "Cody Gakpo",
+            "Tijjani Reijnders",
+            "Micky van de Ven",
+            "Donyell Malen",
+            "Brian Brobbey",
+            "Frenkie de Jong",
+            "Denzel Dumfries"
+          ]
+        },
+        {
+          "date": "2026-06-14",
+          "opp": "Japan",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Bart Verbruggen",
+            "Virgil van Dijk",
+            "Jan Paul van Hecke",
+            "Ryan Gravenberch",
+            "Cody Gakpo",
+            "Tijjani Reijnders",
+            "Micky van de Ven",
+            "Donyell Malen",
+            "Frenkie de Jong",
+            "Denzel Dumfries",
+            "Crysencio Summerville"
+          ]
         }
       ]
     },
@@ -11400,6 +12748,62 @@
           "ga": 1,
           "res": "N"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-25",
+          "opp": "Sweden",
+          "formation": "3-4-3",
+          "xi": [
+            "Zion Suzuki",
+            "Yukinari Sugawara",
+            "Ko Itakura",
+            "Ao Tanaka",
+            "Ritsu Doan",
+            "Daizen Maeda",
+            "Keito Nakamura",
+            "Daichi Kamada",
+            "Ayase Ueda",
+            "Ayumu Seko",
+            "Hiroki Ito"
+          ]
+        },
+        {
+          "date": "2026-06-20",
+          "opp": "Tunisia",
+          "formation": "3-4-3",
+          "xi": [
+            "Zion Suzuki",
+            "Ko Itakura",
+            "Ao Tanaka",
+            "Ritsu Doan",
+            "Keito Nakamura",
+            "Junya Itō",
+            "Daichi Kamada",
+            "Ayase Ueda",
+            "Hiroki Ito",
+            "Takehiro Tomiyasu",
+            "Kaishū Sano"
+          ]
+        },
+        {
+          "date": "2026-06-14",
+          "opp": "Netherlands",
+          "formation": "3-4-3",
+          "xi": [
+            "Zion Suzuki",
+            "Shogo Taniguchi",
+            "Takefusa Kubo",
+            "Ritsu Doan",
+            "Daizen Maeda",
+            "Keito Nakamura",
+            "Daichi Kamada",
+            "Tsuyoshi Watanabe",
+            "Ayase Ueda",
+            "Hiroki Ito",
+            "Kaishū Sano"
+          ]
+        }
       ]
     },
     "Sweden": {
@@ -11654,6 +13058,62 @@
           "ga": 1,
           "res": "N"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-25",
+          "opp": "Japan",
+          "formation": "3-4-3",
+          "xi": [
+            "Jacob Widell Zetterström",
+            "Gustaf Lagerbielke",
+            "Victor Lindelöf",
+            "Isak Hien",
+            "Gabriel Gudmundsson",
+            "Alexander Isak",
+            "Anthony Elanga",
+            "Viktor Gyökeres",
+            "Yasin Ayari",
+            "Alexander Bernhardsson",
+            "Elliot Stroud"
+          ]
+        },
+        {
+          "date": "2026-06-20",
+          "opp": "Netherlands",
+          "formation": "3-1-4-2",
+          "xi": [
+            "Kristoffer Nordfeldt",
+            "Gustaf Lagerbielke",
+            "Victor Lindelöf",
+            "Isak Hien",
+            "Gabriel Gudmundsson",
+            "Alexander Isak",
+            "Benjamin Nygren",
+            "Jesper Karlström",
+            "Viktor Gyökeres",
+            "Yasin Ayari",
+            "Alexander Bernhardsson"
+          ]
+        },
+        {
+          "date": "2026-06-14",
+          "opp": "Tunisia",
+          "formation": "3-4-1-2",
+          "xi": [
+            "Kristoffer Nordfeldt",
+            "Gustaf Lagerbielke",
+            "Victor Lindelöf",
+            "Isak Hien",
+            "Gabriel Gudmundsson",
+            "Alexander Isak",
+            "Benjamin Nygren",
+            "Jesper Karlström",
+            "Viktor Gyökeres",
+            "Yasin Ayari",
+            "Alexander Bernhardsson"
+          ]
+        }
       ]
     },
     "Tunisia": {
@@ -11898,6 +13358,62 @@
           "ga": 3,
           "res": "D"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-25",
+          "opp": "Netherlands",
+          "formation": "5-4-1",
+          "xi": [
+            "Aymen Dahmen",
+            "Ali Abdi",
+            "Montassar Talbi",
+            "Hazem Mastouri",
+            "Hannibal Mejbri",
+            "Ismaël Gharbi",
+            "Rani Khedira",
+            "Ellyes Skhiri",
+            "Yan Valery",
+            "Mohamed Amine Ben Hamida",
+            "Anis Ben Slimane"
+          ]
+        },
+        {
+          "date": "2026-06-20",
+          "opp": "Japan",
+          "formation": "5-4-1",
+          "xi": [
+            "Aymen Dahmen",
+            "Ali Abdi",
+            "Montassar Talbi",
+            "Omar Rekik",
+            "Dylan Bronn",
+            "Elias Saad",
+            "Hannibal Mejbri",
+            "Ellyes Skhiri",
+            "Yan Valery",
+            "Anis Ben Slimane",
+            "Sebastian Tounekti"
+          ]
+        },
+        {
+          "date": "2026-06-14",
+          "opp": "Sweden",
+          "formation": "5-3-2",
+          "xi": [
+            "Mouhib Chamakh",
+            "Ali Abdi",
+            "Montassar Talbi",
+            "Omar Rekik",
+            "Elias Saad",
+            "Hannibal Mejbri",
+            "Rani Khedira",
+            "Ellyes Skhiri",
+            "Yan Valery",
+            "Mohamed Amine Ben Hamida",
+            "Anis Ben Slimane"
+          ]
+        }
       ]
     },
     "Egypt": {
@@ -11940,7 +13456,7 @@
       ],
       "timing": {
         "scored": [
-          0,
+          1,
           1,
           0,
           1,
@@ -11948,7 +13464,7 @@
           1
         ],
         "conceded": [
-          1,
+          2,
           0,
           0,
           0,
@@ -12125,6 +13641,62 @@
           "ga": 1,
           "res": "V"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-26",
+          "opp": "IR Iran",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Mostafa Shobeir",
+            "Mohamed Hany",
+            "Ramy Rabia",
+            "Mohamed Abdelmonem",
+            "Trézéguet",
+            "Emam Ashour",
+            "Mohamed Salah",
+            "Mostafa Ziko",
+            "Ahmed Fatouh",
+            "Mohanad Lasheen",
+            "Mahmoud Saber"
+          ]
+        },
+        {
+          "date": "2026-06-21",
+          "opp": "New Zealand",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Mostafa Shobeir",
+            "Yasser Ibrahim",
+            "Mohamed Hany",
+            "Emam Ashour",
+            "Mohamed Salah",
+            "Mostafa Ziko",
+            "Ahmed Fatouh",
+            "Hamdy Fathy",
+            "Mohanad Lasheen",
+            "Marwan Attia",
+            "Omar Marmoush"
+          ]
+        },
+        {
+          "date": "2026-06-15",
+          "opp": "Belgium",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Mostafa Shobeir",
+            "Yasser Ibrahim",
+            "Mohamed Hany",
+            "Emam Ashour",
+            "Mohamed Salah",
+            "Mostafa Ziko",
+            "Ahmed Fatouh",
+            "Hamdy Fathy",
+            "Mohanad Lasheen",
+            "Marwan Attia",
+            "Omar Marmoush"
+          ]
+        }
       ]
     },
     "IR Iran": {
@@ -12167,7 +13739,7 @@
       ],
       "timing": {
         "scored": [
-          0,
+          1,
           0,
           1,
           0,
@@ -12175,7 +13747,7 @@
           0
         ],
         "conceded": [
-          1,
+          2,
           0,
           0,
           1,
@@ -12352,6 +13924,62 @@
           "ga": 0,
           "res": "N"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-26",
+          "opp": "Egypt",
+          "formation": "5-4-1",
+          "xi": [
+            "Alireza Beiranvand",
+            "Shoja' Khalilzadeh",
+            "Milad Mohammadi",
+            "Saeid Ezatolahi",
+            "Mohammad Mohebi",
+            "Mehdi Taremi",
+            "Hossein Kanaanizadegan",
+            "Saman Ghoddos",
+            "Ali Nemati",
+            "Mohammad Ghorbani",
+            "Ramin Rezaeian"
+          ]
+        },
+        {
+          "date": "2026-06-21",
+          "opp": "Belgium",
+          "formation": "5-4-1",
+          "xi": [
+            "Alireza Beiranvand",
+            "Saleh Hardani",
+            "Ehsan Hajsafi",
+            "Shoja' Khalilzadeh",
+            "Saeid Ezatolahi",
+            "Mohammad Mohebi",
+            "Mehdi Taremi",
+            "Hossein Kanaanizadegan",
+            "Saman Ghoddos",
+            "Ali Nemati",
+            "Ramin Rezaeian"
+          ]
+        },
+        {
+          "date": "2026-06-15",
+          "opp": "New Zealand",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Alireza Beiranvand",
+            "Shoja' Khalilzadeh",
+            "Milad Mohammadi",
+            "Saeid Ezatolahi",
+            "Mohammad Mohebi",
+            "Mehdi Taremi",
+            "Saman Ghoddos",
+            "Aria Yousefi",
+            "Ali Nemati",
+            "Shahriar Moghanlou",
+            "Ramin Rezaeian"
+          ]
+        }
       ]
     },
     "Belgium": {
@@ -12398,11 +14026,11 @@
       "timing": {
         "scored": [
           0,
-          0,
-          0,
+          1,
           0,
           1,
-          0
+          2,
+          2
         ],
         "conceded": [
           0,
@@ -12410,7 +14038,7 @@
           0,
           0,
           0,
-          0
+          1
         ]
       },
       "squad": [
@@ -12582,6 +14210,62 @@
           "ga": 0,
           "res": "N"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-26",
+          "opp": "New Zealand",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Thibaut Courtois",
+            "Arthur Theate",
+            "Brandon Mechele",
+            "Maxim De Cuyper",
+            "Kevin De Bruyne",
+            "Youri Tielemans",
+            "Leandro Trossard",
+            "Jeremy Doku",
+            "Charles De Ketelaere",
+            "Hans Vanaken",
+            "Timothy Castagne"
+          ]
+        },
+        {
+          "date": "2026-06-21",
+          "opp": "IR Iran",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Thibaut Courtois",
+            "Brandon Mechele",
+            "Maxim De Cuyper",
+            "Kevin De Bruyne",
+            "Youri Tielemans",
+            "Romelu Lukaku",
+            "Leandro Trossard",
+            "Thomas Meunier",
+            "Alexis Saelemaekers",
+            "Nicolas Raskin",
+            "Nathan Ngoy"
+          ]
+        },
+        {
+          "date": "2026-06-15",
+          "opp": "Egypt",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Thibaut Courtois",
+            "Brandon Mechele",
+            "Kevin De Bruyne",
+            "Youri Tielemans",
+            "Leandro Trossard",
+            "Jeremy Doku",
+            "Thomas Meunier",
+            "Charles De Ketelaere",
+            "Timothy Castagne",
+            "Amadou Onana",
+            "Nathan Ngoy"
+          ]
+        }
       ]
     },
     "New Zealand": {
@@ -12629,15 +14313,15 @@
           0,
           1,
           0,
-          0
+          1
         ],
         "conceded": [
-          0,
           0,
           1,
           1,
           2,
-          1
+          3,
+          3
         ]
       },
       "squad": [
@@ -12793,6 +14477,62 @@
           "ga": 3,
           "res": "D"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-26",
+          "opp": "Belgium",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Max Crocombe",
+            "Tim Payne",
+            "Tyler Bindon",
+            "Joe Bell",
+            "Marko Stamenic",
+            "Chris Wood",
+            "Sarpreet Singh",
+            "Elijah Just",
+            "Liberato Cacace",
+            "Finn Surman",
+            "Ryan Thomas"
+          ]
+        },
+        {
+          "date": "2026-06-21",
+          "opp": "Egypt",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Max Crocombe",
+            "Tim Payne",
+            "Michael Boxall",
+            "Joe Bell",
+            "Marko Stamenic",
+            "Chris Wood",
+            "Sarpreet Singh",
+            "Elijah Just",
+            "Liberato Cacace",
+            "Finn Surman",
+            "Callum McCowatt"
+          ]
+        },
+        {
+          "date": "2026-06-15",
+          "opp": "IR Iran",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Max Crocombe",
+            "Tim Payne",
+            "Michael Boxall",
+            "Joe Bell",
+            "Marko Stamenic",
+            "Chris Wood",
+            "Sarpreet Singh",
+            "Elijah Just",
+            "Liberato Cacace",
+            "Finn Surman",
+            "Callum McCowatt"
+          ]
+        }
       ]
     },
     "Spain": {
@@ -12838,7 +14578,7 @@
         "scored": [
           1,
           2,
-          0,
+          1,
           1,
           0,
           0
@@ -13013,6 +14753,62 @@
           "ga": 0,
           "res": "V"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-26",
+          "opp": "Uruguay",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Unai Simón",
+            "Marcos Llorente",
+            "Mikel Merino",
+            "Aymeric Laporte",
+            "Álex Baena",
+            "Rodri",
+            "Lamine Yamal",
+            "Pedri",
+            "Mikel Oyarzabal",
+            "Pau Cubarsí",
+            "Marc Cucurella"
+          ]
+        },
+        {
+          "date": "2026-06-21",
+          "opp": "Saudi Arabia",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Unai Simón",
+            "Dani Olmo",
+            "Pedro Porro",
+            "Aymeric Laporte",
+            "Álex Baena",
+            "Rodri",
+            "Lamine Yamal",
+            "Pedri",
+            "Mikel Oyarzabal",
+            "Pau Cubarsí",
+            "Marc Cucurella"
+          ]
+        },
+        {
+          "date": "2026-06-15",
+          "opp": "Cabo Verde",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Unai Simón",
+            "Marcos Llorente",
+            "Ferrán Torres",
+            "Fabián Ruiz Peña",
+            "Gavi",
+            "Aymeric Laporte",
+            "Rodri",
+            "Pedri",
+            "Mikel Oyarzabal",
+            "Pau Cubarsí",
+            "Marc Cucurella"
+          ]
+        }
       ]
     },
     "Uruguay": {
@@ -13066,7 +14862,7 @@
         "conceded": [
           0,
           1,
-          1,
+          2,
           0,
           1,
           0
@@ -13216,6 +15012,62 @@
           "gf": 2,
           "ga": 2,
           "res": "N"
+        }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-26",
+          "opp": "Spain",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Fernando Muslera",
+            "Sebastián Cáceres",
+            "Manuel Ugarte",
+            "Rodrigo Bentancur",
+            "Federico Valverde",
+            "Darwin Núñez",
+            "Guillermo Varela",
+            "Agustín Canobbio",
+            "Mathías Olivera",
+            "Maxi Araújo",
+            "Juan Manuel Sanabria"
+          ]
+        },
+        {
+          "date": "2026-06-21",
+          "opp": "Cabo Verde",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Fernando Muslera",
+            "Sebastián Cáceres",
+            "Manuel Ugarte",
+            "Rodrigo Bentancur",
+            "Federico Valverde",
+            "Guillermo Varela",
+            "Agustín Canobbio",
+            "Mathías Olivera",
+            "Maxi Araújo",
+            "Federico Viñas",
+            "Juan Manuel Sanabria"
+          ]
+        },
+        {
+          "date": "2026-06-15",
+          "opp": "Saudi Arabia",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Fernando Muslera",
+            "Sebastián Cáceres",
+            "Manuel Ugarte",
+            "Rodrigo Bentancur",
+            "Federico Valverde",
+            "Darwin Núñez",
+            "Guillermo Varela",
+            "Mathías Olivera",
+            "Matías Viña",
+            "Maxi Araújo",
+            "Federico Viñas"
+          ]
         }
       ]
     },
@@ -13451,6 +15303,62 @@
           "ga": 2,
           "res": "N"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-26",
+          "opp": "Saudi Arabia",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Vozinha",
+            "Diney",
+            "Pico",
+            "Kevin Pina",
+            "João Paulo Fernandes",
+            "Jamiro Monteiro",
+            "Deroy Duarte",
+            "Willy Semedo",
+            "Dailon Livramento",
+            "Ryan Mendes",
+            "Wagner Pina"
+          ]
+        },
+        {
+          "date": "2026-06-21",
+          "opp": "Uruguay",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Vozinha",
+            "Diney",
+            "Pico",
+            "Kevin Pina",
+            "Gilson Benchimol",
+            "Jamiro Monteiro",
+            "Garry Rodrigues",
+            "Sidny Lopes Cabral",
+            "Telmo Arcanjo",
+            "Ryan Mendes",
+            "Steven Moreira"
+          ]
+        },
+        {
+          "date": "2026-06-15",
+          "opp": "Spain",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Vozinha",
+            "Diney",
+            "Pico",
+            "Kevin Pina",
+            "Jovane Cabral",
+            "Jamiro Monteiro",
+            "Sidny Lopes Cabral",
+            "Laros Duarte",
+            "Dailon Livramento",
+            "Ryan Mendes",
+            "Steven Moreira"
+          ]
+        }
       ]
     },
     "Saudi Arabia": {
@@ -13661,6 +15569,62 @@
           "ga": 4,
           "res": "D"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-26",
+          "opp": "Cabo Verde",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Mohammed Al-Owais",
+            "Abdulelah Al-Amri",
+            "Hassan Al Tambakti",
+            "Nasser Al-Dawsari",
+            "Firas Al-Buraikan",
+            "Salem Al-Dawsari",
+            "Saud Abdulhamid",
+            "Nawaf Boushal",
+            "Abdullah Al-Khaibari",
+            "Sultan Mendash",
+            "Mohamed Kanno"
+          ]
+        },
+        {
+          "date": "2026-06-21",
+          "opp": "Spain",
+          "formation": "5-4-1",
+          "xi": [
+            "Mohammed Al-Owais",
+            "Ali Lajami",
+            "Abdulelah Al-Amri",
+            "Hassan Al Tambakti",
+            "Nasser Al-Dawsari",
+            "Musab Al Juwayr",
+            "Firas Al-Buraikan",
+            "Salem Al-Dawsari",
+            "Saud Abdulhamid",
+            "Abdullah Al-Khaibari",
+            "Moteb Al-Harbi"
+          ]
+        },
+        {
+          "date": "2026-06-15",
+          "opp": "Uruguay",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Mohammed Al-Owais",
+            "Abdulelah Al-Amri",
+            "Hassan Al Tambakti",
+            "Musab Al Juwayr",
+            "Firas Al-Buraikan",
+            "Salem Al-Dawsari",
+            "Saud Abdulhamid",
+            "Abdullah Al-Khaibari",
+            "Mohamed Kanno",
+            "Moteb Al-Harbi",
+            "Mohammed Abu Al-Shamat"
+          ]
+        }
       ]
     },
     "France": {
@@ -13705,16 +15669,16 @@
       ],
       "timing": {
         "scored": [
+          2,
           1,
-          0,
-          0,
+          1,
           1,
           2,
-          2
+          3
         ],
         "conceded": [
           0,
-          0,
+          1,
           0,
           0,
           0,
@@ -13882,6 +15846,62 @@
           "ga": 0,
           "res": "V"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-26",
+          "opp": "Norway",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Mike Maignan",
+            "Dayot Upamecano",
+            "Jules Koundé",
+            "Manu Koné",
+            "Ousmane Dembélé",
+            "Aurélien Tchouaméni",
+            "Kylian Mbappé",
+            "Michael Olise",
+            "Theo Hernández",
+            "Désiré Doué",
+            "Maxence Lacroix"
+          ]
+        },
+        {
+          "date": "2026-06-22",
+          "opp": "Iraq",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Mike Maignan",
+            "Lucas Digne",
+            "Dayot Upamecano",
+            "Jules Koundé",
+            "Manu Koné",
+            "Ousmane Dembélé",
+            "Kylian Mbappé",
+            "Michael Olise",
+            "Bradley Barcola",
+            "Adrien Rabiot",
+            "William Saliba"
+          ]
+        },
+        {
+          "date": "2026-06-16",
+          "opp": "Senegal",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Mike Maignan",
+            "Dayot Upamecano",
+            "Jules Koundé",
+            "Ousmane Dembélé",
+            "Aurélien Tchouaméni",
+            "Kylian Mbappé",
+            "Michael Olise",
+            "Adrien Rabiot",
+            "William Saliba",
+            "Theo Hernández",
+            "Désiré Doué"
+          ]
+        }
       ]
     },
     "Norway": {
@@ -13928,19 +15948,19 @@
       "timing": {
         "scored": [
           0,
-          1,
+          2,
           2,
           2,
           0,
           2
         ],
         "conceded": [
-          0,
-          0,
           1,
           1,
+          2,
+          1,
           0,
-          1
+          2
         ]
       },
       "squad": [
@@ -14096,6 +16116,62 @@
           "ga": 2,
           "res": "V"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-26",
+          "opp": "France",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Egil Selvik",
+            "Leo Østigård",
+            "Patrick Berg",
+            "Jørgen Strand Larsen",
+            "Fredrik Aursnes",
+            "Fredrik André Bjørkan",
+            "Kristian Thorstvedt",
+            "Thelo Aasgaard",
+            "Andreas Schjelderup",
+            "Oscar Bobb",
+            "Henrik Falchener"
+          ]
+        },
+        {
+          "date": "2026-06-22",
+          "opp": "Senegal",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Ørjan Nyland",
+            "Kristoffer Ajer",
+            "David Møller Wolfe",
+            "Alexander Sørloth",
+            "Sander Berge",
+            "Erling Haaland",
+            "Martin Ødegaard",
+            "Fredrik Aursnes",
+            "Torbjørn Heggem",
+            "Antonio Nusa",
+            "Julian Ryerson"
+          ]
+        },
+        {
+          "date": "2026-06-16",
+          "opp": "Iraq",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Ørjan Nyland",
+            "Kristoffer Ajer",
+            "David Møller Wolfe",
+            "Alexander Sørloth",
+            "Sander Berge",
+            "Erling Haaland",
+            "Martin Ødegaard",
+            "Fredrik Aursnes",
+            "Torbjørn Heggem",
+            "Antonio Nusa",
+            "Julian Ryerson"
+          ]
+        }
       ]
     },
     "Senegal": {
@@ -14138,12 +16214,12 @@
       ],
       "timing": {
         "scored": [
-          0,
-          0,
-          0,
           1,
           0,
-          2
+          0,
+          3,
+          1,
+          3
         ],
         "conceded": [
           0,
@@ -14323,6 +16399,62 @@
           "ga": 3,
           "res": "D"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-26",
+          "opp": "Iraq",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Mory Diaw",
+            "Abdoulaye Seck",
+            "Idrissa Gueye",
+            "Lamine Camara",
+            "Sadio Mané",
+            "Ismail Jakobs",
+            "Krépin Diatta",
+            "Ismaila Sarr",
+            "Moussa Niakhaté",
+            "Ibrahim Mbaye",
+            "Habib Diarra"
+          ]
+        },
+        {
+          "date": "2026-06-22",
+          "opp": "Norway",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Édouard Mendy",
+            "Kalidou Koulibaly",
+            "Idrissa Gueye",
+            "Lamine Camara",
+            "Sadio Mané",
+            "Nicolas Jackson",
+            "Krépin Diatta",
+            "Ismaila Sarr",
+            "Moussa Niakhaté",
+            "El Hadji Malick Diouf",
+            "Pape Gueye"
+          ]
+        },
+        {
+          "date": "2026-06-16",
+          "opp": "France",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Édouard Mendy",
+            "Kalidou Koulibaly",
+            "Idrissa Gueye",
+            "Lamine Camara",
+            "Sadio Mané",
+            "Nicolas Jackson",
+            "Krépin Diatta",
+            "Ismaila Sarr",
+            "Moussa Niakhaté",
+            "El Hadji Malick Diouf",
+            "Pape Gueye"
+          ]
+        }
       ]
     },
     "Iraq": {
@@ -14374,12 +16506,12 @@
           0
         ],
         "conceded": [
+          2,
           1,
           1,
-          1,
-          1,
-          1,
-          2
+          3,
+          2,
+          3
         ]
       },
       "squad": [
@@ -14558,6 +16690,62 @@
           "gf": 0,
           "ga": 3,
           "res": "D"
+        }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-26",
+          "opp": "Senegal",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Ahmed Basil",
+            "Rebin Sulaka",
+            "Akam Hashim",
+            "Ibrahim Bayesh",
+            "Ali Al Hamadi",
+            "Ahmed Qasem",
+            "Zidane Iqbal",
+            "Amir Al Ammari",
+            "Ali Jasim",
+            "Merchas Doski",
+            "Frans Dhia Putros"
+          ]
+        },
+        {
+          "date": "2026-06-22",
+          "opp": "France",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Ahmed Basil",
+            "Hussein Ali",
+            "Zaid Tahseen",
+            "Akam Hashim",
+            "Ibrahim Bayesh",
+            "Ahmed Qasem",
+            "Zidane Iqbal",
+            "Amir Al Ammari",
+            "Ayman Hussein",
+            "Merchas Doski",
+            "Zaid Ismail"
+          ]
+        },
+        {
+          "date": "2026-06-16",
+          "opp": "Norway",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Jalal Hassan",
+            "Hussein Ali",
+            "Zaid Tahseen",
+            "Akam Hashim",
+            "Ibrahim Bayesh",
+            "Ali Al Hamadi",
+            "Amir Al Ammari",
+            "Ali Jasim",
+            "Ayman Hussein",
+            "Merchas Doski",
+            "Zaid Ismail"
+          ]
         }
       ]
     },
@@ -14779,6 +16967,44 @@
           "gf": 2,
           "ga": 0,
           "res": "V"
+        }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-22",
+          "opp": "Austria",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Emiliano Martínez",
+            "Lisandro Martínez",
+            "Rodrigo De Paul",
+            "Lionel Messi",
+            "Cristian Romero",
+            "Thiago Almada",
+            "Alexis Mac Allister",
+            "Lautaro Martínez",
+            "Enzo Fernández",
+            "Facundo Medina",
+            "Nahuel Molina"
+          ]
+        },
+        {
+          "date": "2026-06-16",
+          "opp": "Algeria",
+          "formation": "4-2-2-2",
+          "xi": [
+            "Emiliano Martínez",
+            "Gonzalo Montiel",
+            "Lisandro Martínez",
+            "Rodrigo De Paul",
+            "Lionel Messi",
+            "Cristian Romero",
+            "Thiago Almada",
+            "Alexis Mac Allister",
+            "Lautaro Martínez",
+            "Enzo Fernández",
+            "Facundo Medina"
+          ]
         }
       ]
     },
@@ -15006,6 +17232,44 @@
           "ga": 2,
           "res": "D"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-22",
+          "opp": "Argentina",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Alexander Schlager",
+            "Kevin Danso",
+            "Xaver Schlager",
+            "Stefan Posch",
+            "Nicolas Seiwald",
+            "David Alaba",
+            "Marcel Sabitzer",
+            "Michael Gregoritsch",
+            "Romano Schmid",
+            "Konrad Laimer",
+            "Paul Wanner"
+          ]
+        },
+        {
+          "date": "2026-06-16",
+          "opp": "Jordan",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Alexander Schlager",
+            "Xaver Schlager",
+            "Stefan Posch",
+            "Nicolas Seiwald",
+            "David Alaba",
+            "Marcel Sabitzer",
+            "Saša Kalajdžić",
+            "Philipp Lienhart",
+            "Phillipp Mwene",
+            "Romano Schmid",
+            "Konrad Laimer"
+          ]
+        }
       ]
     },
     "Algeria": {
@@ -15232,6 +17496,44 @@
           "gf": 2,
           "ga": 1,
           "res": "V"
+        }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-22",
+          "opp": "Jordan",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Luca Zidane",
+            "Aïssa Mandi",
+            "Ramiz Zerrouki",
+            "Riyad Mahrez",
+            "Amine Gouiri",
+            "Fares Chaïbi",
+            "Hicham Boudaoui",
+            "Rayan Aït-Nouri",
+            "Rafik Belghali",
+            "Ramy Bensebaini",
+            "Ibrahim Maza"
+          ]
+        },
+        {
+          "date": "2026-06-16",
+          "opp": "Argentina",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Luca Zidane",
+            "Aïssa Mandi",
+            "Amine Gouiri",
+            "Fares Chaïbi",
+            "Anis Hadj Moussa",
+            "Hicham Boudaoui",
+            "Rayan Aït-Nouri",
+            "Rafik Belghali",
+            "Nabil Bentaleb",
+            "Ramy Bensebaini",
+            "Ibrahim Maza"
+          ]
         }
       ]
     },
@@ -15461,6 +17763,44 @@
           "ga": 2,
           "res": "D"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-22",
+          "opp": "Algeria",
+          "formation": "5-4-1",
+          "xi": [
+            "Yazeed Abulaila",
+            "Abdallah Nasib",
+            "Husam Abu Dahab",
+            "Yazan Al-Arab",
+            "Noor Al Rawabdeh",
+            "Ali Olwan",
+            "Musa Al-Taamari",
+            "Mahmoud Al-Mardi",
+            "Mohannad Abu Taha",
+            "Nizar Al Rashdan",
+            "Ihsan Haddad"
+          ]
+        },
+        {
+          "date": "2026-06-16",
+          "opp": "Austria",
+          "formation": "5-4-1",
+          "xi": [
+            "Yazeed Abulaila",
+            "Abdallah Nasib",
+            "Yazan Al-Arab",
+            "Noor Al Rawabdeh",
+            "Ali Olwan",
+            "Musa Al-Taamari",
+            "Odeh Al-Fakhouri",
+            "Mo Abualnadi",
+            "Mohannad Abu Taha",
+            "Nizar Al Rashdan",
+            "Ihsan Haddad"
+          ]
+        }
       ]
     },
     "Colombia": {
@@ -15679,6 +18019,44 @@
           "gf": 1,
           "ga": 0,
           "res": "V"
+        }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-23",
+          "opp": "Congo DR",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Camilo Vargas",
+            "Daniel Muñoz",
+            "Jhon Lucumí",
+            "Luis Díaz",
+            "James Rodríguez",
+            "Jhon Arias",
+            "Gustavo Puerta",
+            "Jefferson Lerma",
+            "Johan Mojica",
+            "Davinson Sánchez",
+            "Luis Suárez"
+          ]
+        },
+        {
+          "date": "2026-06-17",
+          "opp": "Uzbekistan",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Camilo Vargas",
+            "Daniel Muñoz",
+            "Jhon Lucumí",
+            "Luis Díaz",
+            "James Rodríguez",
+            "Jhon Arias",
+            "Gustavo Puerta",
+            "Jefferson Lerma",
+            "Johan Mojica",
+            "Davinson Sánchez",
+            "Luis Suárez"
+          ]
         }
       ]
     },
@@ -15901,6 +18279,44 @@
           "ga": 0,
           "res": "V"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-23",
+          "opp": "Uzbekistan",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Diogo Costa",
+            "Rúben Dias",
+            "Cristiano Ronaldo",
+            "Bruno Fernandes",
+            "João Félix",
+            "Renato Veiga",
+            "João Neves",
+            "Pedro Neto",
+            "João Cancelo",
+            "Vitinha",
+            "Nuno Mendes"
+          ]
+        },
+        {
+          "date": "2026-06-17",
+          "opp": "Congo DR",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Diogo Costa",
+            "Tomás Araújo",
+            "Cristiano Ronaldo",
+            "Bruno Fernandes",
+            "Bernardo Silva",
+            "Renato Veiga",
+            "João Neves",
+            "Pedro Neto",
+            "João Cancelo",
+            "Vitinha",
+            "Nuno Mendes"
+          ]
+        }
       ]
     },
     "Congo DR": {
@@ -16113,6 +18529,44 @@
           "gf": 0,
           "ga": 1,
           "res": "D"
+        }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-23",
+          "opp": "Colombia",
+          "formation": "5-3-2",
+          "xi": [
+            "Lionel Mpasi",
+            "Aaron Wan-Bissaka",
+            "Steve Kapuadi",
+            "Axel Tuanzebe",
+            "Ngal'Ayel Mukau",
+            "Samuel Moutoussamy",
+            "Cédric Bakambu",
+            "Yoane Wissa",
+            "Chancel Mbemba",
+            "Edo Kayembe",
+            "Arthur Masuaku"
+          ]
+        },
+        {
+          "date": "2026-06-17",
+          "opp": "Portugal",
+          "formation": "5-3-2",
+          "xi": [
+            "Lionel Mpasi",
+            "Aaron Wan-Bissaka",
+            "Steve Kapuadi",
+            "Axel Tuanzebe",
+            "Ngal'Ayel Mukau",
+            "Samuel Moutoussamy",
+            "Cédric Bakambu",
+            "Yoane Wissa",
+            "Chancel Mbemba",
+            "Edo Kayembe",
+            "Arthur Masuaku"
+          ]
         }
       ]
     },
@@ -16366,6 +18820,44 @@
           "ga": 5,
           "res": "D"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-23",
+          "opp": "Portugal",
+          "formation": "5-4-1",
+          "xi": [
+            "Abduvohid Nematov",
+            "Abdukodir Khusanov",
+            "Rustam Ashurmatov",
+            "Otabek Shukurov",
+            "Odiljon Hamrobekov",
+            "Sherzod Nasrullaev",
+            "Eldor Shomurodov",
+            "Abdulla Abdullaev",
+            "Aziz Gʻaniyev",
+            "Abbosbek Fayzullayev",
+            "Bekhruz Karimov"
+          ]
+        },
+        {
+          "date": "2026-06-17",
+          "opp": "Colombia",
+          "formation": "5-4-1",
+          "xi": [
+            "Utkir Yusupov",
+            "Abdukodir Khusanov",
+            "Rustam Ashurmatov",
+            "Akmal Mozgovoy",
+            "Otabek Shukurov",
+            "Oston Urunov",
+            "Sherzod Nasrullaev",
+            "Eldor Shomurodov",
+            "Abdulla Abdullaev",
+            "Abbosbek Fayzullayev",
+            "Bekhruz Karimov"
+          ]
+        }
       ]
     },
     "England": {
@@ -16576,6 +19068,44 @@
           "gf": 0,
           "ga": 0,
           "res": "N"
+        }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-23",
+          "opp": "Ghana",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Jordan Pickford",
+            "Ezri Konsa",
+            "Declan Rice",
+            "Marc Guéhi",
+            "Elliot Anderson",
+            "Harry Kane",
+            "Jude Bellingham",
+            "Anthony Gordon",
+            "Noni Madueke",
+            "Reece James",
+            "Djed Spence"
+          ]
+        },
+        {
+          "date": "2026-06-17",
+          "opp": "Croatia",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Jordan Pickford",
+            "Ezri Konsa",
+            "Nico O'Reilly",
+            "Declan Rice",
+            "John Stones",
+            "Elliot Anderson",
+            "Harry Kane",
+            "Jude Bellingham",
+            "Anthony Gordon",
+            "Noni Madueke",
+            "Reece James"
+          ]
         }
       ]
     },
@@ -16815,6 +19345,44 @@
           "ga": 0,
           "res": "N"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-23",
+          "opp": "England",
+          "formation": "4-1-4-1",
+          "xi": [
+            "Benjamin Asare",
+            "Caleb Yirenkyi",
+            "Jonas Adjetey",
+            "Thomas Partey",
+            "Kwasi Sibo",
+            "Jordan Ayew",
+            "Antoine Semenyo",
+            "Gideon Mensah",
+            "Jerome Opoku",
+            "Iñaki Williams",
+            "Marvin Senaya"
+          ]
+        },
+        {
+          "date": "2026-06-17",
+          "opp": "Panama",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Lawrence Ati-Zigi",
+            "Caleb Yirenkyi",
+            "Jonas Adjetey",
+            "Jordan Ayew",
+            "Antoine Semenyo",
+            "Gideon Mensah",
+            "Elisha Owusu",
+            "Jerome Opoku",
+            "Kamaldeen Sulemana",
+            "Ernest Nuamah",
+            "Marvin Senaya"
+          ]
+        }
       ]
     },
     "Croatia": {
@@ -17040,6 +19608,44 @@
           "ga": 0,
           "res": "V"
         }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-23",
+          "opp": "Panama",
+          "formation": "4-2-3-1",
+          "xi": [
+            "Dominik Livaković",
+            "Josip Stanišić",
+            "Marin Pongračić",
+            "Joško Gvardiol",
+            "Josip Šutalo",
+            "Mateo Kovačić",
+            "Luka Modrić",
+            "Ivan Perišić",
+            "Martin Baturina",
+            "Marco Pašalić",
+            "Petar Musa"
+          ]
+        },
+        {
+          "date": "2026-06-17",
+          "opp": "England",
+          "formation": "3-4-3",
+          "xi": [
+            "Dominik Livaković",
+            "Josip Stanišić",
+            "Joško Gvardiol",
+            "Josip Šutalo",
+            "Luka Modrić",
+            "Ivan Perišić",
+            "Mario Pašalić",
+            "Martin Baturina",
+            "Petar Sučić",
+            "Luka Vušković",
+            "Petar Musa"
+          ]
+        }
       ]
     },
     "Panama": {
@@ -17251,6 +19857,44 @@
           "gf": 0,
           "ga": 1,
           "res": "D"
+        }
+      ],
+      "formations": [
+        {
+          "date": "2026-06-23",
+          "opp": "Croatia",
+          "formation": "5-4-1",
+          "xi": [
+            "Orlando Mosquera",
+            "César Blackman",
+            "José Córdoba",
+            "Cristian Martínez",
+            "José Luis Rodríguez",
+            "Yoel Bárcenas",
+            "Jiovany Ramos",
+            "Carlos Harvey",
+            "Andrés Andrade Cedeño",
+            "José Fajardo",
+            "Michael Amir Murillo"
+          ]
+        },
+        {
+          "date": "2026-06-17",
+          "opp": "Ghana",
+          "formation": "3-4-3",
+          "xi": [
+            "Orlando Mosquera",
+            "César Blackman",
+            "José Córdoba",
+            "Cristian Martínez",
+            "José Luis Rodríguez",
+            "Yoel Bárcenas",
+            "Jiovany Ramos",
+            "Carlos Harvey",
+            "Andrés Andrade Cedeño",
+            "Cecilio Waterman",
+            "Michael Amir Murillo"
+          ]
         }
       ]
     }

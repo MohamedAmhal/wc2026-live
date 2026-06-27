@@ -36,6 +36,8 @@ def main():
                        help="fbref (sous-ensemble) + native-stats live")
     group.add_argument("--live", action="store_true",
                        help="native-stats SEUL (scores + classement) — sûr pour le cloud/CI")
+    group.add_argument("--lineups", action="store_true",
+                       help="compositions/tactiques fbref seulement (depuis le Mac)")
     parser.add_argument("--headless", action="store_true",
                         help="force le mode invisible (moins fiable vs Cloudflare)")
     args = parser.parse_args()
@@ -46,7 +48,8 @@ def main():
     setup_logging()
     log = logging.getLogger("run")
 
-    mode = "full" if args.full else ("live" if args.live else "update")
+    mode = ("full" if args.full else "live" if args.live
+            else "lineups" if args.lineups else "update")
     run_ts = dt.datetime.now().isoformat(timespec="seconds")
     log.info("Démarrage scraper — mode=%s, ts=%s", mode, run_ts)
 

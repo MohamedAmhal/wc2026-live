@@ -273,6 +273,52 @@ def parse_player_stats(soup, category):
     return players, stats
 
 
+def parse_lineups(soup):
+    """Formations + XI titulaire depuis une feuille de match fbref.
+
+    Renvoie [{team_name, formation, starters:[noms]}] (2 blocs : dom & ext)."""
+    out = []
+    for blk in soup.find_all("div", class_="lineup"):
+        th = blk.find("th")
+        if not th:
+            continue
+        head = th.get_text(strip=True)
+        m = re.match(r"(.+?)\s*\((\d(?:-\d){1,3})\)", head)
+        if not m:
+            continue
+        names = [a.get_text(strip=True) for a in blk.find_all("a") if a.get_text(strip=True)]
+        if not names:
+            continue
+        out.append({
+            "team_name": _clean_name(m.group(1)),
+            "formation": m.group(2),
+            "starters": names[:11],   # les 11 premiers = titulaires
+        })
+    return out
+
+
+def schedule_report_links(soup):
+    """(date, home, away) -> URL de feuille de match, pour les matchs joués."""
+    table = None
+    for t in soup.find_all("table"):
+        if (t.get("id", "") or "").startswith("sched"):
+            table = t
+            break
+    links = {}
+    if table is None:
+        return links
+    for row in _data_rows(table):
+        home, away = _name_text(row, "home_team"), _name_text(row, "away_team")
+        date = _text(row, "date")
+        if not (home and away and date):
+            continue
+        cell = _cell(row, "match_report")
+        a = cell.find("a", href=True) if cell else None
+        if a and "/matches/" in a["href"]:
+            links[(date, home, away)] = "https://fbref.com" + a["href"]
+    return links
+
+
 def parse_team_stats(soup, category):
     """Stats AU NIVEAU ÉQUIPE depuis la table `stats_squads_<cat>_for`.
 

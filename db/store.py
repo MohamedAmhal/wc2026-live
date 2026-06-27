@@ -83,6 +83,20 @@ class Store:
                )""")
         self.conn.commit()
 
+    def lineup_keys(self):
+        """Clés (date, home, away) déjà scrapées — pour un scrape incrémental."""
+        return {tuple(r) for r in self.conn.execute(
+            "SELECT DISTINCT match_date, home_team, away_team FROM lineups")}
+
+    def upsert_lineup(self, date, home, away, team, formation, players):
+        row = {
+            "match_date": date, "home_team": home, "away_team": away,
+            "team_name": team, "formation": formation,
+            "players_json": json.dumps(players, ensure_ascii=False),
+        }
+        return self._upsert("lineups", [row],
+                            ["match_date", "home_team", "away_team", "team_name"])
+
     def upsert_team_stats(self, team_name, category, team_id, stats: dict):
         row = {
             "team_name": team_name, "category": category, "team_id": team_id,

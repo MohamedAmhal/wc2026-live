@@ -232,6 +232,14 @@ def _teams_detail(cur, events, note_map):
               FROM players JOIN player_stats USING(player_id) WHERE category='shooting'"""):
         shots_by_player[r[0]] = _int0(r[1])
 
+    # Compositions / tactiques par équipe (formation + XI), depuis lineups.
+    lineups_by_team = {}
+    for r in cur.execute("""SELECT match_date, home_team, away_team, team_name,
+                                   formation, players_json FROM lineups"""):
+        opp = r[2] if r[3] == r[1] else r[1]
+        lineups_by_team.setdefault(r[3], []).append({
+            "date": r[0], "opp": opp, "formation": r[4], "xi": json.loads(r[5])})
+
     # Résolution nom anglais (events) -> nom fbref.
     lookup = {ns._norm(t["t"]): t["t"] for t in teams}
     lookup.update(ns._ALIASES)
@@ -338,6 +346,8 @@ def _teams_detail(cur, events, note_map):
             "cards_r": _int0(tget(nm, "standard", "cards_red")),
             "form": form[-5:], "strengths": strengths, "weaknesses": weak,
             "style": style, "timing": timing[nm], "squad": sq[:26], "log": log,
+            "formations": sorted(lineups_by_team.get(nm, []),
+                                 key=lambda x: x["date"], reverse=True)[:6],
         }
     return detail
 

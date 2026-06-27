@@ -89,6 +89,17 @@ CREATE TABLE IF NOT EXISTS team_stats (
     PRIMARY KEY (team_name, category)
 );
 
+-- Compositions par match (formation + XI titulaire) depuis fbref
+CREATE TABLE IF NOT EXISTS lineups (
+    match_date   TEXT,
+    home_team    TEXT,
+    away_team    TEXT,
+    team_name    TEXT,
+    formation    TEXT,
+    players_json TEXT,
+    PRIMARY KEY (match_date, home_team, away_team, team_name)
+);
+
 -- Stades / lieux (dérivés des matchs)
 CREATE TABLE IF NOT EXISTS venues (
     venue_name      TEXT PRIMARY KEY,

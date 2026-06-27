@@ -83,6 +83,27 @@ class Pipeline:
             for ts in parsers.parse_team_stats(soup, cat):
                 self.store.upsert_team_stats(ts["team_name"], cat, ts["team_id"], ts["stats"])
 
+    def scrape_lineups(self):
+        """Compositions (formation + XI) de chaque match joué, depuis fbref.
+        Incrémental : ignore les matchs déjà en base."""
+        log.info("== Compositions / tactiques ==")
+        sched = self.fetcher.get_soup(config.SCHEDULE_URL)
+        self.pages += 1
+        links = parsers.schedule_report_links(sched)
+        done = self.store.lineup_keys()
+        todo = [(k, url) for k, url in links.items() if k not in done]
+        log.info("Compositions à récupérer : %d (déjà en base : %d)", len(todo), len(done))
+        for (date, home, away), url in todo:
+            try:
+                soup = self.fetcher.get_soup(url)
+                self.pages += 1
+            except RuntimeError as exc:
+                log.warning("Feuille de match ignorée (%s) : %s", url, exc)
+                continue
+            for lu in parsers.parse_lineups(soup):
+                self.store.upsert_lineup(date, home, away, lu["team_name"],
+                                         lu["formation"], lu["starters"])
+
     def scrape_live_native(self):
         """Source live : corrige le retard de fbref (scores + classement)."""
         log.info("== Live native-stats (scores + classement) ==")
@@ -120,6 +141,14 @@ class Pipeline:
             log.info("Run 'live' terminé : %d pages.", self.pages)
             return self.pages
 
+        # Mode lineups : uniquement les compositions/tactiques (depuis le Mac).
+        if self.mode == "lineups":
+            self.scrape_lineups()
+            self._export()
+            self.store.log_run(run_ts, self.mode, self.pages, notes="lineups")
+            log.info("Run 'lineups' terminé : %d pages.", self.pages)
+            return self.pages
+
         if self.mode == "full":
             categories = list(config.PLAYER_STAT_CATEGORIES.keys())
         else:  # update : le sous-ensemble qui évolue match après match
@@ -128,6 +157,8 @@ class Pipeline:
         self.scrape_groups()
         self.scrape_schedule()
         self.scrape_player_stats(categories)
+        if self.mode == "full":
+            self.scrape_lineups()   # compositions (lourd) seulement en --full
         # native-stats en dernier : écrase scores/classement avec les données à jour.
         self.scrape_live_native()
 

@@ -229,6 +229,22 @@
   .tlegend{display:flex;gap:16px;justify-content:center;font-size:11px;color:var(--muted);margin-top:8px}
   .tlegend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:middle}
   .tlegend .sg{background:var(--accent)}.tlegend .cg{background:var(--accent-2)}
+  /* terrain tactique */
+  .tac{margin-bottom:16px}
+  .tac-h{font-size:12px;color:var(--muted);margin-bottom:6px}
+  .tac-h b{color:var(--accent);font-family:var(--font-num)}
+  .pitch{position:relative;display:flex;flex-direction:column-reverse;justify-content:space-between;
+    background:linear-gradient(0deg,#0b5e2e,#0f7d3c);border:1px solid #1b8f4a;border-radius:12px;
+    padding:18px 8px;aspect-ratio:3/4;max-width:330px}
+  .pitch::before{content:"";position:absolute;left:8%;right:8%;top:50%;height:1px;background:rgba(255,255,255,.22)}
+  .pitch::after{content:"";position:absolute;left:50%;top:50%;width:60px;height:60px;
+    border:1px solid rgba(255,255,255,.22);border-radius:50%;transform:translate(-50%,-50%)}
+  .pline{display:flex;justify-content:space-around;align-items:center;position:relative;z-index:1}
+  .pp{display:flex;flex-direction:column;align-items:center;gap:3px;flex:1;min-width:0}
+  .pp .dot{width:24px;height:24px;border-radius:50%;background:rgba(255,46,109,.92);
+    border:1.5px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4)}
+  .pp .nm{font-size:9px;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.75);max-width:100%;
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center}
   .log{display:flex;flex-direction:column;gap:6px}
   .logrow{display:grid;grid-template-columns:auto auto 1fr auto;gap:10px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:9px 12px}
   .lr-res{width:20px;height:20px;border-radius:6px;display:grid;place-items:center;font-size:11px;font-weight:700;color:#06121f;font-family:var(--font-num)}
@@ -565,6 +581,15 @@ function renderBracket(data){
 }
 
 // ---- écran d'équipe ----
+const _short=(n)=>{const p=String(n||"").trim().split(/\s+/);return p[p.length-1]||n;};
+function pitch(formation, xi){
+  const lines=[1].concat(String(formation).split("-").map(Number));
+  let i=0; const rows=[];
+  for(const c of lines){ rows.push((xi||[]).slice(i,i+(c||0))); i+=(c||0); }
+  return `<div class="pitch">${rows.map(r=>`<div class="pline">${
+    r.map(p=>`<div class="pp"><span class="dot"></span><span class="nm">${esc(_short(p))}</span></div>`).join("")
+  }</div>`).join("")}</div>`;
+}
 const _chip=(t,c)=>`<span class="chip ${c||''}">${esc(t)}</span>`;
 const _formChips=(f)=>(f&&f.length)?f.map(r=>`<span class="fc ${r}">${r}</span>`).join(""):'<span class="th-sub">—</span>';
 const _tile=(v,l,s)=>`<div class="ttile"><div class="tv num">${v==null?'–':esc(v)}${(v==null?'':(s||''))}</div><div class="tl">${l}</div></div>`;
@@ -602,6 +627,9 @@ function renderTeam(name){
     ${t.strengths&&t.strengths.length?`<h3 class="th3">Points forts</h3><div class="chips">${t.strengths.map(s=>_chip("▲ "+s,"good")).join("")}</div>`:""}
     ${t.weaknesses&&t.weaknesses.length?`<h3 class="th3">Points faibles</h3><div class="chips">${t.weaknesses.map(s=>_chip("▼ "+s,"bad")).join("")}</div>`:""}
     ${t.style&&t.style.length?`<h3 class="th3">Profil de jeu</h3><div class="chips">${t.style.map(s=>_chip(s)).join("")}</div>`:""}
+    ${t.formations&&t.formations.length?`<h3 class="th3">Tactique · compositions par match</h3>${
+      t.formations.map(f=>`<div class="tac"><div class="tac-h">vs ${esc(f.opp)} · ${esc(f.date)} · formation <b>${esc(f.formation)}</b></div>${pitch(f.formation,f.xi)}</div>`).join("")
+    }`:""}
     <h3 class="th3">Indicateurs</h3><div class="ttiles">${tiles}</div>
     <h3 class="th3">Quand l'équipe marque / encaisse</h3>${_timingChart(t.timing||{scored:[],conceded:[]})}
     <h3 class="th3">Effectif</h3>
