@@ -229,6 +229,19 @@
   .tlegend{display:flex;gap:16px;justify-content:center;font-size:11px;color:var(--muted);margin-top:8px}
   .tlegend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:middle}
   .tlegend .sg{background:var(--accent)}.tlegend .cg{background:var(--accent-2)}
+  /* grille graphiques moyens 2 par ligne */
+  .agrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:13px}
+  .acard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:13px;min-width:0}
+  .acard-h{font-family:var(--font-display);font-weight:800;font-stretch:condensed;text-transform:uppercase;
+    letter-spacing:.04em;font-size:14px;color:var(--text);margin-bottom:10px}
+  .acard .bars{gap:6px}
+  .acard .row{grid-template-columns:92px 1fr 30px;gap:8px}
+  .acard .row .who{font-size:12px}
+  .acard .track{height:18px}
+  .acard .cols{height:150px}
+  .xy-sel{display:flex;gap:8px;margin-bottom:8px}
+  .xy-sel select{flex:1;min-width:0;background:var(--panel-2);color:var(--text);border:1px solid var(--line);
+    border-radius:8px;padding:7px 8px;font-size:12px;font-family:var(--font-body)}
   /* radar profil */
   .radarwrap{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:8px}
   .radar .rg{fill:none;stroke:var(--line);opacity:.55}
@@ -329,20 +342,25 @@
     <h2 class="sec">Meilleurs 3<sup>es</sup> · 8 qualifiés</h2>
     <p class="hint">Départage : points, puis différence de buts, puis buts marqués.</p>
     <div class="dtable" id="thirds"></div>
-    <h2 class="sec">Buts par jour</h2><div id="goalsday"></div>
-    <h2 class="sec">Marges de victoire</h2><div class="bars" id="margins"></div>
-    <h2 class="sec">Scores les plus fréquents</h2><div class="bars" id="scorelines"></div>
-    <h2 class="sec">Points par match</h2><div class="bars" id="ppg"></div>
-    <h2 class="sec">Meilleures attaques · buts marqués</h2><div class="bars" id="attack"></div>
-    <h2 class="sec">Meilleures défenses · buts encaissés</h2><div class="bars" id="defense"></div>
-    <h2 class="sec">Clean sheets</h2><div class="bars" id="cleansheets"></div>
-    <h2 class="sec">Implication offensive · buts + passes</h2><div class="bars" id="involve"></div>
-    <h2 class="sec">Efficacité · buts par tir</h2><div class="bars" id="conv"></div>
-    <h2 class="sec">Discipline · cartons</h2><div class="bars" id="discipline"></div>
-    <h2 class="sec">Attaque vs défense</h2>
-    <p class="hint">Chaque point = une équipe. Bas-droite = forte attaque + défense solide. Touchez un point.</p>
-    <div id="scatter"></div>
-    <div class="readout" id="scatter-readout">Touchez un point pour voir l'équipe.</div>
+    <h2 class="sec">Graphiques</h2>
+    <div class="agrid">
+      <div class="acard">
+        <h3 class="acard-h">Comparateur d'équipes</h3>
+        <div class="xy-sel"><select id="xsel" aria-label="axe X"></select><select id="ysel" aria-label="axe Y"></select></div>
+        <div id="scatterxy"></div>
+        <p class="hint">Touchez un point → fiche de l'équipe.</p>
+      </div>
+      <div class="acard"><h3 class="acard-h">Buts par jour</h3><div id="goalsday"></div></div>
+      <div class="acard"><h3 class="acard-h">Marges de victoire</h3><div class="bars" id="margins"></div></div>
+      <div class="acard"><h3 class="acard-h">Scores fréquents</h3><div class="bars" id="scorelines"></div></div>
+      <div class="acard"><h3 class="acard-h">Points par match</h3><div class="bars" id="ppg"></div></div>
+      <div class="acard"><h3 class="acard-h">Meilleures attaques</h3><div class="bars" id="attack"></div></div>
+      <div class="acard"><h3 class="acard-h">Meilleures défenses</h3><div class="bars" id="defense"></div></div>
+      <div class="acard"><h3 class="acard-h">Clean sheets</h3><div class="bars" id="cleansheets"></div></div>
+      <div class="acard"><h3 class="acard-h">Implication · buts+passes</h3><div class="bars" id="involve"></div></div>
+      <div class="acard"><h3 class="acard-h">Efficacité · buts/tir</h3><div class="bars" id="conv"></div></div>
+      <div class="acard"><h3 class="acard-h">Discipline · cartons</h3><div class="bars" id="discipline"></div></div>
+    </div>
   </section>
 </main>
 
@@ -508,7 +526,36 @@ function renderStats(data){
   fillBars("involve",(A.involvements||[]).map(p=>({who:p.name,sub:p.team+" · "+p.g+"b "+p.a+"pd",val:p.ga})));
   fillBars("conv",(A.conversion||[]).map(p=>({who:p.name,sub:p.team+" · "+p.goals+"b/"+p.shots+"t",val:p.conv,disp:p.conv+"%"})));
   fillBars("discipline",(A.discipline||[]).map(p=>({who:p.name,sub:p.team,val:(p.y||0)+(p.r||0)*2,disp:(p.y||0)+"🟨"+(p.r?" "+p.r+"🟥":"")})),"amber");
-  renderScatter(data.team_scatter||[]);
+  initScatterXY();
+}
+const SXY=[["possession","Possession %"],["gf_pm","Buts/match"],["ga_pm","Encaissés/m"],
+  ["shots","Tirs"],["sot","Tirs cadrés"],["accuracy","Précision %"],["conversion","Conversion %"],
+  ["clean_sheets","Clean sheets"],["ppg","Pts/match"],["gd","Différence"]];
+function renderScatterXY(){
+  const xk=document.getElementById("xsel").value, yk=document.getElementById("ysel").value;
+  const lab=k=>(SXY.find(m=>m[0]===k)||[])[1]||k;
+  const teams=Object.values(DATA.teams||{}).filter(t=>t[xk]!=null&&t[yk]!=null);
+  if(!teams.length){document.getElementById("scatterxy").innerHTML='<div class="err">Pas de données.</div>';return;}
+  const W=300,H=230,P=36;
+  const xs=teams.map(t=>+t[xk]), ys=teams.map(t=>+t[yk]);
+  const xmin=Math.min(...xs),xmax=Math.max(...xs),ymin=Math.min(...ys),ymax=Math.max(...ys);
+  const sx=v=>P+(xmax===xmin?.5:(v-xmin)/(xmax-xmin))*(W-2*P);
+  const sy=v=>H-P-(ymax===ymin?.5:(v-ymin)/(ymax-ymin))*(H-2*P);
+  const dots=teams.map(t=>`<circle class="pt" cx="${sx(+t[xk]).toFixed(1)}" cy="${sy(+t[yk]).toFixed(1)}" r="4.5" fill="var(--accent)" opacity=".85" tabindex="0" data-team="${esc(t.name)}"/>`).join("");
+  document.getElementById("scatterxy").innerHTML=`<svg class="scatter" viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="comparateur">
+    <line class="ax" x1="${P}" y1="${H-P}" x2="${W-P}" y2="${H-P}"/>
+    <line class="ax" x1="${P}" y1="${P}" x2="${P}" y2="${H-P}"/>
+    <text x="${W-P}" y="${H-P+16}" text-anchor="end">${esc(lab(xk))} →</text>
+    <text x="5" y="${P-12}">↑ ${esc(lab(yk))}</text>${dots}</svg>`;
+}
+function initScatterXY(){
+  const xs=document.getElementById("xsel"), ys=document.getElementById("ysel");
+  if(xs && !xs.options.length){
+    const opts=SXY.map(m=>`<option value="${m[0]}">${m[1]}</option>`).join("");
+    xs.innerHTML=opts; ys.innerHTML=opts; xs.value="possession"; ys.value="gf_pm";
+    xs.onchange=renderScatterXY; ys.onchange=renderScatterXY;
+  }
+  renderScatterXY();
 }
 function renderScatter(teams){
   const W=360,H=300,P=40;
