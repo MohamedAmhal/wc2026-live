@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T14:40:30",
+  "generated_at": "2026-06-27T15:08:47",
   "summary": {
     "teams": 48,
     "groups": 12,
@@ -6039,6 +6039,14 @@
       "clean_sheets": 3,
       "cards_y": 2,
       "cards_r": 1,
+      "radar": {
+        "Attaque": 62,
+        "Défense": 100,
+        "Possession": 42,
+        "Finition": 71,
+        "Solidité": 98,
+        "Discipline": 38
+      },
       "form": [
         "V",
         "V",
@@ -6379,6 +6387,14 @@
       "clean_sheets": 0,
       "cards_y": 4,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 19,
+        "Défense": 75,
+        "Possession": 85,
+        "Finition": 17,
+        "Solidité": 0,
+        "Discipline": 38
+      },
       "form": [
         "V",
         "D",
@@ -6680,6 +6696,14 @@
       "clean_sheets": 0,
       "cards_y": 1,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 19,
+        "Défense": 31,
+        "Possession": 27,
+        "Finition": 12,
+        "Solidité": 0,
+        "Discipline": 94
+      },
       "form": [
         "D",
         "N",
@@ -6988,6 +7012,14 @@
       "clean_sheets": 1,
       "cards_y": 5,
       "cards_r": 2,
+      "radar": {
+        "Attaque": 19,
+        "Défense": 75,
+        "Possession": 35,
+        "Finition": 15,
+        "Solidité": 50,
+        "Discipline": 4
+      },
       "form": [
         "D",
         "N",
@@ -7280,6 +7312,14 @@
       "clean_sheets": 1,
       "cards_y": 5,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 85,
+        "Défense": 75,
+        "Possession": 75,
+        "Finition": 67,
+        "Solidité": 50,
+        "Discipline": 29
+      },
       "form": [
         "N",
         "V",
@@ -7581,6 +7621,14 @@
       "clean_sheets": 0,
       "cards_y": 3,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 75,
+        "Défense": 75,
+        "Possession": 75,
+        "Finition": 69,
+        "Solidité": 0,
+        "Discipline": 54
+      },
       "form": [
         "N",
         "V",
@@ -7890,6 +7938,14 @@
       "clean_sheets": 0,
       "cards_y": 6,
       "cards_r": 1,
+      "radar": {
+        "Attaque": 60,
+        "Défense": 31,
+        "Possession": 31,
+        "Finition": 81,
+        "Solidité": 0,
+        "Discipline": 8
+      },
       "form": [
         "N",
         "D",
@@ -8205,6 +8261,14 @@
       "clean_sheets": 0,
       "cards_y": 4,
       "cards_r": 2,
+      "radar": {
+        "Attaque": 19,
+        "Défense": 8,
+        "Possession": 10,
+        "Finition": 48,
+        "Solidité": 0,
+        "Discipline": 8
+      },
       "form": [
         "N",
         "D",
@@ -8519,6 +8583,14 @@
       "clean_sheets": 2,
       "cards_y": 5,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 75,
+        "Défense": 92,
+        "Possession": 60,
+        "Finition": 71,
+        "Solidité": 83,
+        "Discipline": 29
+      },
       "form": [
         "N",
         "V",
@@ -8837,6 +8909,14 @@
       "clean_sheets": 1,
       "cards_y": 1,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 62,
+        "Défense": 75,
+        "Possession": 69,
+        "Finition": 60,
+        "Solidité": 50,
+        "Discipline": 94
+      },
       "form": [
         "N",
         "V",
@@ -9135,6 +9215,14 @@
       "clean_sheets": 1,
       "cards_y": 5,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 2,
+        "Défense": 50,
+        "Possession": 33,
+        "Finition": 4,
+        "Solidité": 50,
+        "Discipline": 29
+      },
       "form": [
         "V",
         "D",
@@ -9433,6 +9521,14 @@
       "clean_sheets": 0,
       "cards_y": 7,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 19,
+        "Défense": 15,
+        "Possession": 27,
+        "Finition": 19,
+        "Solidité": 0,
+        "Discipline": 12
+      },
       "form": [
         "D",
         "D",
@@ -9715,6 +9811,14 @@
       "clean_sheets": 1,
       "cards_y": 5,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 85,
+        "Défense": 50,
+        "Possession": 71,
+        "Finition": 79,
+        "Solidité": 50,
+        "Discipline": 29
+      },
       "form": [
         "V",
         "V",
@@ -10040,6 +10144,14 @@
       "clean_sheets": 2,
       "cards_y": 5,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 19,
+        "Défense": 81,
+        "Possession": 23,
+        "Finition": 29,
+        "Solidité": 83,
+        "Discipline": 29
+      },
       "form": [
         "V",
         "D",
@@ -10342,6 +10454,14 @@
       "clean_sheets": 2,
       "cards_y": 7,
       "cards_r": 1,
+      "radar": {
+        "Attaque": 19,
+        "Défense": 50,
+        "Possession": 15,
+        "Finition": 38,
+        "Solidité": 83,
+        "Discipline": 4
+      },
       "form": [
         "D",
         "V",
@@ -10650,6 +10770,14 @@
       "clean_sheets": 0,
       "cards_y": 2,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 38,
+        "Défense": 33,
+        "Possession": 94,
+        "Finition": 8,
+        "Solidité": 0,
+        "Discipline": 73
+      },
       "form": [
         "D",
         "D",
@@ -10974,6 +11102,14 @@
       "clean_sheets": 0,
       "cards_y": 1,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 94,
+        "Défense": 50,
+        "Possession": 75,
+        "Finition": 85,
+        "Solidité": 0,
+        "Discipline": 94
+      },
       "form": [
         "V",
         "V",
@@ -11291,6 +11427,14 @@
       "clean_sheets": 2,
       "cards_y": 4,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 48,
+        "Défense": 81,
+        "Possession": 44,
+        "Finition": 62,
+        "Solidité": 83,
+        "Discipline": 38
+      },
       "form": [
         "V",
         "D",
@@ -11605,6 +11749,14 @@
       "clean_sheets": 1,
       "cards_y": 5,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 19,
+        "Défense": 81,
+        "Possession": 67,
+        "Finition": 10,
+        "Solidité": 50,
+        "Discipline": 29
+      },
       "form": [
         "D",
         "N",
@@ -11898,6 +12050,14 @@
       "clean_sheets": 1,
       "cards_y": 7,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 2,
+        "Défense": 12,
+        "Possession": 6,
+        "Finition": 4,
+        "Solidité": 50,
+        "Discipline": 12
+      },
       "form": [
         "D",
         "N",
@@ -12212,6 +12372,14 @@
       "clean_sheets": 0,
       "cards_y": 3,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 94,
+        "Défense": 50,
+        "Possession": 73,
+        "Finition": 94,
+        "Solidité": 0,
+        "Discipline": 54
+      },
       "form": [
         "N",
         "V",
@@ -12506,6 +12674,14 @@
       "clean_sheets": 1,
       "cards_y": 1,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 75,
+        "Défense": 75,
+        "Possession": 50,
+        "Finition": 92,
+        "Solidité": 50,
+        "Discipline": 94
+      },
       "form": [
         "N",
         "V",
@@ -12830,6 +13006,14 @@
       "clean_sheets": 0,
       "cards_y": 5,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 75,
+        "Défense": 23,
+        "Possession": 40,
+        "Finition": 75,
+        "Solidité": 0,
+        "Discipline": 29
+      },
       "form": [
         "V",
         "D",
@@ -13140,6 +13324,14 @@
       "clean_sheets": 0,
       "cards_y": 1,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 19,
+        "Défense": 4,
+        "Possession": 21,
+        "Finition": 48,
+        "Solidité": 0,
+        "Discipline": 94
+      },
       "form": [
         "D",
         "D",
@@ -13440,6 +13632,14 @@
       "clean_sheets": 0,
       "cards_y": 3,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 62,
+        "Défense": 75,
+        "Possession": 46,
+        "Finition": 58,
+        "Solidité": 0,
+        "Discipline": 54
+      },
       "form": [
         "N",
         "V"
@@ -13723,6 +13923,14 @@
       "clean_sheets": 1,
       "cards_y": 2,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 38,
+        "Défense": 75,
+        "Possession": 19,
+        "Finition": 33,
+        "Solidité": 50,
+        "Discipline": 73
+      },
       "form": [
         "N",
         "N"
@@ -14006,6 +14214,14 @@
       "clean_sheets": 1,
       "cards_y": 3,
       "cards_r": 1,
+      "radar": {
+        "Attaque": 6,
+        "Défense": 90,
+        "Possession": 81,
+        "Finition": 2,
+        "Solidité": 50,
+        "Discipline": 29
+      },
       "form": [
         "N",
         "N"
@@ -14292,6 +14508,14 @@
       "clean_sheets": 0,
       "cards_y": 2,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 50,
+        "Défense": 21,
+        "Possession": 38,
+        "Finition": 56,
+        "Solidité": 0,
+        "Discipline": 73
+      },
       "form": [
         "N",
         "D"
@@ -14559,6 +14783,14 @@
       "clean_sheets": 2,
       "cards_y": 1,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 62,
+        "Défense": 100,
+        "Possession": 96,
+        "Finition": 31,
+        "Solidité": 83,
+        "Discipline": 94
+      },
       "form": [
         "N",
         "V"
@@ -14835,6 +15067,14 @@
       "clean_sheets": 0,
       "cards_y": 2,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 50,
+        "Défense": 40,
+        "Possession": 92,
+        "Finition": 27,
+        "Solidité": 0,
+        "Discipline": 73
+      },
       "form": [
         "N",
         "N"
@@ -15095,6 +15335,14 @@
       "clean_sheets": 1,
       "cards_y": 3,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 38,
+        "Défense": 75,
+        "Possession": 2,
+        "Finition": 48,
+        "Solidité": 50,
+        "Discipline": 54
+      },
       "form": [
         "N",
         "N"
@@ -15385,6 +15633,14 @@
       "clean_sheets": 0,
       "cards_y": 3,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 6,
+        "Défense": 21,
+        "Possession": 10,
+        "Finition": 42,
+        "Solidité": 0,
+        "Discipline": 54
+      },
       "form": [
         "N",
         "D"
@@ -15651,6 +15907,14 @@
       "clean_sheets": 1,
       "cards_y": 0,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 90,
+        "Défense": 90,
+        "Possession": 65,
+        "Finition": 88,
+        "Solidité": 50,
+        "Discipline": 100
+      },
       "form": [
         "V",
         "V"
@@ -15928,6 +16192,14 @@
       "clean_sheets": 0,
       "cards_y": 0,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 98,
+        "Défense": 40,
+        "Possession": 52,
+        "Finition": 98,
+        "Solidité": 0,
+        "Discipline": 100
+      },
       "form": [
         "V",
         "V"
@@ -16198,6 +16470,14 @@
       "clean_sheets": 0,
       "cards_y": 0,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 50,
+        "Défense": 12,
+        "Possession": 54,
+        "Finition": 65,
+        "Solidité": 0,
+        "Discipline": 100
+      },
       "form": [
         "D",
         "D"
@@ -16481,6 +16761,14 @@
       "clean_sheets": 0,
       "cards_y": 2,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 6,
+        "Défense": 6,
+        "Possession": 25,
+        "Finition": 21,
+        "Solidité": 0,
+        "Discipline": 73
+      },
       "form": [
         "D",
         "D"
@@ -16773,6 +17061,14 @@
       "clean_sheets": 2,
       "cards_y": 2,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 83,
+        "Défense": 100,
+        "Possession": 46,
+        "Finition": 90,
+        "Solidité": 83,
+        "Discipline": 73
+      },
       "form": [
         "V",
         "V"
@@ -17032,6 +17328,14 @@
       "clean_sheets": 0,
       "cards_y": 3,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 50,
+        "Défense": 40,
+        "Possession": 62,
+        "Finition": 77,
+        "Solidité": 0,
+        "Discipline": 54
+      },
       "form": [
         "V",
         "D"
@@ -17296,6 +17600,14 @@
       "clean_sheets": 0,
       "cards_y": 1,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 38,
+        "Défense": 31,
+        "Possession": 81,
+        "Finition": 33,
+        "Solidité": 0,
+        "Discipline": 94
+      },
       "form": [
         "D",
         "V"
@@ -17561,6 +17873,14 @@
       "clean_sheets": 0,
       "cards_y": 1,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 38,
+        "Défense": 21,
+        "Possession": 8,
+        "Finition": 46,
+        "Solidité": 0,
+        "Discipline": 94
+      },
       "form": [
         "D",
         "D"
@@ -17827,6 +18147,14 @@
       "clean_sheets": 1,
       "cards_y": 3,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 62,
+        "Défense": 90,
+        "Possession": 85,
+        "Finition": 54,
+        "Solidité": 50,
+        "Discipline": 54
+      },
       "form": [
         "V",
         "V"
@@ -18084,6 +18412,14 @@
       "clean_sheets": 1,
       "cards_y": 4,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 90,
+        "Défense": 90,
+        "Possession": 96,
+        "Finition": 94,
+        "Solidité": 50,
+        "Discipline": 38
+      },
       "form": [
         "N",
         "V"
@@ -18343,6 +18679,14 @@
       "clean_sheets": 0,
       "cards_y": 2,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 6,
+        "Défense": 75,
+        "Possession": 4,
+        "Finition": 21,
+        "Solidité": 0,
+        "Discipline": 73
+      },
       "form": [
         "N",
         "D"
@@ -18594,6 +18938,14 @@
       "clean_sheets": 0,
       "cards_y": 2,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 6,
+        "Défense": 4,
+        "Possession": 17,
+        "Finition": 21,
+        "Solidité": 0,
+        "Discipline": 73
+      },
       "form": [
         "D",
         "D"
@@ -18884,6 +19236,14 @@
       "clean_sheets": 1,
       "cards_y": 1,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 62,
+        "Défense": 75,
+        "Possession": 90,
+        "Finition": 40,
+        "Solidité": 50,
+        "Discipline": 94
+      },
       "form": [
         "V",
         "N"
@@ -19133,6 +19493,14 @@
       "clean_sheets": 2,
       "cards_y": 2,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 6,
+        "Défense": 100,
+        "Possession": 0,
+        "Finition": 42,
+        "Solidité": 83,
+        "Discipline": 73
+      },
       "form": [
         "V",
         "N"
@@ -19409,6 +19777,14 @@
       "clean_sheets": 1,
       "cards_y": 1,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 50,
+        "Défense": 31,
+        "Possession": 58,
+        "Finition": 83,
+        "Solidité": 50,
+        "Discipline": 94
+      },
       "form": [
         "D",
         "V"
@@ -19672,6 +20048,14 @@
       "clean_sheets": 0,
       "cards_y": 3,
       "cards_r": 0,
+      "radar": {
+        "Attaque": 0,
+        "Défense": 75,
+        "Possession": 54,
+        "Finition": 0,
+        "Solidité": 0,
+        "Discipline": 54
+      },
       "form": [
         "D",
         "D"

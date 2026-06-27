@@ -229,6 +229,16 @@
   .tlegend{display:flex;gap:16px;justify-content:center;font-size:11px;color:var(--muted);margin-top:8px}
   .tlegend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:middle}
   .tlegend .sg{background:var(--accent)}.tlegend .cg{background:var(--accent-2)}
+  /* radar profil */
+  .radarwrap{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:8px}
+  .radar .rg{fill:none;stroke:var(--line);opacity:.55}
+  .radar .ra{stroke:var(--line);opacity:.55}
+  .radar .rv{fill:rgba(43,224,139,.20);stroke:var(--accent);stroke-width:2}
+  .radar .rd{fill:var(--accent)}
+  .radar .rd.weak{fill:var(--accent-2)}
+  .radar .rl{fill:var(--muted);font-size:10px}
+  .radar .rl.weak{fill:#ff7aa6;font-weight:700}
+  .radar .rval{fill:var(--text);font-size:9px;font-family:var(--font-num)}
   /* terrain tactique — grille 2-3 par ligne */
   .tacgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
   .tac{min-width:0}
@@ -583,6 +593,26 @@ function renderBracket(data){
 }
 
 // ---- écran d'équipe ----
+function radarChart(radar){
+  const dims=Object.keys(radar||{}).filter(k=>radar[k]!=null);
+  if(dims.length<3) return "";
+  const N=dims.length, R=86, cx=130, cy=120;
+  const pt=(i,r)=>{const a=-Math.PI/2+i*2*Math.PI/N; return [cx+r*Math.cos(a), cy+r*Math.sin(a)];};
+  let grid="";
+  [0.25,0.5,0.75,1].forEach(f=>{
+    grid+=`<polygon class="rg" points="${dims.map((_,i)=>pt(i,R*f).map(v=>v.toFixed(1)).join(",")).join(" ")}"/>`;
+  });
+  let axes="",labels="";
+  dims.forEach((d,i)=>{
+    const [x,y]=pt(i,R); axes+=`<line class="ra" x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}"/>`;
+    const [lx,ly]=pt(i,R+15), weak=radar[d]<=30;
+    const anc=Math.abs(lx-cx)<6?"middle":(lx<cx?"end":"start");
+    labels+=`<text class="rl ${weak?'weak':''}" x="${lx.toFixed(1)}" y="${ly.toFixed(1)}" text-anchor="${anc}">${esc(d)}</text>`;
+  });
+  const vpts=dims.map((d,i)=>pt(i,R*(radar[d]/100)).map(v=>v.toFixed(1)).join(",")).join(" ");
+  const dots=dims.map((d,i)=>{const [x,y]=pt(i,R*(radar[d]/100));return `<circle class="rd ${radar[d]<=30?'weak':''}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.5"/>`;}).join("");
+  return `<svg class="radar" viewBox="0 0 260 250" width="100%" role="img" aria-label="Profil percentile">${grid}${axes}<polygon class="rv" points="${vpts}"/>${dots}${labels}</svg>`;
+}
 const _short=(n)=>{const p=String(n||"").trim().split(/\s+/);return p[p.length-1]||n;};
 function pitch(formation, xi){
   const lines=[1].concat(String(formation).split("-").map(Number));
@@ -626,6 +656,9 @@ function renderTeam(name){
       <div class="th-form">${_formChips(t.form)}</div>
       ${t.note!=null?`<div class="th-note num">${t.note}<small>/20</small></div>`:""}
     </div>
+    ${radarChart(t.radar)?`<h3 class="th3">Profil tactique · percentile vs 48 équipes</h3>
+      <p class="hint">Plus un axe est proche du centre, plus c'est un point faible (rouge).</p>
+      <div class="radarwrap">${radarChart(t.radar)}</div>`:""}
     ${t.strengths&&t.strengths.length?`<h3 class="th3">Points forts</h3><div class="chips">${t.strengths.map(s=>_chip("▲ "+s,"good")).join("")}</div>`:""}
     ${t.weaknesses&&t.weaknesses.length?`<h3 class="th3">Points faibles</h3><div class="chips">${t.weaknesses.map(s=>_chip("▼ "+s,"bad")).join("")}</div>`:""}
     ${t.style&&t.style.length?`<h3 class="th3">Profil de jeu</h3><div class="chips">${t.style.map(s=>_chip(s)).join("")}</div>`:""}

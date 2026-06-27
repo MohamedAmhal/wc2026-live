@@ -344,6 +344,7 @@ def _teams_detail(cur, events, note_map):
             "conversion": b["conv"], "clean_sheets": b["cs"],
             "cards_y": _int0(tget(nm, "standard", "cards_yellow")),
             "cards_r": _int0(tget(nm, "standard", "cards_red")),
+            "radar": {k: P[k].get(nm) for k in P},
             "form": form[-5:], "strengths": strengths, "weaknesses": weak,
             "style": style, "timing": timing[nm], "squad": sq[:26], "log": log,
             "formations": sorted(lineups_by_team.get(nm, []),
