@@ -7,7 +7,7 @@ import json
 import logging
 import re
 import urllib.request
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
 log = logging.getLogger(__name__)
@@ -86,14 +86,38 @@ def _parse_scorers(raw, team):
     return out
 
 
-def _status(g):
+def _kickoff_utc(g):
+    """Coup d'envoi en UTC (depuis l'heure locale du stade). None si inconnu."""
+    iso, hh = _parse_date(g.get("local_date"))
+    tz = STADIUM_TZ.get(str(g.get("stadium_id")))
+    if not (iso and hh and tz):
+        return None
+    try:
+        naive = datetime.strptime(f"{iso} {hh}", "%Y-%m-%d %H:%M")
+        return naive.replace(tzinfo=ZoneInfo(tz)).astimezone(timezone.utc)
+    except Exception:
+        return None
+
+
+# Durée max d'un match (prolongations comprises) pour la fenêtre "en direct".
+LIVE_WINDOW = timedelta(minutes=150)
+
+
+def _status(g, now=None):
+    """finished / live / upcoming. Le direct est détecté soit par l'API
+    (time_elapsed = une minute), soit par l'HEURE (coup d'envoi passé et match
+    non terminé) car l'API worldcup26 ne fournit pas la minute en cours."""
     fin = str(g.get("finished", "")).upper() == "TRUE"
     el = str(g.get("time_elapsed", "")).strip().lower()
-    if fin or el in ("finished",):
+    if fin or el == "finished":
         return "finished"
-    if el in ("", "notstarted", "not started"):
-        return "upcoming"
-    return "live"  # une minute / "HT" / autre => match en cours
+    if el not in ("", "notstarted", "not started"):
+        return "live"  # l'API donne une minute / "HT"
+    if now is not None:
+        ko = _kickoff_utc(g)
+        if ko and ko <= now <= ko + LIVE_WINDOW:
+            return "live"  # fenêtre horaire : match en cours
+    return "upcoming"
 
 
 def _to_int(v):
@@ -117,9 +141,10 @@ def build():
     Chaque match : home/away, score, group, matchday, minute (si live),
     et `goals` trié par minute (joueur + minute + côté)."""
     games = fetch_games()
+    now = datetime.now(timezone.utc)
     live, results, upcoming = [], [], []
     for g in games:
-        st = _status(g)
+        st = _status(g, now)
         iso, hhmm = _parse_date(g.get("local_date"))
         goals = (_parse_scorers(g.get("home_scorers"), "home")
                  + _parse_scorers(g.get("away_scorers"), "away"))
@@ -133,7 +158,8 @@ def build():
             "time_paris": _paris_time(iso, hhmm, g.get("stadium_id")),
         }
         if st == "live":
-            m["minute"] = g.get("time_elapsed")
+            el = str(g.get("time_elapsed", "")).strip()
+            m["minute"] = el if re.match(r"^\d", el) else None  # minute si l'API la donne
             m["goals"] = goals
             live.append(m)
         elif st == "finished":
@@ -155,12 +181,13 @@ def build():
         if ty not in by_round:
             continue
         iso, hh = _parse_date(g.get("local_date"))
-        st = _status(g)
+        st = _status(g, now)
+        el = str(g.get("time_elapsed", "")).strip()
         by_round[ty].append({
             "home": g.get("home_team_name_en"), "away": g.get("away_team_name_en"),
             "hs": _to_int(g.get("home_score")), "as": _to_int(g.get("away_score")),
             "date": iso, "time": hh, "status": st,
-            "minute": g.get("time_elapsed") if st == "live" else None,
+            "minute": (el if re.match(r"^\d", el) else None) if st == "live" else None,
             "id": str(g.get("id") or ""),
         })
     for k in by_round:

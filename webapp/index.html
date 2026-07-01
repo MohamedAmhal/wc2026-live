@@ -588,9 +588,9 @@ function renderScatter(teams){
 
 function goalCard(m, live){
   const meta = (m.group?"Gr. "+esc(m.group):"") + (m.matchday?" · J"+esc(m.matchday):"");
-  const min = m.minute!=null ? esc(m.minute)+(/^\d+$/.test(String(m.minute))?"'":"") : "live";
+  const min = m.minute!=null ? esc(m.minute)+(/^\d+$/.test(String(m.minute))?"'":"") : "";
   const top = live
-    ? `<div class="ev-top"><span class="livebadge"><span class="rd"></span>EN DIRECT ${min}</span><span>${meta}</span></div>`
+    ? `<div class="ev-top"><span class="livebadge"><span class="rd"></span>EN DIRECT${min?" "+min:""}</span><span>${meta}</span></div>`
     : `<div class="ev-top"><span>${meta}</span><span>${esc((m.date||"").slice(0,10))}</span></div>`;
   const goals = (m.goals||[]).map(g=>
     `<div class="goal ${g.team==='home'?'h':'a'}"><span class="min">${g.minute?esc(g.minute)+"'":""}</span> ⚽ ${esc(g.player)}</div>`
@@ -623,7 +623,7 @@ function _brTeam(n){ return n?`<span data-team="${esc(n)}">${esc(n)}</span>`:'<s
 function bracketCard(m){
   const fin=m.status==="finished", live=m.status==="live";
   const mid=fin?`<b>${m.hs}-${m.as}</b>`
-    :(live?`<span class="lv">⚽ ${esc(m.minute||"live")}</span>`:`<span class="vs">${esc(m.time||"vs")}</span>`);
+    :(live?`<span class="lv">🔴 ${m.minute?esc(m.minute)+"'":"live"}</span>`:`<span class="vs">${esc(m.time||"vs")}</span>`);
   return `<div class="brcard ${live?'islive':''}">
     <div class="brteam">${_brTeam(m.home)}</div>
     <div class="brmid">${mid}</div>

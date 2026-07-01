@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T15:08:47",
+  "generated_at": "2026-07-01T16:18:06",
   "summary": {
     "teams": 48,
     "groups": 12,
@@ -1010,153 +1010,10 @@
   ],
   "matches_upcoming": [
     {
-      "home": "Panama",
-      "away": "England",
-      "hs": 0,
-      "as": 0,
-      "group": "L",
-      "matchday": "3",
-      "date": "2026-06-27",
-      "time": "17:00",
-      "time_paris": "23:00"
-    },
-    {
-      "home": "Croatia",
-      "away": "Ghana",
-      "hs": 0,
-      "as": 0,
-      "group": "L",
-      "matchday": "3",
-      "date": "2026-06-27",
-      "time": "17:00",
-      "time_paris": "23:00"
-    },
-    {
-      "home": "Democratic Republic of the Congo",
-      "away": "Uzbekistan",
-      "hs": 0,
-      "as": 0,
-      "group": "K",
-      "matchday": "3",
-      "date": "2026-06-27",
-      "time": "19:30",
-      "time_paris": "01:30 +1"
-    },
-    {
-      "home": "Colombia",
-      "away": "Portugal",
-      "hs": 0,
-      "as": 0,
-      "group": "K",
-      "matchday": "3",
-      "date": "2026-06-27",
-      "time": "19:30",
-      "time_paris": "01:30 +1"
-    },
-    {
-      "home": "Jordan",
-      "away": "Argentina",
-      "hs": 0,
-      "as": 0,
-      "group": "J",
-      "matchday": "3",
-      "date": "2026-06-27",
-      "time": "21:00",
-      "time_paris": "04:00 +1"
-    },
-    {
-      "home": "Algeria",
-      "away": "Austria",
-      "hs": 0,
-      "as": 0,
-      "group": "J",
-      "matchday": "3",
-      "date": "2026-06-27",
-      "time": "21:00",
-      "time_paris": "04:00 +1"
-    },
-    {
-      "home": "South Africa",
-      "away": "Canada",
-      "hs": 0,
-      "as": 0,
-      "group": "R32",
-      "matchday": "4",
-      "date": "2026-06-28",
-      "time": "12:00",
-      "time_paris": "21:00"
-    },
-    {
-      "home": "Brazil",
-      "away": "Japan",
-      "hs": 0,
-      "as": 0,
-      "group": "R32",
-      "matchday": "4",
-      "date": "2026-06-29",
-      "time": "12:00",
-      "time_paris": "19:00"
-    },
-    {
-      "home": "Germany",
-      "away": "Paraguay",
-      "hs": 0,
-      "as": 0,
-      "group": "R32",
-      "matchday": "4",
-      "date": "2026-06-29",
-      "time": "16:30",
-      "time_paris": "22:30"
-    },
-    {
-      "home": "Netherlands",
-      "away": "Morocco",
-      "hs": 0,
-      "as": 0,
-      "group": "R32",
-      "matchday": "4",
-      "date": "2026-06-29",
-      "time": "19:00",
-      "time_paris": "03:00 +1"
-    },
-    {
-      "home": "Ivory Coast",
-      "away": "Norway",
-      "hs": 0,
-      "as": 0,
-      "group": "R32",
-      "matchday": "4",
-      "date": "2026-06-30",
-      "time": "12:00",
-      "time_paris": "19:00"
-    },
-    {
-      "home": "France",
-      "away": null,
-      "hs": 0,
-      "as": 0,
-      "group": "R32",
-      "matchday": "4",
-      "date": "2026-06-30",
-      "time": "17:00",
-      "time_paris": "23:00"
-    },
-    {
-      "home": "Mexico",
-      "away": null,
-      "hs": 0,
-      "as": 0,
-      "group": "R32",
-      "matchday": "4",
-      "date": "2026-06-30",
-      "time": "19:00",
-      "time_paris": "03:00 +1"
-    },
-    {
-      "home": "Belgium",
-      "away": null,
-      "hs": 0,
-      "as": 0,
+      "home": "England",
+      "away": "Democratic Republic of the Congo",
+      "hs": null,
+      "as": null,
       "group": "R32",
       "matchday": "4",
       "date": "2026-07-01",
@@ -1164,10 +1021,10 @@
       "time_paris": "18:00"
     },
     {
-      "home": null,
-      "away": null,
-      "hs": 0,
-      "as": 0,
+      "home": "Belgium",
+      "away": "Senegal",
+      "hs": null,
+      "as": null,
       "group": "R32",
       "matchday": "4",
       "date": "2026-07-01",
@@ -1186,8 +1043,8 @@
       "time_paris": "02:00 +1"
     },
     {
-      "home": null,
-      "away": null,
+      "home": "Spain",
+      "away": "Austria",
       "hs": 0,
       "as": 0,
       "group": "R32",
@@ -1197,8 +1054,8 @@
       "time_paris": "21:00"
     },
     {
-      "home": null,
-      "away": null,
+      "home": "Portugal",
+      "away": "Croatia",
       "hs": 0,
       "as": 0,
       "group": "R32",
@@ -1209,7 +1066,7 @@
     },
     {
       "home": "Switzerland",
-      "away": null,
+      "away": "Algeria",
       "hs": 0,
       "as": 0,
       "group": "R32",
@@ -1241,8 +1098,8 @@
       "time_paris": "00:00 +1"
     },
     {
-      "home": null,
-      "away": null,
+      "home": "Colombia",
+      "away": "Ghana",
       "hs": 0,
       "as": 0,
       "group": "R32",
@@ -1252,8 +1109,8 @@
       "time_paris": "03:30 +1"
     },
     {
-      "home": null,
-      "away": null,
+      "home": "Canada",
+      "away": "Morocco",
       "hs": 0,
       "as": 0,
       "group": "R16",
@@ -1263,13 +1120,156 @@
       "time_paris": "19:00"
     },
     {
+      "home": "Paraguay",
+      "away": "France",
+      "hs": 0,
+      "as": 0,
+      "group": "R16",
+      "matchday": "5",
+      "date": "2026-07-04",
+      "time": "17:00",
+      "time_paris": "23:00"
+    },
+    {
+      "home": "Brazil",
+      "away": "Norway",
+      "hs": 0,
+      "as": 0,
+      "group": "R16",
+      "matchday": "5",
+      "date": "2026-07-05",
+      "time": "16:00",
+      "time_paris": "22:00"
+    },
+    {
+      "home": "Mexico",
+      "away": null,
+      "hs": 0,
+      "as": 0,
+      "group": "R16",
+      "matchday": "5",
+      "date": "2026-07-05",
+      "time": "18:00",
+      "time_paris": "02:00 +1"
+    },
+    {
       "home": null,
       "away": null,
       "hs": 0,
       "as": 0,
       "group": "R16",
       "matchday": "5",
-      "date": "2026-07-04",
+      "date": "2026-07-06",
+      "time": "14:00",
+      "time_paris": "21:00"
+    },
+    {
+      "home": null,
+      "away": null,
+      "hs": 0,
+      "as": 0,
+      "group": "R16",
+      "matchday": "5",
+      "date": "2026-07-06",
+      "time": "17:00",
+      "time_paris": "02:00 +1"
+    },
+    {
+      "home": null,
+      "away": null,
+      "hs": 0,
+      "as": 0,
+      "group": "R16",
+      "matchday": "5",
+      "date": "2026-07-07",
+      "time": "12:00",
+      "time_paris": "18:00"
+    },
+    {
+      "home": null,
+      "away": null,
+      "hs": 0,
+      "as": 0,
+      "group": "R16",
+      "matchday": "5",
+      "date": "2026-07-07",
+      "time": "13:00",
+      "time_paris": "22:00"
+    },
+    {
+      "home": null,
+      "away": null,
+      "hs": 0,
+      "as": 0,
+      "group": "QF",
+      "matchday": "6",
+      "date": "2026-07-09",
+      "time": "16:00",
+      "time_paris": "22:00"
+    },
+    {
+      "home": null,
+      "away": null,
+      "hs": 0,
+      "as": 0,
+      "group": "QF",
+      "matchday": "6",
+      "date": "2026-07-10",
+      "time": "12:00",
+      "time_paris": "21:00"
+    },
+    {
+      "home": null,
+      "away": null,
+      "hs": 0,
+      "as": 0,
+      "group": "QF",
+      "matchday": "6",
+      "date": "2026-07-11",
+      "time": "17:00",
+      "time_paris": "23:00"
+    },
+    {
+      "home": null,
+      "away": null,
+      "hs": 0,
+      "as": 0,
+      "group": "QF",
+      "matchday": "6",
+      "date": "2026-07-11",
+      "time": "20:00",
+      "time_paris": "03:00 +1"
+    },
+    {
+      "home": null,
+      "away": null,
+      "hs": 0,
+      "as": 0,
+      "group": "SF",
+      "matchday": "7",
+      "date": "2026-07-14",
+      "time": "14:00",
+      "time_paris": "21:00"
+    },
+    {
+      "home": null,
+      "away": null,
+      "hs": 0,
+      "as": 0,
+      "group": "SF",
+      "matchday": "7",
+      "date": "2026-07-15",
+      "time": "15:00",
+      "time_paris": "21:00"
+    },
+    {
+      "home": null,
+      "away": null,
+      "hs": 0,
+      "as": 0,
+      "group": "3RD",
+      "matchday": "8",
+      "date": "2026-07-18",
       "time": "17:00",
       "time_paris": "23:00"
     }
@@ -3562,6 +3562,344 @@
     "live": [],
     "results": [
       {
+        "home": "Mexico",
+        "away": "Ecuador",
+        "hs": 2,
+        "as": 0,
+        "group": "R32",
+        "matchday": "4",
+        "date": "2026-06-30",
+        "time": "19:00",
+        "time_paris": "03:00 +1",
+        "goals": [
+          {
+            "player": "Jvlian Kviinvnz",
+            "minute": "22",
+            "team": "home"
+          },
+          {
+            "player": "Raúl Jiménez",
+            "minute": "31",
+            "team": "home"
+          }
+        ]
+      },
+      {
+        "home": "France",
+        "away": "Sweden",
+        "hs": 3,
+        "as": 0,
+        "group": "R32",
+        "matchday": "4",
+        "date": "2026-06-30",
+        "time": "17:00",
+        "time_paris": "23:00",
+        "goals": [
+          {
+            "player": "Kylian Mbappé",
+            "minute": "45",
+            "team": "home"
+          },
+          {
+            "player": "Bradley Barcola",
+            "minute": "53",
+            "team": "home"
+          },
+          {
+            "player": "Kylian Mbappé",
+            "minute": "74",
+            "team": "home"
+          }
+        ]
+      },
+      {
+        "home": "Ivory Coast",
+        "away": "Norway",
+        "hs": 1,
+        "as": 2,
+        "group": "R32",
+        "matchday": "4",
+        "date": "2026-06-30",
+        "time": "12:00",
+        "time_paris": "19:00",
+        "goals": [
+          {
+            "player": "Antonio Nusa",
+            "minute": "39",
+            "team": "away"
+          },
+          {
+            "player": "Amad Diallo",
+            "minute": "74",
+            "team": "home"
+          },
+          {
+            "player": "Erling Haaland",
+            "minute": "86",
+            "team": "away"
+          }
+        ]
+      },
+      {
+        "home": "Netherlands",
+        "away": "Morocco",
+        "hs": 1,
+        "as": 1,
+        "group": "R32",
+        "matchday": "4",
+        "date": "2026-06-29",
+        "time": "19:00",
+        "time_paris": "03:00 +1",
+        "goals": [
+          {
+            "player": "Kvdi Khakpv",
+            "minute": "72",
+            "team": "home"
+          },
+          {
+            "player": "Issa Diop",
+            "minute": "90+1",
+            "team": "away"
+          }
+        ]
+      },
+      {
+        "home": "Germany",
+        "away": "Paraguay",
+        "hs": 1,
+        "as": 1,
+        "group": "R32",
+        "matchday": "4",
+        "date": "2026-06-29",
+        "time": "16:30",
+        "time_paris": "22:30",
+        "goals": [
+          {
+            "player": "Khvliv Ansisv",
+            "minute": "42",
+            "team": "away"
+          },
+          {
+            "player": "Kai Havertz",
+            "minute": "54",
+            "team": "home"
+          }
+        ]
+      },
+      {
+        "home": "Brazil",
+        "away": "Japan",
+        "hs": 2,
+        "as": 1,
+        "group": "R32",
+        "matchday": "4",
+        "date": "2026-06-29",
+        "time": "12:00",
+        "time_paris": "19:00",
+        "goals": [
+          {
+            "player": "Kaishū Sano",
+            "minute": "29",
+            "team": "away"
+          },
+          {
+            "player": "Casemiro",
+            "minute": "56",
+            "team": "home"
+          },
+          {
+            "player": "Gabriel Martinelli",
+            "minute": "90+5",
+            "team": "home"
+          }
+        ]
+      },
+      {
+        "home": "South Africa",
+        "away": "Canada",
+        "hs": 0,
+        "as": 1,
+        "group": "R32",
+        "matchday": "4",
+        "date": "2026-06-28",
+        "time": "12:00",
+        "time_paris": "21:00",
+        "goals": [
+          {
+            "player": "Astfan Avstakviv",
+            "minute": "90+2",
+            "team": "away"
+          }
+        ]
+      },
+      {
+        "home": "Jordan",
+        "away": "Argentina",
+        "hs": 1,
+        "as": 3,
+        "group": "J",
+        "matchday": "3",
+        "date": "2026-06-27",
+        "time": "21:00",
+        "time_paris": "04:00 +1",
+        "goals": [
+          {
+            "player": "Jivani Lv Slsv",
+            "minute": "19",
+            "team": "away"
+          },
+          {
+            "player": "Mvsi Altmari",
+            "minute": "55",
+            "team": "home"
+          },
+          {
+            "player": "Lionel Messi",
+            "minute": "80",
+            "team": "away"
+          },
+          {
+            "player": "Lautaro Martínez 31'(P)",
+            "minute": null,
+            "team": "away"
+          }
+        ]
+      },
+      {
+        "home": "Algeria",
+        "away": "Austria",
+        "hs": 3,
+        "as": 3,
+        "group": "J",
+        "matchday": "3",
+        "date": "2026-06-27",
+        "time": "21:00",
+        "time_paris": "04:00 +1",
+        "goals": [
+          {
+            "player": "Marko Arnautović",
+            "minute": "28",
+            "team": "away"
+          },
+          {
+            "player": "Rafik Blghali",
+            "minute": "45",
+            "team": "home"
+          },
+          {
+            "player": "Marcel Sabitzer",
+            "minute": "55",
+            "team": "away"
+          },
+          {
+            "player": "Riyad Mahrez",
+            "minute": "60",
+            "team": "home"
+          },
+          {
+            "player": "Riyad Mahrez",
+            "minute": "90+3",
+            "team": "home"
+          },
+          {
+            "player": "Saša Kalajdžić",
+            "minute": "90+6",
+            "team": "away"
+          }
+        ]
+      },
+      {
+        "home": "Democratic Republic of the Congo",
+        "away": "Uzbekistan",
+        "hs": 3,
+        "as": 1,
+        "group": "K",
+        "matchday": "3",
+        "date": "2026-06-27",
+        "time": "19:30",
+        "time_paris": "01:30 +1",
+        "goals": [
+          {
+            "player": "Aldvr Shvmvrvdvf",
+            "minute": "10",
+            "team": "away"
+          },
+          {
+            "player": "Fistvn Mail",
+            "minute": "78",
+            "team": "home"
+          },
+          {
+            "player": "Yoane Wissa",
+            "minute": "90+1",
+            "team": "home"
+          }
+        ]
+      },
+      {
+        "home": "Colombia",
+        "away": "Portugal",
+        "hs": 0,
+        "as": 0,
+        "group": "K",
+        "matchday": "3",
+        "date": "2026-06-27",
+        "time": "19:30",
+        "time_paris": "01:30 +1",
+        "goals": []
+      },
+      {
+        "home": "Panama",
+        "away": "England",
+        "hs": 0,
+        "as": 2,
+        "group": "L",
+        "matchday": "3",
+        "date": "2026-06-27",
+        "time": "17:00",
+        "time_paris": "23:00",
+        "goals": [
+          {
+            "player": "Jvd Blingham",
+            "minute": "62",
+            "team": "away"
+          },
+          {
+            "player": "Hri Kin",
+            "minute": "67",
+            "team": "away"
+          }
+        ]
+      },
+      {
+        "home": "Croatia",
+        "away": "Ghana",
+        "hs": 2,
+        "as": 1,
+        "group": "L",
+        "matchday": "3",
+        "date": "2026-06-27",
+        "time": "17:00",
+        "time_paris": "23:00",
+        "goals": [
+          {
+            "player": "Petar Sučić",
+            "minute": "31",
+            "team": "home"
+          },
+          {
+            "player": "Drik Lvkasn",
+            "minute": "73",
+            "team": "away"
+          },
+          {
+            "player": "Nikola Vlašić",
+            "minute": "83",
+            "team": "home"
+          }
+        ]
+      },
+      {
         "home": "Egypt",
         "away": "Iran",
         "hs": 1,
@@ -5376,153 +5714,10 @@
     ],
     "upcoming": [
       {
-        "home": "Panama",
-        "away": "England",
-        "hs": 0,
-        "as": 0,
-        "group": "L",
-        "matchday": "3",
-        "date": "2026-06-27",
-        "time": "17:00",
-        "time_paris": "23:00"
-      },
-      {
-        "home": "Croatia",
-        "away": "Ghana",
-        "hs": 0,
-        "as": 0,
-        "group": "L",
-        "matchday": "3",
-        "date": "2026-06-27",
-        "time": "17:00",
-        "time_paris": "23:00"
-      },
-      {
-        "home": "Democratic Republic of the Congo",
-        "away": "Uzbekistan",
-        "hs": 0,
-        "as": 0,
-        "group": "K",
-        "matchday": "3",
-        "date": "2026-06-27",
-        "time": "19:30",
-        "time_paris": "01:30 +1"
-      },
-      {
-        "home": "Colombia",
-        "away": "Portugal",
-        "hs": 0,
-        "as": 0,
-        "group": "K",
-        "matchday": "3",
-        "date": "2026-06-27",
-        "time": "19:30",
-        "time_paris": "01:30 +1"
-      },
-      {
-        "home": "Jordan",
-        "away": "Argentina",
-        "hs": 0,
-        "as": 0,
-        "group": "J",
-        "matchday": "3",
-        "date": "2026-06-27",
-        "time": "21:00",
-        "time_paris": "04:00 +1"
-      },
-      {
-        "home": "Algeria",
-        "away": "Austria",
-        "hs": 0,
-        "as": 0,
-        "group": "J",
-        "matchday": "3",
-        "date": "2026-06-27",
-        "time": "21:00",
-        "time_paris": "04:00 +1"
-      },
-      {
-        "home": "South Africa",
-        "away": "Canada",
-        "hs": 0,
-        "as": 0,
-        "group": "R32",
-        "matchday": "4",
-        "date": "2026-06-28",
-        "time": "12:00",
-        "time_paris": "21:00"
-      },
-      {
-        "home": "Brazil",
-        "away": "Japan",
-        "hs": 0,
-        "as": 0,
-        "group": "R32",
-        "matchday": "4",
-        "date": "2026-06-29",
-        "time": "12:00",
-        "time_paris": "19:00"
-      },
-      {
-        "home": "Germany",
-        "away": "Paraguay",
-        "hs": 0,
-        "as": 0,
-        "group": "R32",
-        "matchday": "4",
-        "date": "2026-06-29",
-        "time": "16:30",
-        "time_paris": "22:30"
-      },
-      {
-        "home": "Netherlands",
-        "away": "Morocco",
-        "hs": 0,
-        "as": 0,
-        "group": "R32",
-        "matchday": "4",
-        "date": "2026-06-29",
-        "time": "19:00",
-        "time_paris": "03:00 +1"
-      },
-      {
-        "home": "Ivory Coast",
-        "away": "Norway",
-        "hs": 0,
-        "as": 0,
-        "group": "R32",
-        "matchday": "4",
-        "date": "2026-06-30",
-        "time": "12:00",
-        "time_paris": "19:00"
-      },
-      {
-        "home": "France",
-        "away": null,
-        "hs": 0,
-        "as": 0,
-        "group": "R32",
-        "matchday": "4",
-        "date": "2026-06-30",
-        "time": "17:00",
-        "time_paris": "23:00"
-      },
-      {
-        "home": "Mexico",
-        "away": null,
-        "hs": 0,
-        "as": 0,
-        "group": "R32",
-        "matchday": "4",
-        "date": "2026-06-30",
-        "time": "19:00",
-        "time_paris": "03:00 +1"
-      },
-      {
-        "home": "Belgium",
-        "away": null,
-        "hs": 0,
-        "as": 0,
+        "home": "England",
+        "away": "Democratic Republic of the Congo",
+        "hs": null,
+        "as": null,
         "group": "R32",
         "matchday": "4",
         "date": "2026-07-01",
@@ -5530,10 +5725,10 @@
         "time_paris": "18:00"
       },
       {
-        "home": null,
-        "away": null,
-        "hs": 0,
-        "as": 0,
+        "home": "Belgium",
+        "away": "Senegal",
+        "hs": null,
+        "as": null,
         "group": "R32",
         "matchday": "4",
         "date": "2026-07-01",
@@ -5552,8 +5747,8 @@
         "time_paris": "02:00 +1"
       },
       {
-        "home": null,
-        "away": null,
+        "home": "Spain",
+        "away": "Austria",
         "hs": 0,
         "as": 0,
         "group": "R32",
@@ -5563,8 +5758,8 @@
         "time_paris": "21:00"
       },
       {
-        "home": null,
-        "away": null,
+        "home": "Portugal",
+        "away": "Croatia",
         "hs": 0,
         "as": 0,
         "group": "R32",
@@ -5575,7 +5770,7 @@
       },
       {
         "home": "Switzerland",
-        "away": null,
+        "away": "Algeria",
         "hs": 0,
         "as": 0,
         "group": "R32",
@@ -5607,8 +5802,8 @@
         "time_paris": "00:00 +1"
       },
       {
-        "home": null,
-        "away": null,
+        "home": "Colombia",
+        "away": "Ghana",
         "hs": 0,
         "as": 0,
         "group": "R32",
@@ -5618,8 +5813,8 @@
         "time_paris": "03:30 +1"
       },
       {
-        "home": null,
-        "away": null,
+        "home": "Canada",
+        "away": "Morocco",
         "hs": 0,
         "as": 0,
         "group": "R16",
@@ -5629,13 +5824,156 @@
         "time_paris": "19:00"
       },
       {
+        "home": "Paraguay",
+        "away": "France",
+        "hs": 0,
+        "as": 0,
+        "group": "R16",
+        "matchday": "5",
+        "date": "2026-07-04",
+        "time": "17:00",
+        "time_paris": "23:00"
+      },
+      {
+        "home": "Brazil",
+        "away": "Norway",
+        "hs": 0,
+        "as": 0,
+        "group": "R16",
+        "matchday": "5",
+        "date": "2026-07-05",
+        "time": "16:00",
+        "time_paris": "22:00"
+      },
+      {
+        "home": "Mexico",
+        "away": null,
+        "hs": 0,
+        "as": 0,
+        "group": "R16",
+        "matchday": "5",
+        "date": "2026-07-05",
+        "time": "18:00",
+        "time_paris": "02:00 +1"
+      },
+      {
         "home": null,
         "away": null,
         "hs": 0,
         "as": 0,
         "group": "R16",
         "matchday": "5",
-        "date": "2026-07-04",
+        "date": "2026-07-06",
+        "time": "14:00",
+        "time_paris": "21:00"
+      },
+      {
+        "home": null,
+        "away": null,
+        "hs": 0,
+        "as": 0,
+        "group": "R16",
+        "matchday": "5",
+        "date": "2026-07-06",
+        "time": "17:00",
+        "time_paris": "02:00 +1"
+      },
+      {
+        "home": null,
+        "away": null,
+        "hs": 0,
+        "as": 0,
+        "group": "R16",
+        "matchday": "5",
+        "date": "2026-07-07",
+        "time": "12:00",
+        "time_paris": "18:00"
+      },
+      {
+        "home": null,
+        "away": null,
+        "hs": 0,
+        "as": 0,
+        "group": "R16",
+        "matchday": "5",
+        "date": "2026-07-07",
+        "time": "13:00",
+        "time_paris": "22:00"
+      },
+      {
+        "home": null,
+        "away": null,
+        "hs": 0,
+        "as": 0,
+        "group": "QF",
+        "matchday": "6",
+        "date": "2026-07-09",
+        "time": "16:00",
+        "time_paris": "22:00"
+      },
+      {
+        "home": null,
+        "away": null,
+        "hs": 0,
+        "as": 0,
+        "group": "QF",
+        "matchday": "6",
+        "date": "2026-07-10",
+        "time": "12:00",
+        "time_paris": "21:00"
+      },
+      {
+        "home": null,
+        "away": null,
+        "hs": 0,
+        "as": 0,
+        "group": "QF",
+        "matchday": "6",
+        "date": "2026-07-11",
+        "time": "17:00",
+        "time_paris": "23:00"
+      },
+      {
+        "home": null,
+        "away": null,
+        "hs": 0,
+        "as": 0,
+        "group": "QF",
+        "matchday": "6",
+        "date": "2026-07-11",
+        "time": "20:00",
+        "time_paris": "03:00 +1"
+      },
+      {
+        "home": null,
+        "away": null,
+        "hs": 0,
+        "as": 0,
+        "group": "SF",
+        "matchday": "7",
+        "date": "2026-07-14",
+        "time": "14:00",
+        "time_paris": "21:00"
+      },
+      {
+        "home": null,
+        "away": null,
+        "hs": 0,
+        "as": 0,
+        "group": "SF",
+        "matchday": "7",
+        "date": "2026-07-15",
+        "time": "15:00",
+        "time_paris": "21:00"
+      },
+      {
+        "home": null,
+        "away": null,
+        "hs": 0,
+        "as": 0,
+        "group": "3RD",
+        "matchday": "8",
+        "date": "2026-07-18",
         "time": "17:00",
         "time_paris": "23:00"
       }
@@ -5649,84 +5987,84 @@
             "home": "South Africa",
             "away": "Canada",
             "hs": 0,
-            "as": 0,
+            "as": 1,
             "date": "2026-06-28",
             "time": "12:00",
-            "status": "upcoming",
+            "status": "finished",
             "minute": null,
             "id": "73"
           },
           {
             "home": "Brazil",
             "away": "Japan",
-            "hs": 0,
-            "as": 0,
+            "hs": 2,
+            "as": 1,
             "date": "2026-06-29",
             "time": "12:00",
-            "status": "upcoming",
+            "status": "finished",
             "minute": null,
             "id": "76"
           },
           {
             "home": "Germany",
             "away": "Paraguay",
-            "hs": 0,
-            "as": 0,
+            "hs": 1,
+            "as": 1,
             "date": "2026-06-29",
             "time": "16:30",
-            "status": "upcoming",
+            "status": "finished",
             "minute": null,
             "id": "74"
           },
           {
             "home": "Netherlands",
             "away": "Morocco",
-            "hs": 0,
-            "as": 0,
+            "hs": 1,
+            "as": 1,
             "date": "2026-06-29",
             "time": "19:00",
-            "status": "upcoming",
+            "status": "finished",
             "minute": null,
             "id": "75"
           },
           {
             "home": "Ivory Coast",
             "away": "Norway",
-            "hs": 0,
-            "as": 0,
+            "hs": 1,
+            "as": 2,
             "date": "2026-06-30",
             "time": "12:00",
-            "status": "upcoming",
+            "status": "finished",
             "minute": null,
             "id": "78"
           },
           {
             "home": "France",
-            "away": null,
-            "hs": 0,
+            "away": "Sweden",
+            "hs": 3,
             "as": 0,
             "date": "2026-06-30",
             "time": "17:00",
-            "status": "upcoming",
+            "status": "finished",
             "minute": null,
             "id": "77"
           },
           {
             "home": "Mexico",
-            "away": null,
-            "hs": 0,
+            "away": "Ecuador",
+            "hs": 2,
             "as": 0,
             "date": "2026-06-30",
             "time": "19:00",
-            "status": "upcoming",
+            "status": "finished",
             "minute": null,
             "id": "79"
           },
           {
-            "home": "Belgium",
-            "away": null,
-            "hs": 0,
-            "as": 0,
+            "home": "England",
+            "away": "Democratic Republic of the Congo",
+            "hs": null,
+            "as": null,
             "date": "2026-07-01",
             "time": "12:00",
             "status": "upcoming",
@@ -5734,10 +6072,10 @@
             "id": "80"
           },
           {
-            "home": null,
-            "away": null,
-            "hs": 0,
-            "as": 0,
+            "home": "Belgium",
+            "away": "Senegal",
+            "hs": null,
+            "as": null,
             "date": "2026-07-01",
             "time": "13:00",
             "status": "upcoming",
@@ -5756,8 +6094,8 @@
             "id": "81"
           },
           {
-            "home": null,
-            "away": null,
+            "home": "Spain",
+            "away": "Austria",
             "hs": 0,
             "as": 0,
             "date": "2026-07-02",
@@ -5767,8 +6105,8 @@
             "id": "84"
           },
           {
-            "home": null,
-            "away": null,
+            "home": "Portugal",
+            "away": "Croatia",
             "hs": 0,
             "as": 0,
             "date": "2026-07-02",
@@ -5779,7 +6117,7 @@
           },
           {
             "home": "Switzerland",
-            "away": null,
+            "away": "Algeria",
             "hs": 0,
             "as": 0,
             "date": "2026-07-02",
@@ -5811,8 +6149,8 @@
             "id": "86"
           },
           {
-            "home": null,
-            "away": null,
+            "home": "Colombia",
+            "away": "Ghana",
             "hs": 0,
             "as": 0,
             "date": "2026-07-03",
@@ -5828,8 +6166,8 @@
         "label": "8es de finale",
         "matches": [
           {
-            "home": null,
-            "away": null,
+            "home": "Canada",
+            "away": "Morocco",
             "hs": 0,
             "as": 0,
             "date": "2026-07-04",
@@ -5839,8 +6177,8 @@
             "id": "90"
           },
           {
-            "home": null,
-            "away": null,
+            "home": "Paraguay",
+            "away": "France",
             "hs": 0,
             "as": 0,
             "date": "2026-07-04",
@@ -5850,8 +6188,8 @@
             "id": "89"
           },
           {
-            "home": null,
-            "away": null,
+            "home": "Brazil",
+            "away": "Norway",
             "hs": 0,
             "as": 0,
             "date": "2026-07-05",
@@ -5861,7 +6199,7 @@
             "id": "91"
           },
           {
-            "home": null,
+            "home": "Mexico",
             "away": null,
             "hs": 0,
             "as": 0,
@@ -6066,8 +6404,8 @@
       "timing": {
         "scored": [
           0,
-          0,
-          0,
+          1,
+          1,
           2,
           1,
           1
@@ -7051,7 +7389,7 @@
           0,
           0,
           0,
-          0
+          1
         ]
       },
       "squad": [
@@ -7344,7 +7682,7 @@
           1,
           0,
           2,
-          2
+          3
         ],
         "conceded": [
           0,
@@ -8614,13 +8952,13 @@
           1,
           1,
           4,
-          1,
+          2,
           0,
-          0
+          1
         ],
         "conceded": [
           0,
-          1,
+          2,
           0,
           0,
           0,
@@ -8938,14 +9276,14 @@
           2,
           0,
           0,
-          2
+          3
         ],
         "conceded": [
           1,
           0,
           2,
           0,
-          0,
+          1,
           0
         ]
       },
@@ -10482,7 +10820,7 @@
         "scored": [
           1,
           0,
-          0,
+          1,
           0,
           1,
           0
@@ -10491,7 +10829,7 @@
           0,
           0,
           1,
-          0,
+          1,
           0,
           0
         ]
@@ -11132,14 +11470,14 @@
           2,
           0,
           1,
-          1,
+          2,
           2,
           3
         ],
         "conceded": [
           1,
           2,
-          0,
+          1,
           0,
           0,
           1
@@ -11455,16 +11793,16 @@
           1,
           0,
           0,
-          1,
+          2,
           1
         ],
         "conceded": [
           0,
           0,
-          0,
+          1,
           0,
           1,
-          1
+          2
         ]
       },
       "squad": [
@@ -11785,8 +12123,8 @@
         ],
         "conceded": [
           1,
-          0,
-          0,
+          1,
+          1,
           0,
           0,
           1
@@ -12404,7 +12742,7 @@
           1,
           0,
           3,
-          2,
+          3,
           1
         ],
         "conceded": [
@@ -12413,7 +12751,7 @@
           0,
           3,
           0,
-          1
+          2
         ]
       },
       "squad": [
@@ -12701,7 +13039,7 @@
       "timing": {
         "scored": [
           1,
-          0,
+          1,
           1,
           2,
           1,
@@ -12711,9 +13049,9 @@
           0,
           0,
           0,
-          1,
           2,
-          0
+          2,
+          1
         ]
       },
       "squad": [
@@ -13044,9 +13382,9 @@
         "conceded": [
           1,
           1,
+          2,
+          4,
           1,
-          3,
-          0,
           1
         ]
       },
@@ -15935,9 +16273,9 @@
         "scored": [
           2,
           1,
-          1,
-          1,
           2,
+          2,
+          3,
           3
         ],
         "conceded": [
@@ -16221,17 +16559,17 @@
         "scored": [
           0,
           2,
-          2,
+          3,
           2,
           0,
-          2
+          3
         ],
         "conceded": [
           1,
           1,
           2,
           1,
-          0,
+          1,
           2
         ]
       },
@@ -17088,17 +17426,17 @@
       "timing": {
         "scored": [
           0,
-          1,
+          2,
           1,
           1,
           0,
-          2
+          3
         ],
         "conceded": [
           0,
           0,
           0,
-          0,
+          1,
           0,
           0
         ]
@@ -17352,19 +17690,19 @@
       "timing": {
         "scored": [
           0,
+          2,
+          0,
           1,
           0,
-          0,
-          0,
-          1
+          2
         ],
         "conceded": [
           0,
           0,
-          1,
-          1,
+          2,
+          2,
           0,
-          1
+          2
         ]
       },
       "squad": [
@@ -17626,18 +17964,18 @@
         "scored": [
           0,
           0,
-          0,
-          0,
           1,
-          1
+          1,
+          1,
+          2
         ],
         "conceded": [
           0,
+          2,
           1,
-          1,
-          1,
+          2,
           0,
-          1
+          2
         ]
       },
       "squad": [
@@ -17901,17 +18239,17 @@
           0,
           0,
           1,
-          1,
+          2,
           0,
           0
         ],
         "conceded": [
           0,
-          1,
+          2,
           0,
           0,
           1,
-          2
+          3
         ]
       },
       "squad": [
@@ -18963,7 +19301,7 @@
       ],
       "timing": {
         "scored": [
-          0,
+          1,
           0,
           0,
           1,
@@ -18976,7 +19314,7 @@
           2,
           1,
           1,
-          2
+          4
         ]
       },
       "squad": [
@@ -19264,7 +19602,7 @@
           0,
           1,
           1,
-          0,
+          2,
           1
         ],
         "conceded": [
@@ -19524,16 +19862,16 @@
           0,
           0,
           0,
-          0,
+          1,
           1
         ],
         "conceded": [
           0,
           0,
+          1,
           0,
           0,
-          0,
-          0
+          1
         ]
       },
       "squad": [
@@ -19801,17 +20139,17 @@
         "scored": [
           0,
           0,
-          2,
+          3,
           1,
           0,
-          0
+          1
         ],
         "conceded": [
           0,
           0,
           1,
           1,
-          0,
+          1,
           1
         ]
       },
@@ -20085,7 +20423,7 @@
           0,
           0,
           1,
-          0,
+          2,
           1
         ]
       },
