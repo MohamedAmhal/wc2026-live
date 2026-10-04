@@ -6,6 +6,7 @@ et construire une base **SQLite** détaillée pour le suivi du tournoi.
 
 ## Deux sources (important)
 
+ 
 - **native-stats.org** (sans Cloudflare, LiveView) → **scores en direct + classement** :
   les points/MJ sont **recalculés par groupe à partir des matchs joués**.
 - **fbref.com** (via SeleniumBase UC) → **groupes A→L + stats joueurs riches**
@@ -13,7 +14,8 @@ et construire une base **SQLite** détaillée pour le suivi du tournoi.
 
 > ⚠️ fbref a souvent **~1 jour de retard** sur les résultats. C'est pourquoi le
 > classement et les scores viennent de native-stats, qui est à jour. À chaque
-> `--update`, native-stats écrase scores/points avec les données live.
+> `--update`, native-stats écrase scores/points avec les données live;
+
 
 ## Ce qui est collecté
 
